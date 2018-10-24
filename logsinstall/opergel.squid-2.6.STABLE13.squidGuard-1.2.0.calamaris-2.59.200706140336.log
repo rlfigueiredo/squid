@@ -1,0 +1,746 @@
+Inicio da instalacao: Thu Jun 14 03:36:14 BRT 2007
+## inicio funcconfmrtg ##
+## declarando variavies ##
+## criando diretorio de instalacao e copiando arquivos fonte
+## instalando mrtg
+mrtg-2.15.1/THANKS
+mrtg-2.15.1/CHANGES
+mrtg-2.15.1/COPYING
+mrtg-2.15.1/COPYRIGHT
+mrtg-2.15.1/README
+mrtg-2.15.1/MANIFEST
+mrtg-2.15.1/Makefile.in
+mrtg-2.15.1/Makefile.Win32
+mrtg-2.15.1/Makefile.NetWare
+mrtg-2.15.1/get_ver.awk
+mrtg-2.15.1/configure
+mrtg-2.15.1/config.h.in
+mrtg-2.15.1/install-sh
+mrtg-2.15.1/mkinstalldirs
+mrtg-2.15.1/configure.in
+mrtg-2.15.1/install-sh
+mrtg-2.15.1/images/
+mrtg-2.15.1/images/favicon.ico
+mrtg-2.15.1/images/mrtg-l.png
+mrtg-2.15.1/images/mrtg-ti.gif
+mrtg-2.15.1/images/mrtg-r.gif
+mrtg-2.15.1/images/mrtg-m.png
+mrtg-2.15.1/images/mrtg-l.gif
+mrtg-2.15.1/images/mrtg-ti.png
+mrtg-2.15.1/images/mrtg-r.png
+mrtg-2.15.1/images/mrtg-m.gif
+mrtg-2.15.1/lib/mrtg2/BER.pm
+mrtg-2.15.1/lib/mrtg2/SNMP_Session.pm
+mrtg-2.15.1/lib/mrtg2/SNMP_util.pm
+mrtg-2.15.1/lib/mrtg2/MRTG_lib.pm
+mrtg-2.15.1/lib/mrtg2/Net_SNMP_util.pm
+mrtg-2.15.1/lib/mrtg2/locales_mrtg.pm
+mrtg-2.15.1/bin/cfgmaker
+mrtg-2.15.1/bin/indexmaker
+mrtg-2.15.1/bin/mrtg
+mrtg-2.15.1/bin/mrtg-traffic-sum
+mrtg-2.15.1/lib/mrtg2/Pod/InputObjects.pm
+mrtg-2.15.1/lib/mrtg2/Pod/Parser.pm
+mrtg-2.15.1/lib/mrtg2/Pod/PlainText.pm
+mrtg-2.15.1/lib/mrtg2/Pod/Select.pm
+mrtg-2.15.1/lib/mrtg2/Pod/Usage.pm
+mrtg-2.15.1/src/rateup.c
+mrtg-2.15.1/src/strftime.c
+mrtg-2.15.1/src/strftime.h
+mrtg-2.15.1/translate/
+mrtg-2.15.1/translate/croatian.pmd
+mrtg-2.15.1/translate/ukrainian1251.pmd
+mrtg-2.15.1/translate/german.pmd.backup
+mrtg-2.15.1/translate/french.pmd
+mrtg-2.15.1/translate/indonesia.pmd
+mrtg-2.15.1/translate/galician.pmd
+mrtg-2.15.1/translate/turkish.pmd
+mrtg-2.15.1/translate/polish.pmd
+mrtg-2.15.1/translate/mergelocale.pl
+mrtg-2.15.1/translate/finnish.pmd
+mrtg-2.15.1/translate/bulgarian.pmd
+mrtg-2.15.1/translate/locales_mrtg.pm
+mrtg-2.15.1/translate/slovenian.pmd
+mrtg-2.15.1/translate/skeleton.pm0
+mrtg-2.15.1/translate/dutch.pmd
+mrtg-2.15.1/translate/german.pmd
+mrtg-2.15.1/translate/catalan.pmd
+mrtg-2.15.1/translate/serbian.pmd
+mrtg-2.15.1/translate/malay.pmd
+mrtg-2.15.1/translate/spanish.pmd
+mrtg-2.15.1/translate/README
+mrtg-2.15.1/translate/czech.pmd
+mrtg-2.15.1/translate/greek.pmd
+mrtg-2.15.1/translate/eucjp.pmd
+mrtg-2.15.1/translate/chinese.pmd
+mrtg-2.15.1/translate/fixer
+mrtg-2.15.1/translate/italian.pmd
+mrtg-2.15.1/translate/lithuanian.pmd
+mrtg-2.15.1/translate/ukrainian.pmd
+mrtg-2.15.1/translate/slovak.pmd
+mrtg-2.15.1/translate/portuguese.pmd
+mrtg-2.15.1/translate/russian.pmd
+mrtg-2.15.1/translate/gb2312.pmd
+mrtg-2.15.1/translate/iso2022jp.pmd
+mrtg-2.15.1/translate/russian1251.pmd
+mrtg-2.15.1/translate/big5.pmd
+mrtg-2.15.1/translate/hungarian.pmd
+mrtg-2.15.1/translate/romanian.pmd
+mrtg-2.15.1/translate/gb.pmd
+mrtg-2.15.1/translate/locales_mrtg.pm.rej
+mrtg-2.15.1/translate/norwegian.pmd
+mrtg-2.15.1/translate/danish.pmd
+mrtg-2.15.1/translate/estonian.pmd
+mrtg-2.15.1/translate/icelandic.pmd
+mrtg-2.15.1/translate/cn.pmd
+mrtg-2.15.1/translate/korean.pmd
+mrtg-2.15.1/translate/macedonian.pmd
+mrtg-2.15.1/translate/swedish.pmd
+mrtg-2.15.1/translate/brazilian.pmd
+mrtg-2.15.1/contrib/
+mrtg-2.15.1/contrib/mrtg-dynip/
+mrtg-2.15.1/contrib/mrtg-dynip/mrtg-dynip
+mrtg-2.15.1/contrib/mrtg-dynip/Changes
+mrtg-2.15.1/contrib/mrtg-dynip/FAQ
+mrtg-2.15.1/contrib/mrtg-dynip/README
+mrtg-2.15.1/contrib/mrtg-dynip/Install
+mrtg-2.15.1/contrib/mrtg-dynip/TODO
+mrtg-2.15.1/contrib/mrtg-dynip/mrtg-dynip-sydnet
+mrtg-2.15.1/contrib/meminfo/
+mrtg-2.15.1/contrib/meminfo/memory.pl
+mrtg-2.15.1/contrib/meminfo/README
+mrtg-2.15.1/contrib/accesslistmon/
+mrtg-2.15.1/contrib/accesslistmon/examplescript
+mrtg-2.15.1/contrib/accesslistmon/README
+mrtg-2.15.1/contrib/accesslistmon/INSTALL
+mrtg-2.15.1/contrib/accesslistmon/mrtg.cfg
+mrtg-2.15.1/contrib/IxDisk/
+mrtg-2.15.1/contrib/IxDisk/README
+mrtg-2.15.1/contrib/IxDisk/ixdisk.pl
+mrtg-2.15.1/contrib/IxDisk/ixdisk.cfg
+mrtg-2.15.1/contrib/TCH/
+mrtg-2.15.1/contrib/TCH/README
+mrtg-2.15.1/contrib/TCH/hiperdsp.pl
+mrtg-2.15.1/contrib/TCH/dualt1.pl
+mrtg-2.15.1/contrib/TCH/mrtg.cfg
+mrtg-2.15.1/contrib/TCH/dualpri.pl
+mrtg-2.15.1/contrib/mrtg-ipacc/
+mrtg-2.15.1/contrib/mrtg-ipacc/README
+mrtg-2.15.1/contrib/mrtg-ipacc/ipfwadm-wrapper
+mrtg-2.15.1/contrib/mrtg-ipacc/ipacc
+mrtg-2.15.1/contrib/xlsummary/
+mrtg-2.15.1/contrib/xlsummary/ReadMe.txt
+mrtg-2.15.1/contrib/xlsummary/xlsummary.pl
+mrtg-2.15.1/contrib/ircstats/
+mrtg-2.15.1/contrib/ircstats/README
+mrtg-2.15.1/contrib/ircstats/ircstats.pl
+mrtg-2.15.1/contrib/nt_n_cisco/
+mrtg-2.15.1/contrib/nt_n_cisco/builder.bat
+mrtg-2.15.1/contrib/nt_n_cisco/nt_template.cfg
+mrtg-2.15.1/contrib/nt_n_cisco/default.asp
+mrtg-2.15.1/contrib/nt_n_cisco/cisco_devices_to_poll.txt
+mrtg-2.15.1/contrib/nt_n_cisco/README
+mrtg-2.15.1/contrib/nt_n_cisco/RUN_builder.bat
+mrtg-2.15.1/contrib/nt_n_cisco/make_all_cisco_configs.bat
+mrtg-2.15.1/contrib/nt_n_cisco/queryone.bat
+mrtg-2.15.1/contrib/nt_n_cisco/RunCcfgs.cmd
+mrtg-2.15.1/contrib/linux_stat/
+mrtg-2.15.1/contrib/linux_stat/linux_stats.pl
+mrtg-2.15.1/contrib/linux_stat/readme
+mrtg-2.15.1/contrib/monitor/
+mrtg-2.15.1/contrib/monitor/config.asp
+mrtg-2.15.1/contrib/monitor/readme.txt
+mrtg-2.15.1/contrib/monitor/monitor.html
+mrtg-2.15.1/contrib/monitor/global.asa
+mrtg-2.15.1/contrib/monitor/default.asp
+mrtg-2.15.1/contrib/monitor/images/
+mrtg-2.15.1/contrib/monitor/images/spacer.gif
+mrtg-2.15.1/contrib/monitor/images/mrtg-ti.gif
+mrtg-2.15.1/contrib/monitor/images/mrtg-r.gif
+mrtg-2.15.1/contrib/monitor/images/msie.gif
+mrtg-2.15.1/contrib/monitor/images/mrtg-l.gif
+mrtg-2.15.1/contrib/monitor/images/msprod.gif
+mrtg-2.15.1/contrib/monitor/images/mrtg-m.gif
+mrtg-2.15.1/contrib/monitor/login.asp
+mrtg-2.15.1/contrib/monitor/monitor.inc
+mrtg-2.15.1/contrib/monitor/Monitor.mdb
+mrtg-2.15.1/contrib/monitor/global/
+mrtg-2.15.1/contrib/monitor/global/main.css
+mrtg-2.15.1/contrib/nt-services/
+mrtg-2.15.1/contrib/nt-services/5mrtg.reg
+mrtg-2.15.1/contrib/nt-services/mrtg-etc.zip
+mrtg-2.15.1/contrib/nt-services/install.cmd
+mrtg-2.15.1/contrib/nt-services/README
+mrtg-2.15.1/contrib/nt-services/5mrtg.exe
+mrtg-2.15.1/contrib/cfgmaker_dlci/
+mrtg-2.15.1/contrib/cfgmaker_dlci/cfgmaker_dlci
+mrtg-2.15.1/contrib/get-equi/
+mrtg-2.15.1/contrib/get-equi/get-equi.pl
+mrtg-2.15.1/contrib/get-equi/README
+mrtg-2.15.1/contrib/mrtgmk/
+mrtg-2.15.1/contrib/mrtgmk/cfg/
+mrtg-2.15.1/contrib/mrtgmk/cfg/page2.cfg
+mrtg-2.15.1/contrib/mrtgmk/cfg/page2.html
+mrtg-2.15.1/contrib/mrtgmk/cfg/alias.cfg
+mrtg-2.15.1/contrib/mrtgmk/cfg/mrtg_cfg
+mrtg-2.15.1/contrib/mrtgmk/cfg/links.cfg
+mrtg-2.15.1/contrib/mrtgmk/cfg/192.168.10.1.cfg
+mrtg-2.15.1/contrib/mrtgmk/cfg/today.html
+mrtg-2.15.1/contrib/mrtgmk/cfg/page1.html
+mrtg-2.15.1/contrib/mrtgmk/cfg/EXAMPLE1
+mrtg-2.15.1/contrib/mrtgmk/cfg/misc.cfg
+mrtg-2.15.1/contrib/mrtgmk/cfg/convert.cfg
+mrtg-2.15.1/contrib/mrtgmk/cfg/a.cfg
+mrtg-2.15.1/contrib/mrtgmk/cfg/mrtg.cfg
+mrtg-2.15.1/contrib/mrtgmk/cfg/page1.cfg
+mrtg-2.15.1/contrib/mrtgmk/cfg/hosts.cfg
+mrtg-2.15.1/contrib/mrtgmk/smrtgmk
+mrtg-2.15.1/contrib/mrtgmk/src/
+mrtg-2.15.1/contrib/mrtgmk/src/parse.ftbl
+mrtg-2.15.1/contrib/mrtgmk/src/mrtgmk.c
+mrtg-2.15.1/contrib/mrtgmk/src/fnctn.c
+mrtg-2.15.1/contrib/mrtgmk/src/defhost.c
+mrtg-2.15.1/contrib/mrtgmk/src/parsen.ftbl
+mrtg-2.15.1/contrib/mrtgmk/src/parse0.ftbl
+mrtg-2.15.1/contrib/mrtgmk/src/vars.h
+mrtg-2.15.1/contrib/mrtgmk/src/txtro.h
+mrtg-2.15.1/contrib/mrtgmk/src/gif.c
+mrtg-2.15.1/contrib/mrtgmk/src/html.c
+mrtg-2.15.1/contrib/mrtgmk/src/parse0.c
+mrtg-2.15.1/contrib/mrtgmk/src/util.c
+mrtg-2.15.1/contrib/mrtgmk/src/mkm
+mrtg-2.15.1/contrib/mrtgmk/src/txte.h
+mrtg-2.15.1/contrib/mrtgmk/src/alias.c
+mrtg-2.15.1/contrib/mrtgmk/src/parsen.c
+mrtg-2.15.1/contrib/mrtgmk/src/parse.c
+mrtg-2.15.1/contrib/mrtgmk/src/fnct0.c
+mrtg-2.15.1/contrib/mrtgmk/doc/
+mrtg-2.15.1/contrib/mrtgmk/doc/commands
+mrtg-2.15.1/contrib/mrtgmk/doc/readme.1st
+mrtg-2.15.1/contrib/mrtgmk/readme.1st
+mrtg-2.15.1/contrib/mrtgindex.cgi/
+mrtg-2.15.1/contrib/mrtgindex.cgi/mrtgindx.cgi.orig
+mrtg-2.15.1/contrib/mrtgindex.cgi/README
+mrtg-2.15.1/contrib/mrtgindex.cgi/mrtgindx.cgi.rej
+mrtg-2.15.1/contrib/mrtgindex.cgi/mrtgindx.cgi
+mrtg-2.15.1/contrib/atmmaker/
+mrtg-2.15.1/contrib/atmmaker/atmmaker
+mrtg-2.15.1/contrib/rdlog2/
+mrtg-2.15.1/contrib/rdlog2/rdlog2.c
+mrtg-2.15.1/contrib/rdlog2/wan.fig
+mrtg-2.15.1/contrib/rdlog2/readme.html
+mrtg-2.15.1/contrib/cfgmaker_ATM/
+mrtg-2.15.1/contrib/cfgmaker_ATM/README
+mrtg-2.15.1/contrib/cfgmaker_ATM/cfgmaker_atm.pl
+mrtg-2.15.1/contrib/mrtg-ipget/
+mrtg-2.15.1/contrib/mrtg-ipget/README
+mrtg-2.15.1/contrib/mrtg-ipget/mrtg-ipget.patch
+mrtg-2.15.1/contrib/mrtg.php/
+mrtg-2.15.1/contrib/mrtg.php/mrtg.php
+mrtg-2.15.1/contrib/mrtg.php/README.txt
+mrtg-2.15.1/contrib/TotalControlModem/
+mrtg-2.15.1/contrib/TotalControlModem/example.txt
+mrtg-2.15.1/contrib/cfgmaker_cisco/
+mrtg-2.15.1/contrib/cfgmaker_cisco/cfgmaker.cisco
+mrtg-2.15.1/contrib/cfgmaker_cisco/README
+mrtg-2.15.1/contrib/mrtg_php_portal/
+mrtg-2.15.1/contrib/mrtg_php_portal/update.pl
+mrtg-2.15.1/contrib/mrtg_php_portal/readme.txt
+mrtg-2.15.1/contrib/mrtg_php_portal/conf/
+mrtg-2.15.1/contrib/mrtg_php_portal/conf/config.inc.php
+mrtg-2.15.1/contrib/mrtg_php_portal/www/
+mrtg-2.15.1/contrib/mrtg_php_portal/www/index.php
+mrtg-2.15.1/contrib/mrtg_php_portal/www/admin.php
+mrtg-2.15.1/contrib/mrtg_php_portal/www/setup.php
+mrtg-2.15.1/contrib/mrtg_php_portal/www/remove.php
+mrtg-2.15.1/contrib/mrtg_php_portal/www/login.php
+mrtg-2.15.1/contrib/mrtg_php_portal/www/update.php
+mrtg-2.15.1/contrib/TTrafic/
+mrtg-2.15.1/contrib/TTrafic/readme.txt
+mrtg-2.15.1/contrib/TTrafic/gpl.txt
+mrtg-2.15.1/contrib/TTrafic/TTraffic.asp
+mrtg-2.15.1/contrib/get-multiserial/
+mrtg-2.15.1/contrib/get-multiserial/get-modems.pl
+mrtg-2.15.1/contrib/get-multiserial/get-modems-remote.pl
+mrtg-2.15.1/contrib/00INDEX
+mrtg-2.15.1/contrib/cisco_ipaccounting/
+mrtg-2.15.1/contrib/cisco_ipaccounting/CHANGELOG
+mrtg-2.15.1/contrib/cisco_ipaccounting/README
+mrtg-2.15.1/contrib/cisco_ipaccounting/cisco_ip_acc_collect.pl
+mrtg-2.15.1/contrib/cisco_ipaccounting/networks
+mrtg-2.15.1/contrib/cisco_ipaccounting/TODO
+mrtg-2.15.1/contrib/net-hosts/
+mrtg-2.15.1/contrib/net-hosts/make-mrtg.cfg.awk
+mrtg-2.15.1/contrib/net-hosts/internet
+mrtg-2.15.1/contrib/net-hosts/README
+mrtg-2.15.1/contrib/net-hosts/net-hosts
+mrtg-2.15.1/contrib/net-hosts/redball.gif
+mrtg-2.15.1/contrib/net-hosts/grnball.gif
+mrtg-2.15.1/contrib/net-hosts/net-hosts.css
+mrtg-2.15.1/contrib/net-hosts/cubprev.gif
+mrtg-2.15.1/contrib/cpuinfo/
+mrtg-2.15.1/contrib/cpuinfo/cpuinfo.pl
+mrtg-2.15.1/contrib/cpuinfo/README
+mrtg-2.15.1/contrib/cpuinfo/sample.cfg
+mrtg-2.15.1/contrib/cisco_tftp/
+mrtg-2.15.1/contrib/cisco_tftp/scarfconf.pl
+mrtg-2.15.1/contrib/mrtgidx/
+mrtg-2.15.1/contrib/mrtgidx/mrtgidx
+mrtg-2.15.1/contrib/stfc/
+mrtg-2.15.1/contrib/stfc/README
+mrtg-2.15.1/contrib/stfc/stfc
+mrtg-2.15.1/contrib/iptables-accounting/
+mrtg-2.15.1/contrib/iptables-accounting/README
+mrtg-2.15.1/contrib/iptables-accounting/iptables-accounting
+mrtg-2.15.1/contrib/ipchains/
+mrtg-2.15.1/contrib/ipchains/README
+mrtg-2.15.1/contrib/ipchains/ipchainacc.rules
+mrtg-2.15.1/contrib/ipchains/ipchainacc
+mrtg-2.15.1/contrib/mrtg-startup-script/
+mrtg-2.15.1/contrib/mrtg-startup-script/README
+mrtg-2.15.1/contrib/mrtg-startup-script/mrtg
+mrtg-2.15.1/contrib/mrtg-archiver/
+mrtg-2.15.1/contrib/mrtg-archiver/README
+mrtg-2.15.1/contrib/mrtg-archiver/backup.pl
+mrtg-2.15.1/contrib/mrtg-archiver/mrtg.archive.conf
+mrtg-2.15.1/contrib/mrtg-archiver/mrtg.archive.pl
+mrtg-2.15.1/contrib/stat/
+mrtg-2.15.1/contrib/stat/dns.named
+mrtg-2.15.1/contrib/stat/dns_mrtg
+mrtg-2.15.1/contrib/stat/README
+mrtg-2.15.1/contrib/stat/stat.pl
+mrtg-2.15.1/contrib/stat/mrtg.cfg
+mrtg-2.15.1/contrib/iptables_acc/
+mrtg-2.15.1/contrib/iptables_acc/README
+mrtg-2.15.1/contrib/iptables_acc/iptables_acc
+mrtg-2.15.1/contrib/diskmon/
+mrtg-2.15.1/contrib/diskmon/getdisk.pl
+mrtg-2.15.1/contrib/diskmon/README
+mrtg-2.15.1/contrib/diskmon/showdisk.pl
+mrtg-2.15.1/contrib/diskmon/sample.cfg
+mrtg-2.15.1/contrib/mrtglog/
+mrtg-2.15.1/contrib/mrtglog/mrtglog.h
+mrtg-2.15.1/contrib/mrtglog/README
+mrtg-2.15.1/contrib/mrtglog/mrtglog.c
+mrtg-2.15.1/contrib/ping-probe/
+mrtg-2.15.1/contrib/ping-probe/README
+mrtg-2.15.1/contrib/ciscoindex/
+mrtg-2.15.1/contrib/ciscoindex/ciscoindex.pl
+mrtg-2.15.1/contrib/ciscoindex/README
+mrtg-2.15.1/contrib/get-active/
+mrtg-2.15.1/contrib/get-active/README
+mrtg-2.15.1/contrib/get-active/get-active2.pl
+mrtg-2.15.1/contrib/get-active/get-active.pl
+mrtg-2.15.1/contrib/gentcucci-1.0.0/
+mrtg-2.15.1/contrib/gentcucci-1.0.0/mrtg_autorun
+mrtg-2.15.1/contrib/gentcucci-1.0.0/README
+mrtg-2.15.1/contrib/gentcucci-1.0.0/gwcs.list
+mrtg-2.15.1/contrib/gentcucci-1.0.0/tcnowtemp
+mrtg-2.15.1/contrib/gentcucci-1.0.0/nmcs.list
+mrtg-2.15.1/contrib/gentcucci-1.0.0/tcnowstat
+mrtg-2.15.1/contrib/gentcucci-1.0.0/gentcucci
+mrtg-2.15.1/contrib/GetSNMPLinesUP/
+mrtg-2.15.1/contrib/GetSNMPLinesUP/Makefile
+mrtg-2.15.1/contrib/GetSNMPLinesUP/README
+mrtg-2.15.1/contrib/GetSNMPLinesUP/COPYRIGHT
+mrtg-2.15.1/contrib/GetSNMPLinesUP/ModemTable.dial-machine
+mrtg-2.15.1/contrib/GetSNMPLinesUP/INSTALL
+mrtg-2.15.1/contrib/GetSNMPLinesUP/GetSNMPLinesUP.pl
+mrtg-2.15.1/contrib/GetSNMPLinesUP/COPYING
+mrtg-2.15.1/contrib/GetSNMPLinesUP/sample.cfg
+mrtg-2.15.1/contrib/jm/
+mrtg-2.15.1/contrib/jm/mrtg-jm.tar.gz
+mrtg-2.15.1/contrib/jm/README
+mrtg-2.15.1/contrib/jm/news-mrtg.pl
+mrtg-2.15.1/contrib/jm/quake-mrtg.pl
+mrtg-2.15.1/contrib/jm/finger-mrtg.pl
+mrtg-2.15.1/contrib/PMLines/
+mrtg-2.15.1/contrib/PMLines/PMLines.pl
+mrtg-2.15.1/contrib/PMLines/README
+mrtg-2.15.1/contrib/PMLines/mrtg.cfg-demo
+mrtg-2.15.1/contrib/mrtg-archiver-script/
+mrtg-2.15.1/contrib/mrtg-archiver-script/to-crontab
+mrtg-2.15.1/contrib/mrtg-archiver-script/index.html
+mrtg-2.15.1/contrib/mrtg-archiver-script/README
+mrtg-2.15.1/contrib/mrtg-archiver-script/mrtg-archiver
+mrtg-2.15.1/contrib/mrtg-archiver-script/mrtgnav
+mrtg-2.15.1/contrib/ircstats2/
+mrtg-2.15.1/contrib/ircstats2/crontab.script
+mrtg-2.15.1/contrib/ircstats2/ircstats2.pl
+mrtg-2.15.1/contrib/ircstats2/README
+mrtg-2.15.1/contrib/ircstats2/example.cf
+mrtg-2.15.1/contrib/mrtg-mail/
+mrtg-2.15.1/contrib/mrtg-mail/inetd.conf-dist
+mrtg-2.15.1/contrib/mrtg-mail/mailstats-alternate
+mrtg-2.15.1/contrib/mrtg-mail/mqueue
+mrtg-2.15.1/contrib/mrtg-mail/mailstats-horowitz
+mrtg-2.15.1/contrib/mrtg-mail/README
+mrtg-2.15.1/contrib/mrtg-mail/mailstats.cfg
+mrtg-2.15.1/contrib/mrtg-mail/smtp-stats
+mrtg-2.15.1/contrib/mrtg-mail/mailstats
+mrtg-2.15.1/contrib/mrtg-mail/services-dist
+mrtg-2.15.1/contrib/mrtg-mail/mqueue.cfg
+mrtg-2.15.1/contrib/NSI/
+mrtg-2.15.1/contrib/NSI/Mrtg_nsi.cfg
+mrtg-2.15.1/contrib/NSI/mrtg-nsi-msg.txt
+mrtg-2.15.1/contrib/NSI/Mrtg_nsi
+mrtg-2.15.1/contrib/adm-mrtg/
+mrtg-2.15.1/contrib/adm-mrtg/adm-mrtg
+mrtg-2.15.1/contrib/adm-mrtg/adm-mrtg.README
+mrtg-2.15.1/contrib/switchmaker/
+mrtg-2.15.1/contrib/switchmaker/README
+mrtg-2.15.1/contrib/switchmaker/switchmaker
+mrtg-2.15.1/contrib/cpumon/
+mrtg-2.15.1/contrib/cpumon/cpumon.pl
+mrtg-2.15.1/contrib/cpumon/README
+mrtg-2.15.1/contrib/14all/
+mrtg-2.15.1/contrib/14all/README
+mrtg-2.15.1/contrib/snmpping/
+mrtg-2.15.1/contrib/snmpping/README
+mrtg-2.15.1/contrib/snmpping/snmpping.pl
+mrtg-2.15.1/contrib/routers/
+mrtg-2.15.1/contrib/routers/README
+mrtg-2.15.1/contrib/portmasters/
+mrtg-2.15.1/contrib/portmasters/gather
+mrtg-2.15.1/contrib/portmasters/README
+mrtg-2.15.1/contrib/portmasters/portm.cfg
+mrtg-2.15.1/contrib/distrib/
+mrtg-2.15.1/contrib/distrib/readme.txt
+mrtg-2.15.1/contrib/distrib/distrib.c
+mrtg-2.15.1/contrib/distrib/distrib.pl
+mrtg-2.15.1/contrib/ascendget/
+mrtg-2.15.1/contrib/ascendget/ascendget
+mrtg-2.15.1/contrib/apc_ups/
+mrtg-2.15.1/contrib/apc_ups/upsdata01.pl
+mrtg-2.15.1/contrib/apc_ups/README
+mrtg-2.15.1/contrib/apc_ups/ups.cfg
+mrtg-2.15.1/contrib/mrtgrq/
+mrtg-2.15.1/contrib/mrtgrq/make-mrtg.cfg.awk
+mrtg-2.15.1/contrib/mrtgrq/README
+mrtg-2.15.1/contrib/mrtgrq/mrtgrq.css
+mrtg-2.15.1/contrib/mrtgrq/redball.gif
+mrtg-2.15.1/contrib/mrtgrq/Net-Telnet-3.02.tar.gz
+mrtg-2.15.1/contrib/mrtgrq/getreport.pl
+mrtg-2.15.1/contrib/mrtgrq/grnball.gif
+mrtg-2.15.1/contrib/mrtgrq/mrtgrq
+mrtg-2.15.1/contrib/mrtgrq/cubprev.gif
+mrtg-2.15.1/contrib/iptables_acc_snmp/
+mrtg-2.15.1/contrib/iptables_acc_snmp/README
+mrtg-2.15.1/contrib/iptables_acc_snmp/iptables_acc_snmp
+mrtg-2.15.1/contrib/iptables_acc_snmp/HANDCO-SNMP-MIB.txt
+mrtg-2.15.1/contrib/rumb-stat/
+mrtg-2.15.1/contrib/rumb-stat/README
+mrtg-2.15.1/contrib/rumb-stat/getsquidstats
+mrtg-2.15.1/contrib/rumb-stat/gethttpstats
+mrtg-2.15.1/contrib/ovmrtg/
+mrtg-2.15.1/contrib/ovmrtg/ovadd
+mrtg-2.15.1/contrib/ovmrtg/mrtgmenu
+mrtg-2.15.1/contrib/ovmrtg/ovmrtg.pm
+mrtg-2.15.1/contrib/ovmrtg/ovdel
+mrtg-2.15.1/contrib/ovmrtg/ovsho
+mrtg-2.15.1/contrib/ovmrtg/ovtst
+mrtg-2.15.1/contrib/ovmrtg/installov
+mrtg-2.15.1/contrib/ovmrtg/ovcvtfile
+mrtg-2.15.1/contrib/ovmrtg/installov.pl
+mrtg-2.15.1/contrib/ovmrtg/cfgmakerov
+mrtg-2.15.1/contrib/ovmrtg/oveval.txt
+mrtg-2.15.1/contrib/ovmrtg/README
+mrtg-2.15.1/contrib/ovmrtg/ovupdate
+mrtg-2.15.1/contrib/ovmrtg/newrtrov.txt
+mrtg-2.15.1/contrib/ovmrtg/index
+mrtg-2.15.1/contrib/ovmrtg/installov.cmds
+mrtg-2.15.1/contrib/ovmrtg/ovcullfile
+mrtg-2.15.1/contrib/ovmrtg/ovtgts
+mrtg-2.15.1/contrib/ovmrtg/ovsysnms
+mrtg-2.15.1/contrib/ovmrtg/buildrtov
+mrtg-2.15.1/contrib/ovmrtg/ovcols
+mrtg-2.15.1/contrib/ovmrtg/buildht
+mrtg-2.15.1/contrib/ovmrtg/ovin
+mrtg-2.15.1/contrib/ipchainacc/
+mrtg-2.15.1/contrib/ipchainacc/README
+mrtg-2.15.1/contrib/ipchainacc/ipchainacc
+mrtg-2.15.1/contrib/cisco_BPX_MGX/
+mrtg-2.15.1/contrib/cisco_BPX_MGX/howto.html
+mrtg-2.15.1/contrib/procmem/
+mrtg-2.15.1/contrib/procmem/getmem.pl
+mrtg-2.15.1/contrib/procmem/getproc.pl
+mrtg-2.15.1/contrib/procmem/README
+mrtg-2.15.1/contrib/procmem/create-cfg-mem.pl
+mrtg-2.15.1/contrib/procmem/create-cfg-proc.pl
+mrtg-2.15.1/contrib/mrtg-blast/
+mrtg-2.15.1/contrib/mrtg-blast/mrtg-blast.cfg
+mrtg-2.15.1/contrib/mrtg-blast/tcpblast.c
+mrtg-2.15.1/contrib/mrtg-blast/README
+mrtg-2.15.1/contrib/mrtg-blast/COPYRIGHT
+mrtg-2.15.1/contrib/mrtg-blast/INSTALL
+mrtg-2.15.1/contrib/mrtg-blast/COPYING
+mrtg-2.15.1/contrib/mrtg-blast/mrtg-blast
+mrtg-2.15.1/contrib/whodo/
+mrtg-2.15.1/contrib/whodo/summarise.pl
+mrtg-2.15.1/contrib/whodo/sources
+mrtg-2.15.1/contrib/whodo/collect.pl
+mrtg-2.15.1/contrib/whodo/sources.cfg
+mrtg-2.15.1/contrib/whodo/makeanalyse.pl
+mrtg-2.15.1/contrib/whodo/README
+mrtg-2.15.1/contrib/whodo/networks
+mrtg-2.15.1/contrib/whodo/wwwscripts/
+mrtg-2.15.1/contrib/whodo/wwwscripts/analyse.pl
+mrtg-2.15.1/contrib/whodo/wwwscripts/pie.pl
+mrtg-2.15.1/contrib/whodo/GIFgraph/
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph.pm
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/legend.pm
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/t/
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/t/linespoints.t
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/t/bars.t
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/t/colour.t
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/t/legend.t
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/t/area.t
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/t/pie.t
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/t/ff.pl
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/t/lines.t
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/t/points.t
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/t/colour_rgb.txt
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/area.pm
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/samples/
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/samples/sample42.dat
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/samples/Makefile
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/samples/sample15.pl
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/samples/sample51.pl
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/samples/sample21.htm
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/samples/sample51.htm
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/samples/sample54.htm
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/samples/sample31.htm
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/samples/sample41.htm
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/samples/sample54.pl
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/samples/sample52.htm
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/samples/sample13.htm
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/samples/sample12.htm
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/samples/sample92.htm
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/samples/sample12.pl
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/samples/sample13.pl
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/samples/sample15.htm
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/samples/logo.gif
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/samples/sample91.htm
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/samples/sample93.pl
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/samples/sample62.pl
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/samples/sample94.pl
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/samples/sample42.htm
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/samples/rgb.txt
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/samples/sample16.htm
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/samples/sample14.htm
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/samples/sample52.pl
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/samples/sample54.dat
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/samples/sample53.pl
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/samples/sample11.htm
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/samples/sample53.htm
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/samples/sample91.pl
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/samples/sample93.htm
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/samples/sample21.pl
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/samples/sample42.pl
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/samples/sample31.pl
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/samples/sample61.pl
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/samples/sample62.htm
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/samples/index.htm
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/samples/sample14.pl
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/samples/sample41.pl
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/samples/sample11.pl
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/samples/sample16.pl
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/samples/sample61.htm
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/samples/sample92.pl
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/WithMap.pm
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/pie.pm
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/lines.pm
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/utils.pm
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/points.pm
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/axestype.pm
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/mixed.pm
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/colour.pm
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/linespoints.pm
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/bars.pm
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/EvenlySpaced.pm
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/install/
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/install/Makefile.PL
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/install/README
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/install/MANIFEST
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/install/BUGS
+mrtg-2.15.1/contrib/whodo/GIFgraph/GIFgraph/install/CHANGES
+mrtg-2.15.1/contrib/ipfilter/
+mrtg-2.15.1/contrib/ipfilter/fw.pl
+mrtg-2.15.1/contrib/ipfilter/ip-filter.readme
+mrtg-2.15.1/doc/cfgmaker.1
+mrtg-2.15.1/doc/cfgmaker.pod
+mrtg-2.15.1/doc/cfgmaker.txt
+mrtg-2.15.1/doc/mrtg-contrib.1
+mrtg-2.15.1/doc/mrtg-contrib.pod
+mrtg-2.15.1/doc/mrtg-contrib.txt
+mrtg-2.15.1/doc/mrtg-faq.1
+mrtg-2.15.1/doc/mrtg-faq.pod
+mrtg-2.15.1/doc/mrtg-faq.txt
+mrtg-2.15.1/doc/mrtg-forum.1
+mrtg-2.15.1/doc/mrtg-forum.pod
+mrtg-2.15.1/doc/mrtg-forum.txt
+mrtg-2.15.1/doc/mrtg-ipv6.pod
+mrtg-2.15.1/doc/mrtg-ipv6.1
+mrtg-2.15.1/doc/mrtg-ipv6.txt
+mrtg-2.15.1/doc/indexmaker.1
+mrtg-2.15.1/doc/indexmaker.pod
+mrtg-2.15.1/doc/indexmaker.txt
+mrtg-2.15.1/doc/mrtg-logfile.1
+mrtg-2.15.1/doc/mrtg-logfile.pod
+mrtg-2.15.1/doc/mrtg-logfile.txt
+mrtg-2.15.1/doc/mrtg-mibhelp.1
+mrtg-2.15.1/doc/mrtg-mibhelp.pod
+mrtg-2.15.1/doc/mrtg-mibhelp.txt
+mrtg-2.15.1/doc/mrtg-l.png
+mrtg-2.15.1/doc/mrtg-m.png
+mrtg-2.15.1/doc/mrtg-r.png
+mrtg-2.15.1/doc/mrtg-r.gif
+mrtg-2.15.1/doc/mrtg-l.gif
+mrtg-2.15.1/doc/mrtg-m.gif
+mrtg-2.15.1/doc/mrtg-rrd.1
+mrtg-2.15.1/doc/mrtg-rrd.pod
+mrtg-2.15.1/doc/mrtg-rrd.txt
+mrtg-2.15.1/doc/mrtg-ti.png
+mrtg-2.15.1/doc/mrtglib.pod
+mrtg-2.15.1/doc/mrtglib.1
+mrtg-2.15.1/doc/mrtglib.txt
+mrtg-2.15.1/doc/mrtg-nt-guide.1
+mrtg-2.15.1/doc/mrtg-nt-guide.pod
+mrtg-2.15.1/doc/mrtg-nt-guide.txt
+mrtg-2.15.1/doc/mrtg-nw-guide.1
+mrtg-2.15.1/doc/mrtg-nw-guide.pod
+mrtg-2.15.1/doc/mrtg-nw-guide.txt
+mrtg-2.15.1/doc/mrtg-reference.1
+mrtg-2.15.1/doc/mrtg-reference.pod
+mrtg-2.15.1/doc/mrtg-reference.txt
+mrtg-2.15.1/doc/mrtg-squid.1
+mrtg-2.15.1/doc/mrtg-squid.pod
+mrtg-2.15.1/doc/mrtg-squid.txt
+mrtg-2.15.1/doc/mrtg-unix-guide.1
+mrtg-2.15.1/doc/mrtg-unix-guide.pod
+mrtg-2.15.1/doc/mrtg-unix-guide.txt
+mrtg-2.15.1/doc/mrtg-webserver.1
+mrtg-2.15.1/doc/mrtg-webserver.pod
+mrtg-2.15.1/doc/mrtg-webserver.txt
+mrtg-2.15.1/doc/mrtg.1
+mrtg-2.15.1/doc/mrtg.pod
+mrtg-2.15.1/doc/mrtg.txt
+checking for gcc... gcc
+checking for C compiler default output file name... a.out
+checking whether the C compiler works... yes
+checking whether we are cross compiling... no
+checking for suffix of executables... 
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ANSI C... none needed
+checking how to run the C preprocessor... gcc -E
+checking whether make sets $(MAKE)... yes
+checking for a BSD-compatible install... /usr/bin/ginstall -c
+checking for perl... /usr/bin/perl
+checking for groff... /usr/bin/groff
+checking for egrep... grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for inttypes.h... (cached) yes
+checking for unsigned long long... yes
+checking for long long... yes
+checking for strtoll... yes
+checking for printf long long format specifier... %lld
+checking for pow in -lm... yes
+checking for gdImageGif in -lgd... yes
+checking for gdImagePng in -lgd... yes
+checking for gdImagePng_jpg in -lgd... no
+checking for gdImagePng_jpg_ft in -lgd... no
+checking for gdImageGd in -lgd... yes
+checking gd.h usability... yes
+checking gd.h presence... yes
+checking for gd.h... yes
+checking the weather... (cached) it's fine
+checking if we can use GCC-specific compiler options... yes
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating config.h
+ordering CD from http://people.ee.ethz.ch/~oetiker/wish .... just kidding ;-)
+
+----------------------------------------------------------------
+Config is DONE!
+
+Type 'make' to compile the software
+
+       ... that wishlist mentioned above does really exist. So if
+you feel like showing your appreciation for MRTG, this is the
+place to go. I just love CDs and DVDs
+
+                            -- Tobi Oetiker <oetiker@ee.ethz.ch>
+----------------------------------------------------------------
+gcc -I/usr/local/gd-2.0.34 -I/usr/local/gd-2.0.34/include -DGFORM_GD=gdImagePng -g -O2 -Wall -Wpointer-arith -Wcast-align -Wmissing-declarations -Wnested-externs -Winline -W -DHAVE_CONFIG_H -c ./src/rateup.c -o bin/rateup.o
+LD_RUN_PATH=/usr/local/gd-2.0.34/lib:/usr/local/gd-2.0.34 gcc bin/rateup.o -o bin/rateup -L/usr/local/gd-2.0.34 -L/usr/local/gd-2.0.34/lib  -Wl,-Bstatic -lgd -lpng -lz -Wl,-Bdynamic  -lm 
+/usr/bin/perl -0777 -p -i~ -e "s'^#!\s*/\S*perl'#! /usr/bin/perl'" ./bin/cfgmaker ./bin/indexmaker ./bin/mrtg
+/usr/bin/perl -0777 -p -i~ -e 's@GRAPHFMT="...";@GRAPHFMT="png";@' ./bin/mrtg ./bin/indexmaker
+/usr/bin/perl -0777 -p -i~ -e "s'^#!\s*/\S*perl'#! /usr/bin/perl'" ./bin/cfgmaker ./bin/indexmaker ./bin/mrtg
+/usr/bin/perl -0777 -p -i~ -e 's@GRAPHFMT="...";@GRAPHFMT="png";@' ./bin/mrtg ./bin/indexmaker
+/bin/sh ./mkinstalldirs /usr/local/mrtg-2.15.1/bin
+mkdir /usr/local/mrtg-2.15.1
+mkdir /usr/local/mrtg-2.15.1/bin
+for x in ./bin/mrtg ./bin/cfgmaker ./bin/indexmaker ./bin/mrtg-traffic-sum; do \
+	  /usr/bin/ginstall -c -m 755 $x /usr/local/mrtg-2.15.1/bin; done
+for x in bin/rateup; do \
+	  /usr/bin/ginstall -c -m 755 $x /usr/local/mrtg-2.15.1/bin; done
+/bin/sh ./mkinstalldirs /usr/local/mrtg-2.15.1/lib/mrtg2/Pod
+mkdir /usr/local/mrtg-2.15.1/lib
+mkdir /usr/local/mrtg-2.15.1/lib/mrtg2
+mkdir /usr/local/mrtg-2.15.1/lib/mrtg2/Pod
+for x in ./lib/mrtg2/*.pm; do \
+	  /usr/bin/ginstall -c -m 644 $x /usr/local/mrtg-2.15.1/lib/mrtg2; done
+for x in ./lib/mrtg2/Pod/*.pm; do \
+	  /usr/bin/ginstall -c -m 644 $x /usr/local/mrtg-2.15.1/lib/mrtg2/Pod; done
+/bin/sh ./mkinstalldirs /usr/local/mrtg-2.15.1/share/mrtg2/icons
+mkdir /usr/local/mrtg-2.15.1/share
+mkdir /usr/local/mrtg-2.15.1/share/mrtg2
+mkdir /usr/local/mrtg-2.15.1/share/mrtg2/icons
+for x in ./images/*.gif ./images/*.png; do \
+	  /usr/bin/ginstall -c -m 644 $x /usr/local/mrtg-2.15.1/share/mrtg2/icons; done
+/bin/sh ./mkinstalldirs /usr/local/mrtg-2.15.1/share/doc/mrtg2
+mkdir /usr/local/mrtg-2.15.1/share/doc
+mkdir /usr/local/mrtg-2.15.1/share/doc/mrtg2
+(cd .; for x in COPYING COPYRIGHT README CHANGES THANKS doc/*.pod doc/*.txt doc/*.png; do \
+	  /usr/bin/ginstall -c -m 644 $x /usr/local/mrtg-2.15.1/share/doc/mrtg2; done)
+/bin/sh ./mkinstalldirs /usr/local/mrtg-2.15.1/man/man1
+mkdir /usr/local/mrtg-2.15.1/man
+mkdir /usr/local/mrtg-2.15.1/man/man1
+for x in ./doc/*.1; do \
+	  /usr/bin/ginstall -c -m 644 $x /usr/local/mrtg-2.15.1/man/man1; done
+## configurando cfgmaker ##
+
+## executando o cfgmaker e as statisticas do mrtg ##
+--base: Get Device Info on web_get@localhost:
+SNMP Error:
+no response received
+SNMPv1_Session (remote host: "localhost" [127.0.0.1].161)
+                  community: "web_get"
+                 request ID: -106721384
+                PDU bufsize: 8000 bytes
+                    timeout: 2s
+                    retries: 5
+                    backoff: 1)
+ at /usr/local/mrtg-2.15.1/bin/../lib/mrtg2/SNMP_util.pm line 627
+SNMPWALK Problem for 1.3.6.1.2.1.1 on web_get@localhost::::::v4only
+ at /usr/local/mrtg-2.15.1/bin/cfgmaker line 924
+WARNING: Skipping web_get@localhost: as no info could be retrieved
+
+--base: Writing /usr/local/mrtg-2.15.1/cfg/fwin-opergel.cfg
+ERROR: unable to open config file: /fwin-opergel.cfg
+ERROR: unable to open config file: /fwin-opergel.cfg
+ERROR: unable to open config file: /fwin-opergel.cfg
+## final funcconfmrtg ##
+Final da instalacao: Thu Jun 14 03:36:41 BRT 2007

@@ -1,0 +1,32 @@
+Inicio da instalacao: Tue Apr  3 23:31:36 BRT 2007
+## inicio funcconfsshroot ##
+Inicio da instalacao: Tue Apr  3 23:31:51 BRT 2007
+## inicio funcconfsshroot ##
+ssh: mkdir /root /root/.ssh/: Name or service not known
+ssh: rogerioamd64 >>/root/.ssh/authorized_keys: Name or service not known
+## final funcconfsshroot ##
+##inicio funcconfsquid##
+## declaracao de variaveis
+## criando diretorio de instalacao e copiando arquivos fonte
+ssh: if ! [ -d /root/install ]; then mkdir /root/install;fi: Name or service not known
+:/root/install: No such file or directory
+## instalando squid
+ssh: cd /root/install;tar xvjf .tar.bz2; cd  ; ./configure --prefix=/usr/local/ --with-pthreads --enable-: Name or service not known
+ssh: cd /root/install//helpers/basic_auth/NCSA;make && make install: Name or service not known
+## instalando squidGuard
+ssh: cd /root/install; tar xvzf .tar.gz ; cd  ; ./configure --prefix=/usr/local/ && make && make install: Name or service not known
+##instalando calamaris
+cp: cannot stat `/home/downloads/softwares/calamaris//calamaris': No such file or directory
+## criando links simbolicos
+ssh: ln -s /usr/local/ /usr/local/squid; ln -s /usr/local/ /usr/local/squidGuard: Name or service not known
+## configurando squid
+Bad port '/var/squid/log/squidGuard'
+Bad port '/var/squid/cache'
+Bad port '/var/squid/listas/todos'
+Bad port '/var/squid/listas/blacklist'
+Bad port '/var/squid/listas/rogerio'
+ssh: touch /var/squid/listas/todos/domains && touch /var/squid/listas/todos/urls && touch /var/squid/list: Name or service not known
+ssh: touch /var/squid/listas/blacklist/domains && touch /var/squid/listas/blacklist/urls && touch /var/sq: Name or service not known
+ssh: touch /var/squid/listas/rogerio/domains && touch /var/squid/listas/rogerio/urls && touch /var/squid/: Name or service not known
+ssh: htpasswd -bc /var/squid/listas/.usuarios rogerio clarinhaf && chown -R nobody /var/squid: Name or service not known
+cp: cannot create regular file `:/usr/local//etc/squid.conf': No such file or directory

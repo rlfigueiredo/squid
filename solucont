@@ -1,0 +1,13 @@
+iptables -I INPUT -s 192.168.0.0/24 -p tcp --dport 3128 -j ACCEPT
+
+iptables -t nat -I OUTPUT -s 200.171.45.249 -o eth0 -j ACCEPT
+
+iptables -t nat -I POSTROUTING -s 200.171.45.249 -p tcp --dport 80 -o eth0 -j ACCEPT
+
+iptables -I INPUT -p tcp --sport 80 -j ACCEPT
+
+##regras acesso http
+
+iptables -I INPUT -d 200.171.45.249 -p tcp --dport 80 -j ACCEPT
+
+iptables -t nat -I PREROUTING -d 200.171.45.249 -p tcp --dport 80 -j ACCEPT

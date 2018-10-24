@@ -1,0 +1,32 @@
+# sudoers file.
+#
+# This file MUST be edited with the 'visudo' command as root.
+#
+# See the sudoers man page for the details on how to write a sudoers file.
+#
+
+# Host alias specification
+
+# User alias specification
+
+# Cmnd alias specification
+
+# Defaults specification
+
+# Runas alias specification
+
+# User privilege specification
+root	ALL=(ALL) ALL
+admroot	ALL=(ALL) ALL
+nobody ALL=NOPASSWD: /usr/sbin/iptables -t nat -I PREROUTING -p tcp --dport 3000 -j ACCEPT, /usr/sbin/iptables -I INPUT -p tcp --dport 3000 -j ACCEPT, /usr/sbin/iptables -L -n -v --line-numbers, /etc/rc.d/rc.firewall
+solutionhttp ALL=NOPASSWD: /usr/sbin/iptables -t nat -I PREROUTING -p tcp --dport 3000 -j ACCEPT, /usr/sbin/iptables -I INPUT -p tcp --dport 3000 -j ACCEPT, /usr/sbin/iptables -L -n -v --line-numbers, /etc/rc.d/rc.firewall
+
+# Uncomment to allow people in group wheel to run all commands
+# %wheel	ALL=(ALL)	ALL
+
+# Same thing without a password
+# %wheel	ALL=(ALL)	NOPASSWD: ALL
+
+# Samples
+# %users  ALL=/sbin/mount /cdrom,/sbin/umount /cdrom
+# %users  localhost=/sbin/shutdown -h now

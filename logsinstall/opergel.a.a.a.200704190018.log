@@ -1,0 +1,610 @@
+Inicio da instalacao: Thu Apr 19 00:18:20 BRT 2007
+## inicio funcconfgd ##
+## declarando variavies ##
+## criando diretorio de instalacao e copiando arquivos fonte
+## instalando libgd ##
+cd /root/install;tar xvjf gd-2.0.34.tar.bz2; cd gd-2.0.34 ; ./configure --prefix=/usr/local/gd-2.0.34 && make && make install
+Last login: Wed Apr 18 11:17:53 2007 from 192.168.100.12
+Linux 2.6.20.4.
+root@fwin-opipari:~# cd /root/install;tar xvjf gd-2.0.34.tar.bz2; cd gd-2.0.34 ;  ./configure --prefix=/usr/local/gd-2.0.34 && make && make install
+gd-2.0.34/config/Makefile.am
+gd-2.0.34/config/Makefile.in
+gd-2.0.34/config/gdlib-config.in
+gd-2.0.34/config/config.guess
+gd-2.0.34/config/config.rpath
+gd-2.0.34/config/config.sub
+gd-2.0.34/config/depcomp
+gd-2.0.34/config/install-sh
+gd-2.0.34/config/ltmain.sh
+gd-2.0.34/config/missing
+gd-2.0.34/config/mkinstalldirs
+gd-2.0.34/configure.ac
+gd-2.0.34/aclocal.m4
+gd-2.0.34/gd.h
+gd-2.0.34/gdfx.h
+gd-2.0.34/gd_io.h
+gd-2.0.34/gdcache.h
+gd-2.0.34/gdfontg.h
+gd-2.0.34/gdfontl.h
+gd-2.0.34/gdfontmb.h
+gd-2.0.34/gdfonts.h
+gd-2.0.34/gdfontt.h
+gd-2.0.34/entities.h
+gd-2.0.34/Makefile.am
+gd-2.0.34/Makefile.in
+gd-2.0.34/config.hin
+gd-2.0.34/configure
+gd-2.0.34/COPYING
+gd-2.0.34/INSTALL
+gd-2.0.34/depcomp
+gd-2.0.34/install-sh
+gd-2.0.34/missing
+gd-2.0.34/mkinstalldirs
+gd-2.0.34/gd.c
+gd-2.0.34/gdfx.c
+gd-2.0.34/gd_security.c
+gd-2.0.34/gd_gd.c
+gd-2.0.34/gd_gd2.c
+gd-2.0.34/gd_io.c
+gd-2.0.34/gd_io_dp.c
+gd-2.0.34/gd_gif_in.c
+gd-2.0.34/gd_gif_out.c
+gd-2.0.34/gd_io_file.c
+gd-2.0.34/gd_io_ss.c
+gd-2.0.34/gd_jpeg.c
+gd-2.0.34/gd_png.c
+gd-2.0.34/gd_ss.c
+gd-2.0.34/gd_topal.c
+gd-2.0.34/gd_wbmp.c
+gd-2.0.34/gdcache.c
+gd-2.0.34/gdfontg.c
+gd-2.0.34/gdfontl.c
+gd-2.0.34/gdfontmb.c
+gd-2.0.34/gdfonts.c
+gd-2.0.34/gdfontt.c
+gd-2.0.34/gdft.c
+gd-2.0.34/gdhelpers.c
+gd-2.0.34/gdhelpers.h
+gd-2.0.34/gdkanji.c
+gd-2.0.34/gdtables.c
+gd-2.0.34/gdxpm.c
+gd-2.0.34/jisx0208.h
+gd-2.0.34/wbmp.c
+gd-2.0.34/wbmp.h
+gd-2.0.34/annotate.c
+gd-2.0.34/circletexttest.c
+gd-2.0.34/fontconfigtest.c
+gd-2.0.34/fontsizetest.c
+gd-2.0.34/fontwheeltest.c
+gd-2.0.34/gd2copypal.c
+gd-2.0.34/gd2time.c
+gd-2.0.34/gd2togif.c
+gd-2.0.34/gd2topng.c
+gd-2.0.34/gdcmpgif.c
+gd-2.0.34/gddemo.c
+gd-2.0.34/gdparttopng.c
+gd-2.0.34/gdtest.c
+gd-2.0.34/gdtestft.c
+gd-2.0.34/gdtopng.c
+gd-2.0.34/gifanimtest.c
+gd-2.0.34/giftogd2.c
+gd-2.0.34/pngtogd.c
+gd-2.0.34/pngtogd2.c
+gd-2.0.34/testac.c
+gd-2.0.34/testtr.c
+gd-2.0.34/webpng.c
+gd-2.0.34/README-JPEG.TXT
+gd-2.0.34/README.TXT
+gd-2.0.34/bdftogd
+gd-2.0.34/demoin.png
+gd-2.0.34/err.out
+gd-2.0.34/index.html
+gd-2.0.34/install-item
+gd-2.0.34/readme.jpn
+gd-2.0.34/entities.html
+gd-2.0.34/entities.tcl
+gd-2.0.34/test/Makefile.am
+gd-2.0.34/test/Makefile.in
+gd-2.0.34/test/gdtest.gd2
+gd-2.0.34/test/gdtest.png
+gd-2.0.34/test/gdtest_200_300_150_100.png
+gd-2.0.34/test/gdtest_merge.png
+gd-2.0.34/test/gdtest_wbmp_to_png.png
+gd-2.0.34/NEWS
+gd-2.0.34/README.TESTING
+gd-2.0.34/CMakeLists.txt
+gd-2.0.34/config.h.cmake
+gd-2.0.34/tests/gdimagecopyrotated/bug00020_exp.png
+gd-2.0.34/tests/gdimagecopyrotated/CMakeLists.txt
+gd-2.0.34/tests/gdimagecopyrotated/bug00020.c
+gd-2.0.34/tests/gdimagecolorresolve/CMakeLists.txt
+gd-2.0.34/tests/gdimagecolorresolve/gdimagecolorresolve.c
+gd-2.0.34/tests/gdimagefilledellipse/CMakeLists.txt
+gd-2.0.34/tests/gdimagefilledellipse/bug00010.c
+gd-2.0.34/tests/gdimagefilledellipse/bug00010_exp.png
+gd-2.0.34/tests/gdtest/gdtest.h
+gd-2.0.34/tests/gdtest/CMakeLists.txt
+gd-2.0.34/tests/gdtest/gdtest.c
+gd-2.0.34/tests/gdimagefilledrectangle/CMakeLists.txt
+gd-2.0.34/tests/gdimagefilledrectangle/bug00004.c
+gd-2.0.34/tests/png/emptyfile
+gd-2.0.34/tests/png/bug00011.c
+gd-2.0.34/tests/png/CMakeLists.txt
+gd-2.0.34/tests/png/bug00033.png
+gd-2.0.34/tests/png/bug00033.c
+gd-2.0.34/tests/gdimagecolorexact/gdimagecolorexact.c
+gd-2.0.34/tests/gdimagecolorexact/CMakeLists.txt
+gd-2.0.34/tests/gd2/gd2_empty_file.c
+gd-2.0.34/tests/gd2/conv_gd2_exp.gd2
+gd-2.0.34/tests/gd2/empty.gd2
+gd-2.0.34/tests/gd2/CMakeLists.txt
+gd-2.0.34/tests/gd2/gd2_read.c
+gd-2.0.34/tests/gd2/conv_test.gd2
+gd-2.0.34/tests/gd2/conv_test_exp.png
+gd-2.0.34/tests/gdimageline/gdimageline_aa_b_0_exp.png
+gd-2.0.34/tests/gdimageline/gdimageline_aa_a_1_exp.png
+gd-2.0.34/tests/gdimageline/gdimageline_aa_b_1_exp.png
+gd-2.0.34/tests/gdimageline/gdimageline_aa_c_0_exp.png
+gd-2.0.34/tests/gdimageline/gdimageline_aa.c
+gd-2.0.34/tests/gdimageline/gdimageline_aa_d_1_exp.png
+gd-2.0.34/tests/gdimageline/CMakeLists.txt
+gd-2.0.34/tests/gdimageline/gdimageline_aa_d_0_exp.png
+gd-2.0.34/tests/gdimageline/gdimageline_aa_c_1_exp.png
+gd-2.0.34/tests/gdimageline/gdimageline_aa_outofrange.c
+gd-2.0.34/tests/gdimageline/gdimageline_aa_a_0_exp.png
+gd-2.0.34/tests/CMakeLists.txt
+gd-2.0.34/tests/gdimagecopy/CMakeLists.txt
+gd-2.0.34/tests/gdimagecopy/bug00007.c
+gd-2.0.34/tests/gdtiled/bug00032_exp.png
+gd-2.0.34/tests/gdtiled/CMakeLists.txt
+gd-2.0.34/tests/gdtiled/bug00032.c
+gd-2.0.34/tests/gif/bug00005_2.gif
+gd-2.0.34/tests/gif/bug00005_2_exp.png
+gd-2.0.34/tests/gif/bug00005.c
+gd-2.0.34/tests/gif/bug00005_3.gif
+gd-2.0.34/tests/gif/CMakeLists.txt
+gd-2.0.34/tests/gif/bug00005_1.gif
+gd-2.0.34/tests/gif/bug00006.c
+gd-2.0.34/tests/gif/bug00005_0.gif
+gd-2.0.34/tests/gif/bug00005_2.c
+gd-2.0.34/tests/gdimagefilltoborder/bug00037.c
+gd-2.0.34/tests/gdimagefilltoborder/CMakeLists.txt
+gd-2.0.34/tests/jpeg/CMakeLists.txt
+gd-2.0.34/tests/jpeg/empty.jpeg
+gd-2.0.34/tests/jpeg/jpeg_empty_file.c
+gd-2.0.34/tests/jpeg/jpeg_read.c
+gd-2.0.34/tests/jpeg/conv_test_exp.png
+gd-2.0.34/tests/jpeg/conv_test.jpeg
+gd-2.0.34/tests/gdimagecolorclosest/CMakeLists.txt
+gd-2.0.34/tests/gdimagecolorclosest/gdimagecolorclosest.c
+gd-2.0.34/tests/gdimagefill/bug00002_2.c
+gd-2.0.34/tests/gdimagefill/bug00002_4_exp.png
+gd-2.0.34/tests/gdimagefill/bug00002_1_exp.png
+gd-2.0.34/tests/gdimagefill/bug00002_1.c
+gd-2.0.34/tests/gdimagefill/bug00002_3.c
+gd-2.0.34/tests/gdimagefill/CMakeLists.txt
+gd-2.0.34/tests/gdimagefill/bug00002_3_exp.png
+gd-2.0.34/tests/gdimagefill/bug00002_2_exp.png
+gd-2.0.34/tests/gdimagefill/bug00002_4.c
+gd-2.0.34/tests/gdimagerectangle/CMakeLists.txt
+gd-2.0.34/tests/gdimagerectangle/bug00003.c
+gd-2.0.34/windows/libgd.rc
+gd-2.0.34/windows/Makefile
+checking build system type... i686-pc-linux-gnu
+checking host system type... i686-pc-linux-gnu
+checking target system type... i686-pc-linux-gnu
+checking for a BSD-compatible install... /usr/bin/ginstall -c
+checking whether build environment is sane... yes
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking if we are building a Cygwin target... no
+checking for gcc... gcc
+checking for C compiler default output file name... a.out
+checking whether the C compiler works... yes
+checking whether we are cross compiling... no
+checking for suffix of executables... 
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking for style of include used by make... GNU
+checking dependency style of gcc... gcc3
+checking for gcc... (cached) gcc
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether gcc accepts -g... (cached) yes
+checking for gcc option to accept ISO C89... (cached) none needed
+checking dependency style of gcc... (cached) gcc3
+checking for a BSD-compatible install... /usr/bin/ginstall -c
+checking for a sed that does not truncate output... /usr/bin/sed
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for ld used by gcc... /usr/i486-slackware-linux/bin/ld
+checking if the linker (/usr/i486-slackware-linux/bin/ld) is GNU ld... yes
+checking for /usr/i486-slackware-linux/bin/ld option to reload object files... -r
+checking for BSD-compatible nm... /usr/bin/nm -B
+checking whether ln -s works... yes
+checking how to recognise dependent libraries... pass_all
+checking how to run the C preprocessor... gcc -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking dlfcn.h usability... yes
+checking dlfcn.h presence... yes
+checking for dlfcn.h... yes
+checking for g++... g++
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking dependency style of g++... gcc3
+checking how to run the C++ preprocessor... g++ -E
+checking for g77... g77
+checking whether we are using the GNU Fortran 77 compiler... yes
+checking whether g77 accepts -g... yes
+checking the maximum length of command line arguments... 32768
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for objdir... .libs
+checking for ar... ar
+checking for ranlib... ranlib
+checking for strip... strip
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC
+checking if gcc PIC flag -fPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking whether the gcc linker (/usr/i486-slackware-linux/bin/ld) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+configure: creating libtool
+appending configuration tag "CXX" to libtool
+checking for ld used by g++... /usr/i486-slackware-linux/bin/ld
+checking if the linker (/usr/i486-slackware-linux/bin/ld) is GNU ld... yes
+checking whether the g++ linker (/usr/i486-slackware-linux/bin/ld) supports shared libraries... yes
+checking for g++ option to produce PIC... -fPIC
+checking if g++ PIC flag -fPIC works... yes
+checking if g++ static flag -static works... yes
+checking if g++ supports -c -o file.o... yes
+checking whether the g++ linker (/usr/i486-slackware-linux/bin/ld) supports shared libraries... yes
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+appending configuration tag "F77" to libtool
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking for g77 option to produce PIC... -fPIC
+checking if g77 PIC flag -fPIC works... yes
+checking if g77 static flag -static works... yes
+checking if g77 supports -c -o file.o... yes
+checking whether the g77 linker (/usr/i486-slackware-linux/bin/ld) supports shared libraries... yes
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether ln -s works... yes
+checking whether make sets $(MAKE)... (cached) yes
+checking for X... libraries /usr/X11R6/lib, headers /usr/X11R6/include
+checking for ANSI C header files... (cached) yes
+checking errno.h usability... yes
+checking errno.h presence... yes
+checking for errno.h... yes
+checking limits.h usability... yes
+checking limits.h presence... yes
+checking for limits.h... yes
+checking stddef.h usability... yes
+checking stddef.h presence... yes
+checking for stddef.h... yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for ld used by GCC... /usr/i486-slackware-linux/bin/ld
+checking if the linker (/usr/i486-slackware-linux/bin/ld) is GNU ld... yes
+checking for shared library run path origin... done
+checking for iconv... yes
+checking for iconv declaration... 
+         extern size_t iconv (iconv_t cd, char * *inbuf, size_t *inbytesleft, char * *outbuf, size_t *outbytesleft);
+checking iconv.h usability... yes
+checking iconv.h presence... yes
+checking for iconv.h... yes
+checking whether iconv.h defines iconv_t... yes
+checking for sin... no
+checking for sin in -lm... yes
+checking for deflate in -lz... yes
+checking for libpng12-config... /usr/bin/libpng12-config
+checking for libpng-config... /usr/bin/libpng-config
+checking png.h usability... yes
+checking png.h presence... yes
+checking for png.h... yes
+checking for png_create_read_struct in -lpng12... yes
+checking for freetype-config... /usr/bin/freetype-config
+checking for FT_Init_FreeType in -lfreetype... yes
+checking ft2build.h usability... yes
+checking ft2build.h presence... yes
+checking for ft2build.h... yes
+checking for FcInit in -lfontconfig... yes
+checking for jpeg_set_defaults in -ljpeg... yes
+checking for XpmReadFileToXpmImage in -lXpm... yes
+checking for the pthreads library -lpthreads... no
+checking whether pthreads work without any flags... no
+checking whether pthreads work with -Kthread... no
+checking whether pthreads work with -kthread... no
+checking for the pthreads library -llthread... no
+checking whether pthreads work with -pthread... yes
+checking for joinable pthread attribute... PTHREAD_CREATE_JOINABLE
+checking if more special flags are required for pthreads... no
+
+** Configuration summary for gd 2.0.34:
+
+   Support for PNG library:          yes
+   Support for JPEG library:         yes
+   Support for Freetype 2.x library: yes
+   Support for Fontconfig library:   yes
+   Support for Xpm library:          yes
+   Support for pthreads:             yes
+
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating config/Makefile
+config.status: creating config/gdlib-config
+config.status: creating test/Makefile
+config.status: creating config.h
+config.status: config.h is unchanged
+config.status: executing depfiles commands
+cd . && /bin/sh /root/install/gd-2.0.34/config/missing --run autoheader
+rm -f stamp-h1
+touch config.hin
+cd . && /bin/sh ./config.status config.h
+config.status: creating config.h
+config.status: config.h is unchanged
+make  all-recursive
+make[1]: Entering directory `/root/install/gd-2.0.34'
+Making all in config
+make[2]: Entering directory `/root/install/gd-2.0.34/config'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/root/install/gd-2.0.34/config'
+Making all in test
+make[2]: Entering directory `/root/install/gd-2.0.34/test'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/root/install/gd-2.0.34/test'
+make[2]: Entering directory `/root/install/gd-2.0.34'
+if /bin/sh ./libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/freetype2  -I/usr/X11R6/include  -g -O2 -MT gdft.lo -MD -MP -MF ".deps/gdft.Tpo" -c -o gdft.lo gdft.c; \
+	then mv -f ".deps/gdft.Tpo" ".deps/gdft.Plo"; else rm -f ".deps/gdft.Tpo"; exit 1; fi
+ gcc -DHAVE_CONFIG_H -I. -I. -I. -I/usr/include/freetype2 -I/usr/X11R6/include -g -O2 -MT gdft.lo -MD -MP -MF .deps/gdft.Tpo -c gdft.c  -fPIC -DPIC -o .libs/gdft.o
+ gcc -DHAVE_CONFIG_H -I. -I. -I. -I/usr/include/freetype2 -I/usr/X11R6/include -g -O2 -MT gdft.lo -MD -MP -MF .deps/gdft.Tpo -c gdft.c -o gdft.o >/dev/null 2>&1
+if /bin/sh ./libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/freetype2  -I/usr/X11R6/include  -g -O2 -MT gdhelpers.lo -MD -MP -MF ".deps/gdhelpers.Tpo" -c -o gdhelpers.lo gdhelpers.c; \
+	then mv -f ".deps/gdhelpers.Tpo" ".deps/gdhelpers.Plo"; else rm -f ".deps/gdhelpers.Tpo"; exit 1; fi
+ gcc -DHAVE_CONFIG_H -I. -I. -I. -I/usr/include/freetype2 -I/usr/X11R6/include -g -O2 -MT gdhelpers.lo -MD -MP -MF .deps/gdhelpers.Tpo -c gdhelpers.c  -fPIC -DPIC -o .libs/gdhelpers.o
+ gcc -DHAVE_CONFIG_H -I. -I. -I. -I/usr/include/freetype2 -I/usr/X11R6/include -g -O2 -MT gdhelpers.lo -MD -MP -MF .deps/gdhelpers.Tpo -c gdhelpers.c -o gdhelpers.o >/dev/null 2>&1
+if /bin/sh ./libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/freetype2  -I/usr/X11R6/include  -g -O2 -MT gdkanji.lo -MD -MP -MF ".deps/gdkanji.Tpo" -c -o gdkanji.lo gdkanji.c; \
+	then mv -f ".deps/gdkanji.Tpo" ".deps/gdkanji.Plo"; else rm -f ".deps/gdkanji.Tpo"; exit 1; fi
+ gcc -DHAVE_CONFIG_H -I. -I. -I. -I/usr/include/freetype2 -I/usr/X11R6/include -g -O2 -MT gdkanji.lo -MD -MP -MF .deps/gdkanji.Tpo -c gdkanji.c  -fPIC -DPIC -o .libs/gdkanji.o
+ gcc -DHAVE_CONFIG_H -I. -I. -I. -I/usr/include/freetype2 -I/usr/X11R6/include -g -O2 -MT gdkanji.lo -MD -MP -MF .deps/gdkanji.Tpo -c gdkanji.c -o gdkanji.o >/dev/null 2>&1
+if /bin/sh ./libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/freetype2  -I/usr/X11R6/include  -g -O2 -MT gdtables.lo -MD -MP -MF ".deps/gdtables.Tpo" -c -o gdtables.lo gdtables.c; \
+	then mv -f ".deps/gdtables.Tpo" ".deps/gdtables.Plo"; else rm -f ".deps/gdtables.Tpo"; exit 1; fi
+ gcc -DHAVE_CONFIG_H -I. -I. -I. -I/usr/include/freetype2 -I/usr/X11R6/include -g -O2 -MT gdtables.lo -MD -MP -MF .deps/gdtables.Tpo -c gdtables.c  -fPIC -DPIC -o .libs/gdtables.o
+ gcc -DHAVE_CONFIG_H -I. -I. -I. -I/usr/include/freetype2 -I/usr/X11R6/include -g -O2 -MT gdtables.lo -MD -MP -MF .deps/gdtables.Tpo -c gdtables.c -o gdtables.o >/dev/null 2>&1
+if /bin/sh ./libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/freetype2  -I/usr/X11R6/include  -g -O2 -MT gdxpm.lo -MD -MP -MF ".deps/gdxpm.Tpo" -c -o gdxpm.lo gdxpm.c; \
+	then mv -f ".deps/gdxpm.Tpo" ".deps/gdxpm.Plo"; else rm -f ".deps/gdxpm.Tpo"; exit 1; fi
+ gcc -DHAVE_CONFIG_H -I. -I. -I. -I/usr/include/freetype2 -I/usr/X11R6/include -g -O2 -MT gdxpm.lo -MD -MP -MF .deps/gdxpm.Tpo -c gdxpm.c  -fPIC -DPIC -o .libs/gdxpm.o
+ gcc -DHAVE_CONFIG_H -I. -I. -I. -I/usr/include/freetype2 -I/usr/X11R6/include -g -O2 -MT gdxpm.lo -MD -MP -MF .deps/gdxpm.Tpo -c gdxpm.c -o gdxpm.o >/dev/null 2>&1
+if /bin/sh ./libtool --tag=CC --mode=compile gcc -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/freetype2  -I/usr/X11R6/include  -g -O2 -MT wbmp.lo -MD -MP -MF ".deps/wbmp.Tpo" -c -o wbmp.lo wbmp.c; \
+	then mv -f ".deps/wbmp.Tpo" ".deps/wbmp.Plo"; else rm -f ".deps/wbmp.Tpo"; exit 1; fi
+ gcc -DHAVE_CONFIG_H -I. -I. -I. -I/usr/include/freetype2 -I/usr/X11R6/include -g -O2 -MT wbmp.lo -MD -MP -MF .deps/wbmp.Tpo -c wbmp.c  -fPIC -DPIC -o .libs/wbmp.o
+ gcc -DHAVE_CONFIG_H -I. -I. -I. -I/usr/include/freetype2 -I/usr/X11R6/include -g -O2 -MT wbmp.lo -MD -MP -MF .deps/wbmp.Tpo -c wbmp.c -o wbmp.o >/dev/null 2>&1
+/bin/sh ./libtool --tag=CC --mode=link gcc  -g -O2  -L/usr/lib  -L/usr/X11R6/lib -o libgd.la -rpath /usr/local/gd-2.0.34/lib -version-info 2:0:0  gd.lo gdfx.lo gd_security.lo gd_gd.lo gd_gd2.lo gd_io.lo gd_io_dp.lo gd_gif_in.lo gd_gif_out.lo gd_io_file.lo gd_io_ss.lo gd_jpeg.lo gd_png.lo gd_ss.lo gd_topal.lo gd_wbmp.lo gdcache.lo gdfontg.lo gdfontl.lo gdfontmb.lo gdfonts.lo gdfontt.lo gdft.lo gdhelpers.lo gdkanji.lo gdtables.lo gdxpm.lo wbmp.lo  -lXpm -lX11 -ljpeg -lfontconfig -lfreetype -lpng12 -lz -lm 
+gcc -shared  .libs/gd.o .libs/gdfx.o .libs/gd_security.o .libs/gd_gd.o .libs/gd_gd2.o .libs/gd_io.o .libs/gd_io_dp.o .libs/gd_gif_in.o .libs/gd_gif_out.o .libs/gd_io_file.o .libs/gd_io_ss.o .libs/gd_jpeg.o .libs/gd_png.o .libs/gd_ss.o .libs/gd_topal.o .libs/gd_wbmp.o .libs/gdcache.o .libs/gdfontg.o .libs/gdfontl.o .libs/gdfontmb.o .libs/gdfonts.o .libs/gdfontt.o .libs/gdft.o .libs/gdhelpers.o .libs/gdkanji.o .libs/gdtables.o .libs/gdxpm.o .libs/wbmp.o  -L/usr/lib -L/usr/X11R6/lib -lXpm -lX11 -ljpeg /usr/X11R6/lib/libfontconfig.so /usr/lib/libfreetype.so -lpng12 -lz -lm  -Wl,-soname -Wl,libgd.so.2 -o .libs/libgd.so.2.0.0
+(cd .libs && rm -f libgd.so.2 && ln -s libgd.so.2.0.0 libgd.so.2)
+(cd .libs && rm -f libgd.so && ln -s libgd.so.2.0.0 libgd.so)
+ar cru .libs/libgd.a  gd.o gdfx.o gd_security.o gd_gd.o gd_gd2.o gd_io.o gd_io_dp.o gd_gif_in.o gd_gif_out.o gd_io_file.o gd_io_ss.o gd_jpeg.o gd_png.o gd_ss.o gd_topal.o gd_wbmp.o gdcache.o gdfontg.o gdfontl.o gdfontmb.o gdfonts.o gdfontt.o gdft.o gdhelpers.o gdkanji.o gdtables.o gdxpm.o wbmp.o
+ranlib .libs/libgd.a
+creating libgd.la
+(cd .libs && rm -f libgd.la && ln -s ../libgd.la libgd.la)
+if gcc -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/freetype2  -I/usr/X11R6/include  -g -O2 -MT annotate.o -MD -MP -MF ".deps/annotate.Tpo" -c -o annotate.o annotate.c; \
+	then mv -f ".deps/annotate.Tpo" ".deps/annotate.Po"; else rm -f ".deps/annotate.Tpo"; exit 1; fi
+/bin/sh ./libtool --tag=CC --mode=link gcc  -g -O2  -L/usr/lib  -L/usr/X11R6/lib -o annotate  annotate.o ./libgd.la  -lXpm -lX11 -ljpeg -lfontconfig -lfreetype -lpng12 -lz -lm 
+gcc -g -O2 -o .libs/annotate annotate.o  -L/usr/lib -L/usr/X11R6/lib ./.libs/libgd.so /usr/X11R6/lib/libfontconfig.so /usr/lib/libfreetype.so -lXpm -lX11 -ljpeg -lpng12 -lm -lz -Wl,--rpath -Wl,/usr/local/gd-2.0.34/lib
+creating annotate
+if gcc -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/freetype2  -I/usr/X11R6/include  -g -O2 -MT gdparttopng.o -MD -MP -MF ".deps/gdparttopng.Tpo" -c -o gdparttopng.o gdparttopng.c; \
+	then mv -f ".deps/gdparttopng.Tpo" ".deps/gdparttopng.Po"; else rm -f ".deps/gdparttopng.Tpo"; exit 1; fi
+/bin/sh ./libtool --tag=CC --mode=link gcc  -g -O2  -L/usr/lib  -L/usr/X11R6/lib -o gdparttopng  gdparttopng.o ./libgd.la  -lXpm -lX11 -ljpeg -lfontconfig -lfreetype -lpng12 -lz -lm 
+gcc -g -O2 -o .libs/gdparttopng gdparttopng.o  -L/usr/lib -L/usr/X11R6/lib ./.libs/libgd.so /usr/X11R6/lib/libfontconfig.so /usr/lib/libfreetype.so -lXpm -lX11 -ljpeg -lpng12 -lm -lz -Wl,--rpath -Wl,/usr/local/gd-2.0.34/lib
+creating gdparttopng
+if gcc -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/freetype2  -I/usr/X11R6/include  -g -O2 -MT gdtopng.o -MD -MP -MF ".deps/gdtopng.Tpo" -c -o gdtopng.o gdtopng.c; \
+	then mv -f ".deps/gdtopng.Tpo" ".deps/gdtopng.Po"; else rm -f ".deps/gdtopng.Tpo"; exit 1; fi
+/bin/sh ./libtool --tag=CC --mode=link gcc  -g -O2  -L/usr/lib  -L/usr/X11R6/lib -o gdtopng  gdtopng.o ./libgd.la  -lXpm -lX11 -ljpeg -lfontconfig -lfreetype -lpng12 -lz -lm 
+gcc -g -O2 -o .libs/gdtopng gdtopng.o  -L/usr/lib -L/usr/X11R6/lib ./.libs/libgd.so /usr/X11R6/lib/libfontconfig.so /usr/lib/libfreetype.so -lXpm -lX11 -ljpeg -lpng12 -lm -lz -Wl,--rpath -Wl,/usr/local/gd-2.0.34/lib
+creating gdtopng
+if gcc -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/freetype2  -I/usr/X11R6/include  -g -O2 -MT gd2copypal.o -MD -MP -MF ".deps/gd2copypal.Tpo" -c -o gd2copypal.o gd2copypal.c; \
+	then mv -f ".deps/gd2copypal.Tpo" ".deps/gd2copypal.Po"; else rm -f ".deps/gd2copypal.Tpo"; exit 1; fi
+/bin/sh ./libtool --tag=CC --mode=link gcc  -g -O2  -L/usr/lib  -L/usr/X11R6/lib -o gd2copypal  gd2copypal.o ./libgd.la  -lXpm -lX11 -ljpeg -lfontconfig -lfreetype -lpng12 -lz -lm 
+gcc -g -O2 -o .libs/gd2copypal gd2copypal.o  -L/usr/lib -L/usr/X11R6/lib ./.libs/libgd.so /usr/X11R6/lib/libfontconfig.so /usr/lib/libfreetype.so -lXpm -lX11 -ljpeg -lpng12 -lm -lz -Wl,--rpath -Wl,/usr/local/gd-2.0.34/lib
+creating gd2copypal
+if gcc -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/freetype2  -I/usr/X11R6/include  -g -O2 -MT gd2topng.o -MD -MP -MF ".deps/gd2topng.Tpo" -c -o gd2topng.o gd2topng.c; \
+	then mv -f ".deps/gd2topng.Tpo" ".deps/gd2topng.Po"; else rm -f ".deps/gd2topng.Tpo"; exit 1; fi
+/bin/sh ./libtool --tag=CC --mode=link gcc  -g -O2  -L/usr/lib  -L/usr/X11R6/lib -o gd2topng  gd2topng.o ./libgd.la  -lXpm -lX11 -ljpeg -lfontconfig -lfreetype -lpng12 -lz -lm 
+gcc -g -O2 -o .libs/gd2topng gd2topng.o  -L/usr/lib -L/usr/X11R6/lib ./.libs/libgd.so /usr/X11R6/lib/libfontconfig.so /usr/lib/libfreetype.so -lXpm -lX11 -ljpeg -lpng12 -lm -lz -Wl,--rpath -Wl,/usr/local/gd-2.0.34/lib
+creating gd2topng
+if gcc -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/freetype2  -I/usr/X11R6/include  -g -O2 -MT pngtogd.o -MD -MP -MF ".deps/pngtogd.Tpo" -c -o pngtogd.o pngtogd.c; \
+	then mv -f ".deps/pngtogd.Tpo" ".deps/pngtogd.Po"; else rm -f ".deps/pngtogd.Tpo"; exit 1; fi
+/bin/sh ./libtool --tag=CC --mode=link gcc  -g -O2  -L/usr/lib  -L/usr/X11R6/lib -o pngtogd  pngtogd.o ./libgd.la  -lXpm -lX11 -ljpeg -lfontconfig -lfreetype -lpng12 -lz -lm 
+gcc -g -O2 -o .libs/pngtogd pngtogd.o  -L/usr/lib -L/usr/X11R6/lib ./.libs/libgd.so /usr/X11R6/lib/libfontconfig.so /usr/lib/libfreetype.so -lXpm -lX11 -ljpeg -lpng12 -lm -lz -Wl,--rpath -Wl,/usr/local/gd-2.0.34/lib
+creating pngtogd
+if gcc -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/freetype2  -I/usr/X11R6/include  -g -O2 -MT pngtogd2.o -MD -MP -MF ".deps/pngtogd2.Tpo" -c -o pngtogd2.o pngtogd2.c; \
+	then mv -f ".deps/pngtogd2.Tpo" ".deps/pngtogd2.Po"; else rm -f ".deps/pngtogd2.Tpo"; exit 1; fi
+/bin/sh ./libtool --tag=CC --mode=link gcc  -g -O2  -L/usr/lib  -L/usr/X11R6/lib -o pngtogd2  pngtogd2.o ./libgd.la  -lXpm -lX11 -ljpeg -lfontconfig -lfreetype -lpng12 -lz -lm 
+gcc -g -O2 -o .libs/pngtogd2 pngtogd2.o  -L/usr/lib -L/usr/X11R6/lib ./.libs/libgd.so /usr/X11R6/lib/libfontconfig.so /usr/lib/libfreetype.so -lXpm -lX11 -ljpeg -lpng12 -lm -lz -Wl,--rpath -Wl,/usr/local/gd-2.0.34/lib
+creating pngtogd2
+if gcc -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/freetype2  -I/usr/X11R6/include  -g -O2 -MT webpng.o -MD -MP -MF ".deps/webpng.Tpo" -c -o webpng.o webpng.c; \
+	then mv -f ".deps/webpng.Tpo" ".deps/webpng.Po"; else rm -f ".deps/webpng.Tpo"; exit 1; fi
+/bin/sh ./libtool --tag=CC --mode=link gcc  -g -O2  -L/usr/lib  -L/usr/X11R6/lib -o webpng  webpng.o ./libgd.la  -lXpm -lX11 -ljpeg -lfontconfig -lfreetype -lpng12 -lz -lm 
+gcc -g -O2 -o .libs/webpng webpng.o  -L/usr/lib -L/usr/X11R6/lib ./.libs/libgd.so /usr/X11R6/lib/libfontconfig.so /usr/lib/libfreetype.so -lXpm -lX11 -ljpeg -lpng12 -lm -lz -Wl,--rpath -Wl,/usr/local/gd-2.0.34/lib
+creating webpng
+if gcc -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/freetype2  -I/usr/X11R6/include  -g -O2 -MT gd2togif.o -MD -MP -MF ".deps/gd2togif.Tpo" -c -o gd2togif.o gd2togif.c; \
+	then mv -f ".deps/gd2togif.Tpo" ".deps/gd2togif.Po"; else rm -f ".deps/gd2togif.Tpo"; exit 1; fi
+/bin/sh ./libtool --tag=CC --mode=link gcc  -g -O2  -L/usr/lib  -L/usr/X11R6/lib -o gd2togif  gd2togif.o ./libgd.la  -lXpm -lX11 -ljpeg -lfontconfig -lfreetype -lpng12 -lz -lm 
+gcc -g -O2 -o .libs/gd2togif gd2togif.o  -L/usr/lib -L/usr/X11R6/lib ./.libs/libgd.so /usr/X11R6/lib/libfontconfig.so /usr/lib/libfreetype.so -lXpm -lX11 -ljpeg -lpng12 -lm -lz -Wl,--rpath -Wl,/usr/local/gd-2.0.34/lib
+creating gd2togif
+if gcc -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/freetype2  -I/usr/X11R6/include  -g -O2 -MT gdcmpgif.o -MD -MP -MF ".deps/gdcmpgif.Tpo" -c -o gdcmpgif.o gdcmpgif.c; \
+	then mv -f ".deps/gdcmpgif.Tpo" ".deps/gdcmpgif.Po"; else rm -f ".deps/gdcmpgif.Tpo"; exit 1; fi
+/bin/sh ./libtool --tag=CC --mode=link gcc  -g -O2  -L/usr/lib  -L/usr/X11R6/lib -o gdcmpgif  gdcmpgif.o ./libgd.la  -lXpm -lX11 -ljpeg -lfontconfig -lfreetype -lpng12 -lz -lm 
+gcc -g -O2 -o .libs/gdcmpgif gdcmpgif.o  -L/usr/lib -L/usr/X11R6/lib ./.libs/libgd.so /usr/X11R6/lib/libfontconfig.so /usr/lib/libfreetype.so -lXpm -lX11 -ljpeg -lpng12 -lm -lz -Wl,--rpath -Wl,/usr/local/gd-2.0.34/lib
+creating gdcmpgif
+if gcc -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/freetype2  -I/usr/X11R6/include  -g -O2 -MT giftogd2.o -MD -MP -MF ".deps/giftogd2.Tpo" -c -o giftogd2.o giftogd2.c; \
+	then mv -f ".deps/giftogd2.Tpo" ".deps/giftogd2.Po"; else rm -f ".deps/giftogd2.Tpo"; exit 1; fi
+/bin/sh ./libtool --tag=CC --mode=link gcc  -g -O2  -L/usr/lib  -L/usr/X11R6/lib -o giftogd2  giftogd2.o ./libgd.la  -lXpm -lX11 -ljpeg -lfontconfig -lfreetype -lpng12 -lz -lm 
+gcc -g -O2 -o .libs/giftogd2 giftogd2.o  -L/usr/lib -L/usr/X11R6/lib ./.libs/libgd.so /usr/X11R6/lib/libfontconfig.so /usr/lib/libfreetype.so -lXpm -lX11 -ljpeg -lpng12 -lm -lz -Wl,--rpath -Wl,/usr/local/gd-2.0.34/lib
+creating giftogd2
+if gcc -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/freetype2  -I/usr/X11R6/include  -g -O2 -MT fontsizetest.o -MD -MP -MF ".deps/fontsizetest.Tpo" -c -o fontsizetest.o fontsizetest.c; \
+	then mv -f ".deps/fontsizetest.Tpo" ".deps/fontsizetest.Po"; else rm -f ".deps/fontsizetest.Tpo"; exit 1; fi
+/bin/sh ./libtool --tag=CC --mode=link gcc  -g -O2  -L/usr/lib  -L/usr/X11R6/lib -o fontsizetest  fontsizetest.o ./libgd.la  -lXpm -lX11 -ljpeg -lfontconfig -lfreetype -lpng12 -lz -lm 
+gcc -g -O2 -o .libs/fontsizetest fontsizetest.o  -L/usr/lib -L/usr/X11R6/lib ./.libs/libgd.so /usr/X11R6/lib/libfontconfig.so /usr/lib/libfreetype.so -lXpm -lX11 -ljpeg -lpng12 -lm -lz -Wl,--rpath -Wl,/usr/local/gd-2.0.34/lib
+creating fontsizetest
+if gcc -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/freetype2  -I/usr/X11R6/include  -g -O2 -MT fontwheeltest.o -MD -MP -MF ".deps/fontwheeltest.Tpo" -c -o fontwheeltest.o fontwheeltest.c; \
+	then mv -f ".deps/fontwheeltest.Tpo" ".deps/fontwheeltest.Po"; else rm -f ".deps/fontwheeltest.Tpo"; exit 1; fi
+/bin/sh ./libtool --tag=CC --mode=link gcc  -g -O2  -L/usr/lib  -L/usr/X11R6/lib -o fontwheeltest  fontwheeltest.o ./libgd.la  -lXpm -lX11 -ljpeg -lfontconfig -lfreetype -lpng12 -lz -lm 
+gcc -g -O2 -o .libs/fontwheeltest fontwheeltest.o  -L/usr/lib -L/usr/X11R6/lib ./.libs/libgd.so /usr/X11R6/lib/libfontconfig.so /usr/lib/libfreetype.so -lXpm -lX11 -ljpeg -lpng12 -lm -lz -Wl,--rpath -Wl,/usr/local/gd-2.0.34/lib
+creating fontwheeltest
+if gcc -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/freetype2  -I/usr/X11R6/include  -g -O2 -MT gdtest.o -MD -MP -MF ".deps/gdtest.Tpo" -c -o gdtest.o gdtest.c; \
+	then mv -f ".deps/gdtest.Tpo" ".deps/gdtest.Po"; else rm -f ".deps/gdtest.Tpo"; exit 1; fi
+/bin/sh ./libtool --tag=CC --mode=link gcc  -g -O2  -L/usr/lib  -L/usr/X11R6/lib -o gdtest  gdtest.o ./libgd.la  -lXpm -lX11 -ljpeg -lfontconfig -lfreetype -lpng12 -lz -lm 
+gcc -g -O2 -o .libs/gdtest gdtest.o  -L/usr/lib -L/usr/X11R6/lib ./.libs/libgd.so /usr/X11R6/lib/libfontconfig.so /usr/lib/libfreetype.so -lXpm -lX11 -ljpeg -lpng12 -lm -lz -Wl,--rpath -Wl,/usr/local/gd-2.0.34/lib
+creating gdtest
+if gcc -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/freetype2  -I/usr/X11R6/include  -g -O2 -MT gddemo.o -MD -MP -MF ".deps/gddemo.Tpo" -c -o gddemo.o gddemo.c; \
+	then mv -f ".deps/gddemo.Tpo" ".deps/gddemo.Po"; else rm -f ".deps/gddemo.Tpo"; exit 1; fi
+/bin/sh ./libtool --tag=CC --mode=link gcc  -g -O2  -L/usr/lib  -L/usr/X11R6/lib -o gddemo  gddemo.o ./libgd.la  -lXpm -lX11 -ljpeg -lfontconfig -lfreetype -lpng12 -lz -lm 
+gcc -g -O2 -o .libs/gddemo gddemo.o  -L/usr/lib -L/usr/X11R6/lib ./.libs/libgd.so /usr/X11R6/lib/libfontconfig.so /usr/lib/libfreetype.so -lXpm -lX11 -ljpeg -lpng12 -lm -lz -Wl,--rpath -Wl,/usr/local/gd-2.0.34/lib
+creating gddemo
+if gcc -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/freetype2  -I/usr/X11R6/include  -g -O2 -MT gd2time.o -MD -MP -MF ".deps/gd2time.Tpo" -c -o gd2time.o gd2time.c; \
+	then mv -f ".deps/gd2time.Tpo" ".deps/gd2time.Po"; else rm -f ".deps/gd2time.Tpo"; exit 1; fi
+/bin/sh ./libtool --tag=CC --mode=link gcc  -g -O2  -L/usr/lib  -L/usr/X11R6/lib -o gd2time  gd2time.o ./libgd.la  -lXpm -lX11 -ljpeg -lfontconfig -lfreetype -lpng12 -lz -lm 
+gcc -g -O2 -o .libs/gd2time gd2time.o  -L/usr/lib -L/usr/X11R6/lib ./.libs/libgd.so /usr/X11R6/lib/libfontconfig.so /usr/lib/libfreetype.so -lXpm -lX11 -ljpeg -lpng12 -lm -lz -Wl,--rpath -Wl,/usr/local/gd-2.0.34/lib
+creating gd2time
+if gcc -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/freetype2  -I/usr/X11R6/include  -g -O2 -MT gdtestft.o -MD -MP -MF ".deps/gdtestft.Tpo" -c -o gdtestft.o gdtestft.c; \
+	then mv -f ".deps/gdtestft.Tpo" ".deps/gdtestft.Po"; else rm -f ".deps/gdtestft.Tpo"; exit 1; fi
+/bin/sh ./libtool --tag=CC --mode=link gcc  -g -O2  -L/usr/lib  -L/usr/X11R6/lib -o gdtestft  gdtestft.o ./libgd.la  -lXpm -lX11 -ljpeg -lfontconfig -lfreetype -lpng12 -lz -lm 
+gcc -g -O2 -o .libs/gdtestft gdtestft.o  -L/usr/lib -L/usr/X11R6/lib ./.libs/libgd.so /usr/X11R6/lib/libfontconfig.so /usr/lib/libfreetype.so -lXpm -lX11 -ljpeg -lpng12 -lm -lz -Wl,--rpath -Wl,/usr/local/gd-2.0.34/lib
+creating gdtestft
+if gcc -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/freetype2  -I/usr/X11R6/include  -g -O2 -MT testac.o -MD -MP -MF ".deps/testac.Tpo" -c -o testac.o testac.c; \
+	then mv -f ".deps/testac.Tpo" ".deps/testac.Po"; else rm -f ".deps/testac.Tpo"; exit 1; fi
+/bin/sh ./libtool --tag=CC --mode=link gcc  -g -O2  -L/usr/lib  -L/usr/X11R6/lib -o testac  testac.o ./libgd.la  -lXpm -lX11 -ljpeg -lfontconfig -lfreetype -lpng12 -lz -lm 
+gcc -g -O2 -o .libs/testac testac.o  -L/usr/lib -L/usr/X11R6/lib ./.libs/libgd.so /usr/X11R6/lib/libfontconfig.so /usr/lib/libfreetype.so -lXpm -lX11 -ljpeg -lpng12 -lm -lz -Wl,--rpath -Wl,/usr/local/gd-2.0.34/lib
+creating testac
+if gcc -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/freetype2  -I/usr/X11R6/include  -g -O2 -MT circletexttest.o -MD -MP -MF ".deps/circletexttest.Tpo" -c -o circletexttest.o circletexttest.c; \
+	then mv -f ".deps/circletexttest.Tpo" ".deps/circletexttest.Po"; else rm -f ".deps/circletexttest.Tpo"; exit 1; fi
+/bin/sh ./libtool --tag=CC --mode=link gcc  -g -O2  -L/usr/lib  -L/usr/X11R6/lib -o circletexttest  circletexttest.o ./libgd.la  -lXpm -lX11 -ljpeg -lfontconfig -lfreetype -lpng12 -lz -lm 
+gcc -g -O2 -o .libs/circletexttest circletexttest.o  -L/usr/lib -L/usr/X11R6/lib ./.libs/libgd.so /usr/X11R6/lib/libfontconfig.so /usr/lib/libfreetype.so -lXpm -lX11 -ljpeg -lpng12 -lm -lz -Wl,--rpath -Wl,/usr/local/gd-2.0.34/lib
+creating circletexttest
+if gcc -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/freetype2  -I/usr/X11R6/include  -g -O2 -MT testtr.o -MD -MP -MF ".deps/testtr.Tpo" -c -o testtr.o testtr.c; \
+	then mv -f ".deps/testtr.Tpo" ".deps/testtr.Po"; else rm -f ".deps/testtr.Tpo"; exit 1; fi
+/bin/sh ./libtool --tag=CC --mode=link gcc  -g -O2  -L/usr/lib  -L/usr/X11R6/lib -o testtr  testtr.o ./libgd.la  -lXpm -lX11 -ljpeg -lfontconfig -lfreetype -lpng12 -lz -lm 
+gcc -g -O2 -o .libs/testtr testtr.o  -L/usr/lib -L/usr/X11R6/lib ./.libs/libgd.so /usr/X11R6/lib/libfontconfig.so /usr/lib/libfreetype.so -lXpm -lX11 -ljpeg -lpng12 -lm -lz -Wl,--rpath -Wl,/usr/local/gd-2.0.34/lib
+creating testtr
+if gcc -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/freetype2  -I/usr/X11R6/include  -g -O2 -MT fontconfigtest.o -MD -MP -MF ".deps/fontconfigtest.Tpo" -c -o fontconfigtest.o fontconfigtest.c; \
+	then mv -f ".deps/fontconfigtest.Tpo" ".deps/fontconfigtest.Po"; else rm -f ".deps/fontconfigtest.Tpo"; exit 1; fi
+/bin/sh ./libtool --tag=CC --mode=link gcc  -g -O2  -L/usr/lib  -L/usr/X11R6/lib -o fontconfigtest  fontconfigtest.o ./libgd.la  -lXpm -lX11 -ljpeg -lfontconfig -lfreetype -lpng12 -lz -lm 
+gcc -g -O2 -o .libs/fontconfigtest fontconfigtest.o  -L/usr/lib -L/usr/X11R6/lib ./.libs/libgd.so /usr/X11R6/lib/libfontconfig.so /usr/lib/libfreetype.so -lXpm -lX11 -ljpeg -lpng12 -lm -lz -Wl,--rpath -Wl,/usr/local/gd-2.0.34/lib
+creating fontconfigtest
+if gcc -DHAVE_CONFIG_H -I. -I. -I.   -I/usr/include/freetype2  -I/usr/X11R6/include  -g -O2 -MT gifanimtest.o -MD -MP -MF ".deps/gifanimtest.Tpo" -c -o gifanimtest.o gifanimtest.c; \
+	then mv -f ".deps/gifanimtest.Tpo" ".deps/gifanimtest.Po"; else rm -f ".deps/gifanimtest.Tpo"; exit 1; fi
+/bin/sh ./libtool --tag=CC --mode=link gcc  -g -O2  -L/usr/lib  -L/usr/X11R6/lib -o gifanimtest  gifanimtest.o ./libgd.la  -lXpm -lX11 -ljpeg -lfontconfig -lfreetype -lpng12 -lz -lm 
+gcc -g -O2 -o .libs/gifanimtest gifanimtest.o  -L/usr/lib -L/usr/X11R6/lib ./.libs/libgd.so /usr/X11R6/lib/libfontconfig.so /usr/lib/libfreetype.so -lXpm -lX11 -ljpeg -lpng12 -lm -lz -Wl,--rpath -Wl,/usr/local/gd-2.0.34/lib
+creating gifanimtest
+make[2]: Leaving directory `/root/install/gd-2.0.34'
+make[1]: Leaving directory `/root/install/gd-2.0.34'
+Making install in config
+make[1]: Entering directory `/root/install/gd-2.0.34/config'
+make[2]: Entering directory `/root/install/gd-2.0.34/config'
+test -z "/usr/local/gd-2.0.34/bin" || mkdir -p -- "/usr/local/gd-2.0.34/bin"
+ /usr/bin/ginstall -c 'gdlib-config' '/usr/local/gd-2.0.34/bin/gdlib-config'
+make[2]: Nothing to be done for `install-data-am'.
+make[2]: Leaving directory `/root/install/gd-2.0.34/config'
+make[1]: Leaving directory `/root/install/gd-2.0.34/config'
+Making install in test
+make[1]: Entering directory `/root/install/gd-2.0.34/test'
+make[2]: Entering directory `/root/install/gd-2.0.34/test'
+make[2]: Nothing to be done for `install-exec-am'.
+make[2]: Nothing to be done for `install-data-am'.
+make[2]: Leaving directory `/root/install/gd-2.0.34/test'
+make[1]: Leaving directory `/root/install/gd-2.0.34/test'
+make[1]: Entering directory `/root/install/gd-2.0.34'
+make[2]: Entering directory `/root/install/gd-2.0.34'
+test -z "/usr/local/gd-2.0.34/lib" || mkdir -p -- "/usr/local/gd-2.0.34/lib"
+ /bin/sh ./libtool --mode=install /usr/bin/ginstall -c  'libgd.la' '/usr/local/gd-2.0.34/lib/libgd.la'
+/usr/bin/ginstall -c .libs/libgd.so.2.0.0 /usr/local/gd-2.0.34/lib/libgd.so.2.0.0
+(cd /usr/local/gd-2.0.34/lib && { ln -s -f libgd.so.2.0.0 libgd.so.2 || { rm -f libgd.so.2 && ln -s libgd.so.2.0.0 libgd.so.2; }; })
+(cd /usr/local/gd-2.0.34/lib && { ln -s -f libgd.so.2.0.0 libgd.so || { rm -f libgd.so && ln -s libgd.so.2.0.0 libgd.so; }; })
+/usr/bin/ginstall -c .libs/libgd.lai /usr/local/gd-2.0.34/lib/libgd.la
+/usr/bin/ginstall -c .libs/libgd.a /usr/local/gd-2.0.34/lib/libgd.a
+chmod 644 /usr/local/gd-2.0.34/lib/libgd.a
+ranlib /usr/local/gd-2.0.34/lib/libgd.a
+PATH="$PATH:/sbin" ldconfig -n /usr/local/gd-2.0.34/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /usr/local/gd-2.0.34/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the `-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the `LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the `LD_RUN_PATH' environment variable
+     during linking
+   - use the `-Wl,--rpath -Wl,LIBDIR' linker flag
+   - have your system administrator add LIBDIR to `/etc/ld.so.conf'
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+test -z "/usr/local/gd-2.0.34/bin" || mkdir -p -- "/usr/local/gd-2.0.34/bin"
+  /bin/sh ./libtool --mode=install /usr/bin/ginstall -c 'annotate' '/usr/local/gd-2.0.34/bin/annotate'
+/usr/bin/ginstall -c .libs/annotate /usr/local/gd-2.0.34/bin/annotate
+  /bin/sh ./libtool --mode=install /usr/bin/ginstall -c 'gdparttopng' '/usr/local/gd-2.0.34/bin/gdparttopng'
+/usr/bin/ginstall -c .libs/gdparttopng /usr/local/gd-2.0.34/bin/gdparttopng
+  /bin/sh ./libtool --mode=install /usr/bin/ginstall -c 'gdtopng' '/usr/local/gd-2.0.34/bin/gdtopng'
+/usr/bin/ginstall -c .libs/gdtopng /usr/local/gd-2.0.34/bin/gdtopng
+  /bin/sh ./libtool --mode=install /usr/bin/ginstall -c 'gd2copypal' '/usr/local/gd-2.0.34/bin/gd2copypal'
+/usr/bin/ginstall -c .libs/gd2copypal /usr/local/gd-2.0.34/bin/gd2copypal
+  /bin/sh ./libtool --mode=install /usr/bin/ginstall -c 'gd2topng' '/usr/local/gd-2.0.34/bin/gd2topng'
+/usr/bin/ginstall -c .libs/gd2topng /usr/local/gd-2.0.34/bin/gd2topng
+  /bin/sh ./libtool --mode=install /usr/bin/ginstall -c 'pngtogd' '/usr/local/gd-2.0.34/bin/pngtogd'
+/usr/bin/ginstall -c .libs/pngtogd /usr/local/gd-2.0.34/bin/pngtogd
+  /bin/sh ./libtool --mode=install /usr/bin/ginstall -c 'pngtogd2' '/usr/local/gd-2.0.34/bin/pngtogd2'
+/usr/bin/ginstall -c .libs/pngtogd2 /usr/local/gd-2.0.34/bin/pngtogd2
+  /bin/sh ./libtool --mode=install /usr/bin/ginstall -c 'webpng' '/usr/local/gd-2.0.34/bin/webpng'
+/usr/bin/ginstall -c .libs/webpng /usr/local/gd-2.0.34/bin/webpng
+  /bin/sh ./libtool --mode=install /usr/bin/ginstall -c 'gd2togif' '/usr/local/gd-2.0.34/bin/gd2togif'
+/usr/bin/ginstall -c .libs/gd2togif /usr/local/gd-2.0.34/bin/gd2togif
+  /bin/sh ./libtool --mode=install /usr/bin/ginstall -c 'gdcmpgif' '/usr/local/gd-2.0.34/bin/gdcmpgif'
+/usr/bin/ginstall -c .libs/gdcmpgif /usr/local/gd-2.0.34/bin/gdcmpgif
+  /bin/sh ./libtool --mode=install /usr/bin/ginstall -c 'giftogd2' '/usr/local/gd-2.0.34/bin/giftogd2'
+/usr/bin/ginstall -c .libs/giftogd2 /usr/local/gd-2.0.34/bin/giftogd2
+test -z "/usr/local/gd-2.0.34/bin" || mkdir -p -- "/usr/local/gd-2.0.34/bin"
+ /usr/bin/ginstall -c 'bdftogd' '/usr/local/gd-2.0.34/bin/bdftogd'
+ /usr/bin/ginstall -c 'config/gdlib-config' '/usr/local/gd-2.0.34/bin/gdlib-config'
+test -z "/usr/local/gd-2.0.34/include" || mkdir -p -- "/usr/local/gd-2.0.34/include"
+ /usr/bin/ginstall -c -m 644 'gd.h' '/usr/local/gd-2.0.34/include/gd.h'
+ /usr/bin/ginstall -c -m 644 'gdfx.h' '/usr/local/gd-2.0.34/include/gdfx.h'
+ /usr/bin/ginstall -c -m 644 'gd_io.h' '/usr/local/gd-2.0.34/include/gd_io.h'
+ /usr/bin/ginstall -c -m 644 'gdcache.h' '/usr/local/gd-2.0.34/include/gdcache.h'
+ /usr/bin/ginstall -c -m 644 'gdfontg.h' '/usr/local/gd-2.0.34/include/gdfontg.h'
+ /usr/bin/ginstall -c -m 644 'gdfontl.h' '/usr/local/gd-2.0.34/include/gdfontl.h'
+ /usr/bin/ginstall -c -m 644 'gdfontmb.h' '/usr/local/gd-2.0.34/include/gdfontmb.h'
+ /usr/bin/ginstall -c -m 644 'gdfonts.h' '/usr/local/gd-2.0.34/include/gdfonts.h'
+ /usr/bin/ginstall -c -m 644 'gdfontt.h' '/usr/local/gd-2.0.34/include/gdfontt.h'
+ /usr/bin/ginstall -c -m 644 'entities.h' '/usr/local/gd-2.0.34/include/entities.h'
+make[2]: Leaving directory `/root/install/gd-2.0.34'
+make[1]: Leaving directory `/root/install/gd-2.0.34'
+You have new mail in /var/mail/root
+root@fwin-opipari:~/install/gd-2.0.34# exit
+logout
+Connection to 192.168.100.75 closed.
+## final funcconfgd ##
+Final da instalacao: Thu Apr 19 00:20:44 BRT 2007

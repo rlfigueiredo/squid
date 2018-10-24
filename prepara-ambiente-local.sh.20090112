@@ -1,0 +1,456 @@
+#!/bin/bash
+
+
+funcconfsquid () {
+	echo "##inicio funcconfsquid##"
+
+	echo "## declaracao de variaveis"
+	zipsquid="install/$versaosquid.tar.bz2"
+	bincalamaris="install/$versaocalamaris/calamaris"
+	configuresquid="./configure --prefix=/usr/local/$versaosquid --with-pthreads --enable-ssl --with-large-files --enable-large-cache-files --enable-underscores"
+	raiz="/var/squid"
+	cache="$raiz/cache"
+	listas="$raiz/listas/todos $raiz/listas/blacklist $raiz/listas/suporte" 
+	squidconf="/usr/local/$versaosquid/etc/squid.conf"
+	squidsbin="/usr/local/$versaosquid/sbin/squid"
+	usuarios="$raiz/listas/.usuarios"
+
+	echo "## criando diretorio de instalacao e copiando arquivos fonte"
+	if ! [ -d $homeinstall ]; then mkdir $homeinstall;fi
+	cp $zipsquid $homeinstall
+
+	echo "## instalando squid"
+	cd $homeinstall && tar xvjf $versaosquid.tar.bz2 && cd $versaosquid && $configuresquid && make && make install
+	cd $homeinstall/$versaosquid/helpers/basic_auth/NCSA && make && make install
+
+	echo "##instalando calamaris"
+	cp $bincalamaris /usr/local/bin
+
+	echo "## criando links simbolicos"
+	ln -s /usr/local/$versaosquid /usr/local/squid
+
+	echo "## configurando squid"
+	cp squid/squid.conf.padrao squid/squid.conf.$cliente
+	for i in $log $cache $listas;do
+		mkdir -p $i
+	done;
+	for i in $listas;do
+		touch $i/domains && touch $i/urls && touch $i/expressions
+	done;
+	htpasswd -bc $usuarios suporte solution2030 && chown -R nobody $raiz
+	cp squid/squid.conf.$cliente $squidconf
+	$squidsbin -z
+
+	echo "##final funcconfsquid##"
+}
+
+funcconfsquidguard () {
+
+	echo "##inicio funcconfsquidguard##"
+
+	echo "## declaracao de variaveis"
+	zipsquidGuard="/tmp/squid/install/$versaosquidGuard.tar.gz"
+	bd="/usr/local/$versaobd/BerkeleyDB"
+	configuresquidGuard="./configure --prefix=/usr/local/$versaosquidGuard --with-db=$bd --with-db-lib=$bd/lib --with-db-inc=$bd/include"
+	raiz="/var/squid"
+	log="$raiz/log/squidGuard"
+	squidGuard="/usr/local/$versaosquidGuard/bin/squidGuard.conf"
+	
+	echo "## criando diretorio de instalacao e copiando arquivos fonte"
+	if ! [ -d $homeinstall ]; then mkdir $homeinstall;fi
+	cp $zipsquidGuard $homeinstall
+
+	echo "## instalando squidGuard"
+	cd $homeinstall && tar xvzf $versaosquidGuard.tar.gz && cd $versaosquidGuard && $configuresquidGuard && make && make install
+	
+	echo "## criando links simbolicos squidGuard"
+	ln -s /usr/local/$versaosquidGuard /usr/local/squidGuard
+
+	echo "## configurando squidGuard"
+	touch $squidGuard && chown nobody $squidGuard
+
+	echo "##final funcconfsquidguard##"
+}
+
+funcconfapache () {
+	echo "## inicio funcconfapache ##"
+
+	echo "## declaracao de variaveis"
+	apachehost="/etc/httpd/httpd.conf"
+	apacheconfnovo="apache/conf/httpd.conf.$cliente"
+	apacheconftemp="apache/conf/httpd.conf.temp"
+	paginarestart="/srv/httpd/htdocs/admin/proxy/restart/restart.php"
+	paginarestartnova="apache/restart.php.nova"
+	paginasquidguard="/srv/httpd/htdocs/erro/squidGuard.php"
+	paginasquidguardnova="apache/squidGuard.php.nova"
+	
+	
+	echo "## copiando arquivos de configuracao"
+	cp -r apache/htdocs/* /srv/httpd/htdocs
+	cp $apachehost $apachehost.orig
+	cp $apachehost apache/conf/
+
+	echo "## acertando arquivos de configuracao"
+	sed "s+index.html+index.html index.php+g" apache/conf/httpd.conf >$apacheconftemp
+	sed "s+#Include /etc/apache/mod_php.conf+Include /etc/httpd/mod_php.conf+g" $apacheconftemp >$apacheconfnovo
+	echo "<Directory \"/srv/httpd/htdocs/admin\">
+        	AuthType Basic
+        	AuthName \"Administracao Squid\"
+        	AuthUserFile /var/squid/listas/.usuarios
+        	Require user suporte
+	</Directory>" >>$apacheconfnovo
+
+	echo "## copiando arquivos novos e alterando permissoes para o servidor"
+	cp $apacheconfnovo $apachehost
+	mkdir /srv/httpd/htdocs/.old;mv /srv/httpd/htdocs/index* /srv/httpd/htdocs/.old; touch /srv/httpd/htdocs/index.html
+	chmod 755 /etc/rc.d/rc.httpd
+	/etc/rc.d/rc.httpd restart
+
+	echo "## acertando paginas de restart e de erro"
+	cp $paginarestart apache/
+	sed "s+http://localhost+http://$subnet.1+g" apache/restart.php >$paginarestartnova
+	cp $paginarestartnova $paginarestart
+	cp $paginasquidguard apache/
+	sed "s+squidclientesolutionlinux+$email+g" apache/squidGuard.php >$paginasquidguardnova
+	cp $paginasquidguardnova $paginasquidguard
+	
+	echo "## final funcconfapache ##"
+}
+
+funcconfsshroot () {
+	echo "## inicio funcconfsshroot ##"
+	home="/root"
+	ssh_dir="$home/.ssh/"
+	ssh_key="$home/.ssh/authorized_keys"
+
+	ssh $host "mkdir $home $ssh_dir"
+	ssh $host "echo `cat ~/.ssh/id_rsa.pub` >>$ssh_key"
+
+	echo "## final funcconfsshroot ##"
+}
+
+funcconfusuario () {
+	echo "## inicio funcconfusuario ##"
+	echo "## declaracao de variaveis"
+	user_passwd="admroot:x:1000:100:,,,:/home/admroot:/bin/bash"
+	senha="conf_so/shadow-admroot"
+	usuario="admroot.users"
+	passwd="/etc/passwd"
+	shadow="/etc/shadow"
+	home="/home/admroot"
+	ssh_dir="$home/.ssh/"
+	ssh_key="$home/.ssh/authorized_keys"
+
+	echo "## criando usuario, acertando permissoes e copiando chave ssh"
+	echo $user_passwd >>$passwd
+	cp $senha ~/
+	cat ~/shadow-admroot >>$shadow
+	mkdir $home $ssh_dir
+	echo `cat ~/.ssh/id_rsa.pub` >>$ssh_key
+	chown -R $usuario $home
+
+	echo "## final funcconfusuario ##"
+}
+
+funcconfso () {
+	echo "## inicio funcconfso ##"
+
+	echo "## declaracao de variaveis"
+	logrotate_squid="/etc/logrotate.d/squid"
+	logrotate_syslog="/etc/logrotate.d/syslog"
+	logrotate_httpd="/etc/logrotate.d/httpd"
+	rc_local="/etc/rc.d/rc.local"
+	sudoers="/etc/sudoers"
+	syslog="/etc/syslog.conf"
+	crontab="/var/spool/cron/crontabs/root"
+	hosts="/etc/hosts"
+	sshd="/etc/ssh/sshd_config"
+	sshd_novo="conf_so/sshd_config.novo"
+	lilo="/etc/lilo.conf"
+	lilo_novo="conf_so/lilo.conf.novo"
+	inittab="/etc/inittab"
+	inittab_novo="conf_so/inittab.novo"
+	inetd="/etc/inetd.conf"
+	velhos="/root/velhos"
+
+	echo "## criando diretorio para guardar arquivos originais e copiando arquivos originais"
+	if ! [ -d /root/velhos ]; then mkdir -p $velhos;fi
+	for i in $logrotate_squid $logrotate_syslog $logrotate_httpd $rc_local $sudoers $syslog $crontab $sshd $lilo $inittab $inetd ;do 
+		cp -v $i $velhos
+	done
+
+	echo "## acertando e copiando arquivo do sshd"
+	cp $sshd conf_so
+	sed "s+#PermitRootLogin yes+PermitRootLogin no+g" conf_so/sshd_config >$sshd_novo
+	cp $sshd_novo $sshd
+
+	echo "## acertando lilo.conf"
+	cp $lilo conf_so
+	sed "s+timeout = 1200+timeout = 12+g" conf_so/lilo.conf >$lilo_novo
+	cp $lilo_novo $lilo
+	lilo
+
+	echo "## acertando inittab"
+	cp $inittab conf_so
+	sed "s+ca::ctrlaltdel:/sbin/shutdown -t5 -r now+#ca::ctrlaltdel:/sbin/shutdown -t5 -r now+g" conf_so/inittab >$inittab_novo
+	cp $inittab_novo $inittab
+	telinit q
+
+	echo "## copiando demais arquivos novos"
+	cp conf_so/logrotate.squid $logrotate_squid
+	cp conf_so/logrotate.syslog $logrotate_syslog
+	cp conf_so/logrotate.httpd $logrotate_httpd
+	cp conf_so/rc.local $rc_local
+	cp conf_so/sudoers $sudoers
+	cp conf_so/syslog.conf $syslog
+	cp conf_so/inetd.conf $inetd
+	cp -r scripts/ /root
+
+	echo "## acertando crontab"
+	cat scripts/crontab >>$crontab
+
+	echo "## final funcconfso ##"
+}
+
+funcconffirewall () {
+	echo "## inicio funcconffirewall ##"
+
+	echo "## declaracao de variaveis"
+	fwin="/etc/rc.d/rc.firewall"
+	fwin_pad="firewall/rc.firewall.padrao"
+	fwin_final="firewall/rc.firewall.$cliente.$data"
+
+	echo "## acertando arquivo rc.firewall" 
+	sed "s+redelocal=+redelocal=$subnet.0/24+g" $fwin_pad >$fwin_pad.1
+	sed "s+broadcast=+broadcast=$subnet.255+g" $fwin_pad.1 >$fwin_pad.2
+	sed "s+fwin=+fwin=$subnet.1+g" $fwin_pad.2 >$fwin_pad.3
+	sed "s+fwin_ext=+fwin_ext=$subnet.1+g" $fwin_pad.3 >$fwin_final
+	chmod 755 $fwin_final
+	cp $fwin_final $fwin
+
+	echo "## final funcconffirewall ##"
+}
+
+funcconfdhcp () {
+	echo "## inicio funcconfdhcp ##"
+
+	echo "## declaracao de variavies ##"
+	dhcp_conf="conf_so/dhcpd.conf.$cliente"
+	dhcpd="/etc/dhcpd.conf"
+	dhcp_mascara="255.255.255.0"
+	dhcp_donimio="$cliente"
+	dhcp_router="$subnet.1"
+	dhcp_inicio="$subnet.21"
+	dhcp_final="$subnet.200"
+	dhcp_broadcast="$subnet.255"	
+
+	echo "## criando arquivo de configuracao"
+	echo "# dhcpd.conf
+ddns-update-style none;
+default-lease-time 40000000;
+max-lease-time 41000000;
+option subnet-mask $dhcp_mascara;
+option broadcast-address $dhcp_broadcast;
+option routers $dhcp_router;
+option domain-name-servers 200.204.0.10, 200.204.0.138;
+option domain-name "$cliente";
+
+subnet $subnet.0.0 netmask $dhcp_mascara {
+	range $dhcp_inicio $dhcp_final;
+}" >>$dhcp_conf
+
+	echo "## copiando arquivo de configuracao para o servidor"
+	cp $dhcp_conf $dhcpd
+
+	echo "## final funcconfdhcp ##"
+}
+
+funcconfhorario() {
+	echo "## inicio funcconfhorario ##"
+	
+	echo "## declarando variavies ##"
+	localtime="/etc/localtime"
+	arquivozic="tz-brasil-sp.zic"
+	localtimevelho="/root/velhos"
+	localtimenovo="/usr/share/zoneinfo/America/Sao_Paulo"
+	
+	echo "## fazendo backup do localtime atual ##"
+	cp -v $localtime $localtimevelho
+	
+	echo "## configurando novo arquivo de time zone ##"
+	cp conf_so/$arquivozic /root/scripts
+	zic /root/scripts/$arquivozic
+	rm -frv /etc/localtime
+	ln -s $localtimenovo $localtime
+	date `date +%m%d%H%M%Y`
+	hwclock --systohc
+
+	echo "## final funcconfhorario ##"
+}
+
+funcconfnetsnmp () {
+	echo "## inicio funcconnetsnmp ##"
+	
+	echo "## declarando variavies ##"
+	zipnetsnmp="install/$versaonetsnmp.tar.gz"
+	configurenetsnmp="cd $homeinstall;tar xvzf $versaonetsnmp.tar.gz; cd $versaonetsnmp ; ./configure --prefix=/usr/local/$versaonetsnmp && make && make install"
+	snmpconf="/usr/local/$versaonetsnmp/share/snmp/snmpd.conf"
+	snmpconf_novo="conf_so/snmpd.conf"
+	inicia_snmpd="/usr/local/net-snmp-5.4/sbin/snmpd"
+	
+	echo "## criando diretorio de instalacao e copiando arquivos fonte"
+	if ! [ -d $homeinstall ]; then mkdir $homeinstall;fi
+	cp $zipnetsnmp $homeinstall
+	
+	echo "## instalando net-snmp ##"
+	$configurenetsnmp
+	cp $snmpconf_novo $snmpconf
+	$inicia_snmpd
+	
+	echo "## final funcconnetsnmp ##"
+}
+
+funcconfgd() {
+	echo "## inicio funcconfgd ##"
+
+	echo "## declarando variavies ##"
+	zipgd="install/$versaogd.tar.bz2"
+	configuregd="./configure --prefix=/usr/local/$versaogd"
+	
+	echo "## criando diretorio de instalacao e copiando arquivos fonte"
+	if ! [ -d $homeinstall ]; then mkdir $homeinstall;fi
+	cp $zipgd $homeinstall
+	
+	echo "## instalando libgd ##"
+	cd $homeinstall && tar xvjf $versaogd.tar.bz2 && cd $versaogd && $configuregd && make && make install
+	
+	echo "## final funcconfgd ##"
+}
+
+funcconfmrtg() {
+	echo "## inicio funcconfmrtg ##"
+
+	echo "## declarando variavies ##"
+	zipmrtg="install/$versaomrtg.tar.gz"
+	configuremrtg="./configure --prefix=/usr/local/$versaomrtg --with-gd=/usr/local/$versaogd --with-gd-lib=/usr/local/$versaogd/lib --with-gd-inc=/usr/local/$versaogd/include"
+	cfgmaker="/usr/local/$versaomrtg/bin/cfgmaker-fwin-$cliente.sh"
+	mrtgbin="/usr/local/$versaomrtg/bin/mrtg $cfgdir/fwin-$cliente.cfg"
+	workdir="/var/www/htdocs/admin/mrtg"
+	cfgdir="/usr/local/$versaomrtg/cfg"
+	
+	echo "## criando diretorio de instalacao e copiando arquivos fonte"
+	if ! [ -d $homeinstall ]; then mkdir $homeinstall;fi
+	cp $zipmrtg $homeinstall
+	
+	echo "## instalando mrtg"
+	cd $homeinstall && tar xvzf $versaomrtg.tar.gz && cd $versaomrtg && $configuremrtg && make && make install
+	
+	echo "## configurando cfgmaker ##"
+	echo "/usr/local/$versaomrtg/bin/cfgmaker --global \'WorkDir: $workdir/fwin-$cliente\' \\\ " >$cfgmaker
+	echo "--global \'Options[_]: bits,growright\' \\\ " >>$cfgmaker
+	echo "--output $cfgdir/fwin-$cliente.cfg \\\ " >>$cfgmaker
+	echo "	web_get@localhost" >>$cfgmaker
+	chmod 700 $cfgmaker
+	
+	echo "## criando diretorios cfg e http ##"
+	if ! [ -d $workdir ]; then mkdir -p $workdir/fwin-$cliente;fi
+	if ! [ -d $cfgdir ]; then mkdir $cfgdir;fi
+	
+	echo "## executando o cfgmaker e as statisticas do mrtg ##"
+	$cfgmaker
+	for i in 1 2 3;do $mrtgbin;done
+
+	echo "## final funcconfmrtg ##"
+}
+
+funcconfntop () {
+	echo "## inicio funcconfntop ##"
+
+	echo "## declarando variavies ##"
+	zipntop="install/$versaontop.tgz"
+	configurentop="./configure --prefix=/usr/local/$versaontop --with-gd-root=/usr/local/$versaogd --with-gd-lib=/usr/local/$versaogd/lib --with-gd-include=/usr/local/$versaogd/include"
+	
+	echo "## criando diretorio de instalacao e copiando arquivos fonte"
+	if ! [ -d $homeinstall ]; then mkdir $homeinstall;fi
+	cp $zipntop $homeinstall
+	
+	echo "## instalando ntop"
+	cd $homeinstall && tar xvzf $versaontop.tgz && cd $versaontop && $configurentop && make && make install
+	groupadd ntop
+	useradd ntop -g ntop
+	chown -R ntop.ntop /usr/local/$versaontop/share/ntop /usr/local/$versaontop/var
+}
+
+funcconfbd () {
+	echo "## inicio funcconfbd ##"
+
+	echo "## declarando variavies ##"
+	zipbd="install/$versaobd.tar.gz"
+	configurebd="../dist/configure --prefix=/usr/local/$versaobd"
+	
+	echo "## criando diretorio de instalacao e copiando arquivos fonte"
+	if ! [ -d $homeinstall ]; then mkdir $homeinstall;fi
+	cp $zipbd $homeinstall
+	
+	echo "## instalando bd"
+	cd $homeinstall && tar xvzf $versaobd.tar.gz && cd $versaobd/build_unix/ && $configurebd && make && make install
+}
+
+if [ -z $1 ];then  
+	echo "Digitar: ./comando cliente"
+	exit 0
+fi
+#host="$1"
+cliente="$1"
+subnet="192.168.0"
+versaosquid="squid-2.6.STABLE13"
+versaosquidGuard="squidGuard-1.2.0"
+versaocalamaris="calamaris-2.59"
+versaobd="db-2.7.7"
+versaonetsnmp="net-snmp-5.4"
+versaogd="gd-2.0.34"
+versaomrtg="mrtg-2.15.1"
+versaontop="ntop-3.2"
+email="solutionlinux"
+data=`date +%Y%m%d%H%M`
+homeinstall="/root/install"
+raizinstall="/tmp/squid"
+logokinstall="/tmp/logsinstall/$cliente.$versaosquid.$versaosquidGuard.$versaocalamaris.$data.ok"
+logerrinstall="/tmp/logsinstall/$cliente.$versaosquid.$versaosquidGuard.$versaocalamaris.$data.err"
+
+if [ ! -d /tmp/logsinstall ];then
+	mkdir /tmp/logsinstall
+fi
+
+echo "Inicio da instalacao: `date`" >>$logokinstall 2>$logerrinstall
+
+#echo "funcconfsshroot"
+#funcconfsshroot >>$logokinstall 2>$logerrinstall
+echo "funcconfbd"
+funcconfbd >>$logokinstall 2>>$logerrinstall
+echo "funcconfsquidguard"
+funcconfsquidguard >>$logokinstall 2>>$logerrinstall
+echo "funcconfsquid"
+funcconfsquid >>$logokinstall 2>>$logerrinstall
+echo "funcconfapache"
+funcconfapache >>$logokinstall 2>>$logerrinstall
+echo "funcconfusuario"
+funcconfusuario >>$logokinstall 2>>$logerrinstall
+echo "funcconfso"
+funcconfso >>$logokinstall 2>>$logerrinstall
+echo "funcconfhorario"
+funcconfhorario >>$logokinstall 2>>$logerrinstall
+echo "funcconffirewall"
+funcconffirewall >>$logokinstall 2>>$logerrinstall
+echo "funcconfdhcp"
+funcconfdhcp >>$logokinstall 2>>$logerrinstall
+#echo "funcconfnetsnmp"
+#funcconfnetsnmp >>$logokinstall 2>>$logerrinstall
+echo "funcconfgd"
+funcconfgd >>$logokinstall 2>>$logerrinstall
+echo "funcconfmrtg"
+funcconfmrtg >>$logokinstall 2>>$logerrinstall
+echo "funcconfntop"
+funcconfntop >>$logokinstall 2>>$logerrinstall
+
+echo "Final da instalacao: `date`" >>$logokinstall 2>>$logerrinstall

@@ -1,0 +1,13 @@
+/var/log/httpd/*log {
+    weekly
+    rotate 48
+    size=100k
+    copytruncate
+    notifempty
+    missingok
+    postrotate
+       if [ -r /var/run/httpd.pid ]; then
+            xargs kill -HUP < /var/run/httpd.pid
+       fi
+    endscript
+}

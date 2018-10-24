@@ -1,0 +1,28 @@
+#!/bin/sh
+#
+# /etc/rc.d/rc.local:  Local system initialization script.
+#
+# Put any local setup commands in here:
+##
+## squid inicio
+/usr/local/squid/sbin/squid
+## squid final
+#
+## dhcpd inicio
+/usr/sbin/dhcpd -d -f eth1 >/var/log/dhcpd_start.log 2>&1 &
+## dhcpd final
+#
+## apache inicio
+/etc/rc.d/rc.httpd start
+## apache final
+#
+## aviso de boot inicio
+echo -e "`mii-tool`\n\n`ifconfig`\n\n`last`\n\n`dmesg`" | mail -s"Boot `hostname`" solutionlinux@gmail.com
+## aviso de boot final
+#
+## ntop inicio
+/usr/local/ntop-3.2/bin/ntop -u ntop -d -i eth0,eth1 >/usr/local/ntop-3.2/bin/ntop.log 2>&1
+## ntop final
+## snmp inicio
+/usr/local/net-snmp-5.4/sbin/snmpd
+## snmp final

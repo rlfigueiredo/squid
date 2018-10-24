@@ -1,0 +1,112 @@
+# Brazil Sao Paulo timezone information
+
+# Information from:
+#    http://www.aneel.gov.br/
+#    http://www.aneel.gov.br/area.cfm?id_area=65
+
+# Rule  NAME      FROM    TO      TYPE    IN      ON      AT      SAVE    LETTER/S
+Rule    BrazilSP  1931    only    -       Oct     03      0:00    1:00    S
+Rule    BrazilSP  1932    only    -       Mar     31      0:00    0       -
+
+Rule    BrazilSP  1932    only    -       Oct     03      0:00    1:00    S
+Rule    BrazilSP  1933    only    -       Mar     31      0:00    0       -
+
+Rule    BrazilSP  1949    only    -       Dec     01      0:00    1:00    S
+Rule    BrazilSP  1950    only    -       Apr     16      0:00    0       -
+
+Rule    BrazilSP  1950    only    -       Dec     01      0:00    1:00    S
+Rule    BrazilSP  1951    only    -       Feb     28      0:00    0       -
+
+Rule    BrazilSP  1951    only    -       Dec     01      0:00    1:00    S
+Rule    BrazilSP  1952    only    -       Feb     28      0:00    0       -
+
+Rule    BrazilSP  1952    only    -       Dec     01      0:00    1:00    S
+Rule    BrazilSP  1953    only    -       Feb     28      0:00    0       -
+
+Rule    BrazilSP  1963    only    -       Oct     23      0:00    1:00    S
+Rule    BrazilSP  1964    only    -       Mar     01      0:00    0       -
+
+Rule    BrazilSP  1965    only    -       Jan     31      0:00    1:00    S
+Rule    BrazilSP  1965    only    -       Mar     31      0:00    0       -
+
+Rule    BrazilSP  1965    only    -       Nov     30      0:00    1:00    S
+Rule    BrazilSP  1966    only    -       Mar     31      0:00    0       -
+
+Rule    BrazilSP  1966    only    -       Nov     01      0:00    1:00    S
+Rule    BrazilSP  1967    only    -       Mar     01      0:00    0       -
+
+Rule    BrazilSP  1967    only    -       Nov     01      0:00    1:00    S
+Rule    BrazilSP  1968    only    -       Mar     01      0:00    0       -
+
+Rule    BrazilSP  1985    only    -       Nov     02      0:00    1:00    S
+Rule    BrazilSP  1986    only    -       Mar     15      0:00    0       -
+
+Rule    BrazilSP  1986    only    -       Oct     25      0:00    1:00    S
+Rule    BrazilSP  1987    only    -       Feb     14      0:00    0       -
+
+Rule    BrazilSP  1987    only    -       Oct     25      0:00    1:00    S
+Rule    BrazilSP  1988    only    -       Feb     07      0:00    0       -
+
+Rule    BrazilSP  1988    only    -       Oct     16      0:00    1:00    S
+Rule    BrazilSP  1989    only    -       Jan     29      0:00    0       -
+
+Rule    BrazilSP  1989    only    -       Oct     15      0:00    1:00    S
+Rule    BrazilSP  1990    only    -       Feb     11      0:00    0       -
+
+Rule    BrazilSP  1990    only    -       Oct     21      0:00    1:00    S
+Rule    BrazilSP  1991    only    -       Feb     17      0:00    0       -
+
+Rule    BrazilSP  1991    only    -       Oct     20      0:00    1:00    S
+Rule    BrazilSP  1992    only    -       Feb     09      0:00    0       -
+
+Rule    BrazilSP  1992    only    -       Oct     25      0:00    1:00    S
+Rule    BrazilSP  1993    only    -       Jan     31      0:00    0       -
+
+Rule    BrazilSP  1993    only    -       Oct     17      0:00    1:00    S
+Rule    BrazilSP  1994    only    -       Feb     20      0:00    0       -
+
+Rule    BrazilSP  1994    only    -       Oct     16      0:00    1:00    S
+Rule    BrazilSP  1995    only    -       Feb     19      0:00    0       -
+
+Rule    BrazilSP  1995    only    -       Oct     15      0:00    1:00    S
+Rule    BrazilSP  1996    only    -       Feb     11      0:00    0       -
+
+Rule    BrazilSP  1996    only    -       Oct     06      0:00    1:00    S
+Rule    BrazilSP  1997    only    -       Feb     16      0:00    0       -
+
+Rule    BrazilSP  1997    only    -       Oct     06      0:00    1:00    S
+Rule    BrazilSP  1998    only    -       Mar     01      0:00    0       -
+
+Rule    BrazilSP  1998    only    -       Oct     11      0:00    1:00    S
+Rule    BrazilSP  1999    only    -       Feb     21      0:00    0       -
+
+Rule    BrazilSP  1999	  only    -       Oct     03      0:00    1:00    S
+Rule    BrazilSP  2000	  only    -       Feb     27      0:00    0	  -
+
+Rule	BrazilSP  2000	  only	  -	  Oct	  08	  0:00	  1:00    S
+Rule	BrazilSP  2001	  only	  -	  Feb	  18	  0:00	  0       -
+
+Rule	BrazilSP  2001	  only	  -	  Oct	  14	  0:00	  1:00    S
+Rule	BrazilSP  2002	  only	  -	  Feb	  17	  0:00	  0       -
+
+Rule	BrazilSP  2002	  only	  -	  Nov	  03	  0:00	  1:00    S
+Rule	BrazilSP  2003	  only	  -	  Feb	  16	  0:00    0       -
+
+Rule	BrazilSP  2003	  only	  -	  Oct	  19	  0:00	  1:00    S
+Rule	BrazilSP  2004	  only	  -	  Feb	  15	  0:00    0       -
+
+Rule    BrazilSP  2004    only    -       Nov     02      0:00    1:00    S
+Rule	BrazilSP  2005    only    -       Feb     20      0:00    0       -
+
+Rule    BrazilSP  2006    only    -       Nov     02      0:00    1:00    S
+Rule	BrazilSP  2007    only    -       Feb     25      0:00    0       -
+
+Rule    BrazilSP  2007    only    -       Oct     14      0:00    1:00    S
+Rule	BrazilSP  2008    only    -       Feb     17      0:00    0       -
+
+Rule    BrazilSP  2008    only    -       Oct     19      0:00    1:00    S
+Rule    BrazilSP  2009    only    -       Feb     15      0:00    0       -
+
+ # Zone  NAME                    GMTOFF  RULES/SAVE      FORMAT  [UNTIL]
+Zone    America/Sao_Paulo       -3:00   BrazilSP        BR%sT
+

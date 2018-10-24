@@ -1,0 +1,72 @@
+total 20
+drwxr-xr-x   2 root root  6824 2006-08-16 17:20 sbin
+drwxr-xr-x  17 root root   480 2006-09-08 21:51 var
+drwxr-xr-x  18 root root   544 2006-11-02 18:02 usr
+drwxr-xr-x   7 root root   176 2006-11-02 18:02 opt
+drwxr-xr-x  16 root root   600 2007-01-28 01:15 media
+drwxr-xr-x   6 root root  3400 2007-01-28 01:24 lib
+drwxr-xr-x   2 root root  3904 2007-01-28 01:24 bin
+drwxr-xr-x   4 root root   504 2007-01-28 06:00 boot
+drwx--x---   2 root root   192 2007-02-01 03:12 root
+drwxr-xr-x  16 root root   416 2007-02-02 01:24 mnt
+dr-xr-xr-x 164 root root     0 2007-02-06 19:46 proc
+drwxr-xr-x  11 root root     0 2007-02-06 19:46 sys
+drwxr-xr-x  19 root root 14700 2007-02-06 21:47 dev
+drwxr-xr-x  48 root root  4800 2007-02-06 22:10 etc
+drwxr-xr-x  10 root root   240 2007-02-06 22:16 home
+drwxrwxrwt  11 root root   712 2007-02-10 06:49 tmp
+total 20
+drwxr-xr-x   2 root root  6824 2006-08-16 17:20 sbin
+drwxr-xr-x  17 root root   480 2006-09-08 21:51 var
+drwxr-xr-x  18 root root   544 2006-11-02 18:02 usr
+drwxr-xr-x   7 root root   176 2006-11-02 18:02 opt
+drwxr-xr-x  16 root root   600 2007-01-28 01:15 media
+drwxr-xr-x   6 root root  3400 2007-01-28 01:24 lib
+drwxr-xr-x   2 root root  3904 2007-01-28 01:24 bin
+drwxr-xr-x   4 root root   504 2007-01-28 06:00 boot
+drwx--x---   2 root root   192 2007-02-01 03:12 root
+drwxr-xr-x  16 root root   416 2007-02-02 01:24 mnt
+dr-xr-xr-x 169 root root     0 2007-02-06 19:46 proc
+drwxr-xr-x  11 root root     0 2007-02-06 19:46 sys
+drwxr-xr-x  19 root root 14700 2007-02-06 21:47 dev
+drwxr-xr-x  48 root root  4800 2007-02-06 22:10 etc
+drwxr-xr-x  10 root root   240 2007-02-06 22:16 home
+drwxrwxrwt  11 root root   712 2007-02-10 01:58 tmp
+Sat Feb 10 02:26:30 BRST 2007
+total 20
+drwxr-xr-x   2 root root  6824 2006-08-16 17:20 sbin
+drwxr-xr-x  17 root root   480 2006-09-08 21:51 var
+drwxr-xr-x  18 root root   544 2006-11-02 18:02 usr
+drwxr-xr-x   7 root root   176 2006-11-02 18:02 opt
+drwxr-xr-x  16 root root   600 2007-01-28 01:15 media
+drwxr-xr-x   6 root root  3400 2007-01-28 01:24 lib
+drwxr-xr-x   2 root root  3904 2007-01-28 01:24 bin
+drwxr-xr-x   4 root root   504 2007-01-28 06:00 boot
+drwx--x---   2 root root   192 2007-02-01 03:12 root
+drwxr-xr-x  16 root root   416 2007-02-02 01:24 mnt
+dr-xr-xr-x 167 root root     0 2007-02-06 19:46 proc
+drwxr-xr-x  11 root root     0 2007-02-06 19:46 sys
+drwxr-xr-x  19 root root 14700 2007-02-06 21:47 dev
+drwxr-xr-x  48 root root  4800 2007-02-06 22:10 etc
+drwxr-xr-x  10 root root   240 2007-02-06 22:16 home
+drwxrwxrwt  11 root root   712 2007-02-10 01:58 tmp
+Sat Feb 10 02:26:30 BRST 2007
+Sat Feb 10 02:26:36 BRST 2007
+total 20
+drwxr-xr-x   2 root root  6824 2006-08-16 17:20 sbin
+drwxr-xr-x  17 root root   480 2006-09-08 21:51 var
+drwxr-xr-x  18 root root   544 2006-11-02 18:02 usr
+drwxr-xr-x   7 root root   176 2006-11-02 18:02 opt
+drwxr-xr-x  16 root root   600 2007-01-28 01:15 media
+drwxr-xr-x   6 root root  3400 2007-01-28 01:24 lib
+drwxr-xr-x   2 root root  3904 2007-01-28 01:24 bin
+drwxr-xr-x   4 root root   504 2007-01-28 06:00 boot
+drwx--x---   2 root root   192 2007-02-01 03:12 root
+drwxr-xr-x  16 root root   416 2007-02-02 01:24 mnt
+dr-xr-xr-x 170 root root     0 2007-02-06 19:46 proc
+drwxr-xr-x  11 root root     0 2007-02-06 19:46 sys
+drwxr-xr-x  19 root root 14700 2007-02-06 21:47 dev
+drwxr-xr-x  48 root root  4800 2007-02-06 22:10 etc
+drwxr-xr-x  10 root root   240 2007-02-06 22:16 home
+drwxrwxrwt  11 root root   712 2007-02-10 01:58 tmp
+Sat Feb 10 02:26:36 BRST 2007

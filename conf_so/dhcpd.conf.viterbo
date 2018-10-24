@@ -1,0 +1,13 @@
+# dhcpd.conf
+ddns-update-style none;
+default-lease-time 40000000;
+max-lease-time 41000000;
+option subnet-mask 255.255.255.0;
+option broadcast-address 192.168.10.255;
+option routers 192.168.10.1;
+option domain-name-servers 200.204.0.10, 200.204.0.138;
+option domain-name viterbo;
+
+subnet 192.168.10.0.0 netmask 255.255.255.0 {
+	range 192.168.10.21 192.168.10.200;
+}

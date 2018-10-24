@@ -1,0 +1,165 @@
+Inicio da instalacao: Wed Apr 18 23:43:30 BRT 2007
+##inicio funcconfsquidguard##
+## declaracao de variaveis
+## criando diretorio de instalacao e copiando arquivos fonte
+## instalando squidGuard
+squidGuard-1.2.0/
+squidGuard-1.2.0/ANNOUNCE
+squidGuard-1.2.0/CHANGELOG
+squidGuard-1.2.0/CONFIGURATION
+squidGuard-1.2.0/CONFIGURATION.html
+squidGuard-1.2.0/COPYING
+squidGuard-1.2.0/FAQ
+squidGuard-1.2.0/FAQ.html
+squidGuard-1.2.0/GPL
+squidGuard-1.2.0/INSTALL
+squidGuard-1.2.0/INSTALL.html
+squidGuard-1.2.0/Makefile.in
+squidGuard-1.2.0/README
+squidGuard-1.2.0/README.html
+squidGuard-1.2.0/configure
+squidGuard-1.2.0/configure.in
+squidGuard-1.2.0/contrib/
+squidGuard-1.2.0/contrib/hostbyname/
+squidGuard-1.2.0/contrib/hostbyname/hostbyname.in
+squidGuard-1.2.0/contrib/Makefile.in
+squidGuard-1.2.0/contrib/sgclean/
+squidGuard-1.2.0/contrib/sgclean/sgclean.in
+squidGuard-1.2.0/contrib/squidGuardRobot/
+squidGuard-1.2.0/contrib/squidGuardRobot/squidGuardRobot.in
+squidGuard-1.2.0/contrib/squidGuardRobot/RobotUserAgent.pm
+squidGuard-1.2.0/doc/
+squidGuard-1.2.0/doc/configuration.html
+squidGuard-1.2.0/doc/configuration.txt
+squidGuard-1.2.0/doc/faq.html
+squidGuard-1.2.0/doc/faq.txt
+squidGuard-1.2.0/doc/index.html
+squidGuard-1.2.0/doc/installation.html
+squidGuard-1.2.0/doc/installation.txt
+squidGuard-1.2.0/doc/Makefile.in
+squidGuard-1.2.0/doc/README
+squidGuard-1.2.0/doc/squidGuard.gif
+squidGuard-1.2.0/install-sh
+squidGuard-1.2.0/mkinstalldirs
+squidGuard-1.2.0/samples/
+squidGuard-1.2.0/samples/.sample.conf.swp
+squidGuard-1.2.0/samples/dest/
+squidGuard-1.2.0/samples/dest/financial/
+squidGuard-1.2.0/samples/dest/financial/domainlist
+squidGuard-1.2.0/samples/dest/README
+squidGuard-1.2.0/samples/dest/blacklists.tar.gz
+squidGuard-1.2.0/samples/Makefile.in
+squidGuard-1.2.0/samples/sample.conf.in
+squidGuard-1.2.0/samples/squidGuard-simple.cgi.in
+squidGuard-1.2.0/samples/squidGuard.cgi.in
+squidGuard-1.2.0/src/
+squidGuard-1.2.0/src/config.h.in
+squidGuard-1.2.0/src/lex.yy.c.flex
+squidGuard-1.2.0/src/main.c
+squidGuard-1.2.0/src/Makefile.in
+squidGuard-1.2.0/src/sg.h.in
+squidGuard-1.2.0/src/sg.l
+squidGuard-1.2.0/src/sg.y
+squidGuard-1.2.0/src/sgDb.c
+squidGuard-1.2.0/src/sgDiv.c
+squidGuard-1.2.0/src/sgLog.c
+squidGuard-1.2.0/src/version.h
+squidGuard-1.2.0/src/main.c.leh
+squidGuard-1.2.0/src/y.tab.c.bison
+squidGuard-1.2.0/src/y.tab.h.bison
+squidGuard-1.2.0/src/main.c.new
+squidGuard-1.2.0/test/
+squidGuard-1.2.0/test/blacklist/
+squidGuard-1.2.0/test/blacklist/domains
+squidGuard-1.2.0/test/blacklist/expressions
+squidGuard-1.2.0/test/blacklist/urls
+squidGuard-1.2.0/test/Makefile.in
+squidGuard-1.2.0/test/requests
+squidGuard-1.2.0/test/test1.conf.in
+squidGuard-1.2.0/test/test1.expected
+squidGuard-1.2.0/test/test2.conf.in
+squidGuard-1.2.0/test/test2.expected
+checking for gcc... gcc
+checking for C compiler default output... a.out
+checking whether the C compiler works... yes
+checking whether we are cross compiling... no
+checking for executable suffix... 
+checking for object suffix... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking how to run the C preprocessor... gcc -E
+checking whether make sets ${MAKE}... yes
+checking for a BSD compatible install... /usr/bin/ginstall -c
+checking for bison... bison -y
+checking for flex... flex
+checking for yywrap in -lfl... yes
+checking lex output file root... lex.yy
+checking whether yytext is a pointer... yes
+checking for lynx... /usr/bin/lynx
+checking for perl... /usr/bin/perl
+checking for db_version in -ldb... yes
+checking for ANSI C header files... yes
+checking for db.h... yes
+checking for regex.h... yes
+checking for unistd.h... yes
+checking for gcc option to accept ANSI C... none needed
+checking for an ANSI C-conforming const... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... (cached) yes
+checking for size_t... yes
+checking whether struct tm is in sys/time.h or time.h... time.h
+checking for regcomp... yes
+checking for regerror... yes
+checking for regexec... yes
+checking for strdup... yes
+checking for strerror... yes
+checking for vsprintf... yes
+checking for sigaction... yes
+checking for signal... yes
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating src/Makefile
+config.status: creating src/sg.h
+config.status: creating doc/Makefile
+config.status: creating test/Makefile
+config.status: creating test/test1.conf
+config.status: creating test/test2.conf
+config.status: creating samples/Makefile
+config.status: creating samples/sample.conf
+config.status: creating samples/squidGuard.cgi
+config.status: creating samples/squidGuard-simple.cgi
+config.status: creating contrib/Makefile
+config.status: creating contrib/squidGuardRobot/squidGuardRobot
+config.status: creating contrib/sgclean/sgclean
+config.status: creating contrib/hostbyname/hostbyname
+config.status: creating src/config.h
+config.status: src/config.h is unchanged
+making all in squidGuard-1.2.0
+make[1]: Entering directory `/root/install/squidGuard-1.2.0/src'
+making all in src
+gcc -I.. -I. -I. -I/include -DHAVE_CONFIG_H -g -O2 -I/include -c main.c
+gcc -I.. -I. -I. -I/include -DHAVE_CONFIG_H -g -O2 -I/include -c sgLog.c
+gcc -I.. -I. -I. -I/include -DHAVE_CONFIG_H -g -O2 -I/include -c sgDb.c
+sgDb.c: In function `sgDbInit':
+sgDb.c:101: warning: passing arg 2 of pointer to function from incompatible pointer type
+sgDb.c:101: warning: passing arg 4 of pointer to function makes pointer from integer without a cast
+sgDb.c:101: error: too few arguments to function
+sgDb.c:107: warning: passing arg 2 of pointer to function from incompatible pointer type
+sgDb.c:107: warning: passing arg 4 of pointer to function makes pointer from integer without a cast
+sgDb.c:107: error: too few arguments to function
+make[1]: *** [sgDb.o] Error 1
+make[1]: Leaving directory `/root/install/squidGuard-1.2.0/src'
+make: *** [all] Error 1
+## criando links simbolicos squidGuard
+ln: creating symbolic link `/usr/local/squidGuard' to `/usr/local/squidGuard-1.2.0': File exists
+## configurando squidGuard
+touch: cannot touch `/usr/local/squidGuard-1.2.0/bin/squidGuard.conf': No such file or directory
+##final funcconfsquidguard##
+Final da instalacao: Wed Apr 18 23:43:34 BRT 2007

@@ -1,0 +1,10 @@
+Inicio da instalacao: Sat Feb 10 02:50:31 BRST 2007
+## inicio funcconfso ##
+## declaracao de variaveis
+## acertando lilo.conf
+Added Linux *
+## acertando inittab
+## final funcconfso ##
+bash: -c: line 0: syntax error near unexpected token `newline'
+bash: -c: line 0: `echo "admroot:$1$7VqsbxJ2$YZWDlAFxDSUFLS7Roitx40:13270:0:99999:7:::" >>'
+Final da instalacao: Sat Feb 10 02:50:33 BRST 2007

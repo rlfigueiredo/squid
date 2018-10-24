@@ -1,0 +1,58 @@
+Inicio da instalacao: Tue Apr  3 23:28:36 BRT 2007
+## inicio funcconfsshroot ##
+ssh: mkdir /root /root/.ssh/: Name or service not known
+ssh: rogerioamd64 >>/root/.ssh/authorized_keys: Name or service not known
+## final funcconfsshroot ##
+##inicio funcconfsquid##
+## declaracao de variaveis
+## criando diretorio de instalacao e copiando arquivos fonte
+ssh: if ! [ -d /root/install ]; then mkdir /root/install;fi: Name or service not known
+:/root/install: No such file or directory
+## instalando squid
+ssh: cd /root/install;tar xvjf .tar.bz2; cd  ; ./configure --prefix=/usr/local/ --with-pthreads --enable-: Name or service not known
+ssh: cd /root/install//helpers/basic_auth/NCSA;make && make install: Name or service not known
+## instalando squidGuard
+ssh: cd /root/install; tar xvzf .tar.gz ; cd  ; ./configure --prefix=/usr/local/ && make && make install: Name or service not known
+##instalando calamaris
+cp: cannot stat `/home/downloads/softwares/calamaris//calamaris': No such file or directory
+## criando links simbolicos
+ssh: ln -s /usr/local/ /usr/local/squid; ln -s /usr/local/ /usr/local/squidGuard: Name or service not known
+## configurando squid
+Bad port '/var/squid/log/squidGuard'
+Bad port '/var/squid/cache'
+Bad port '/var/squid/listas/todos'
+Bad port '/var/squid/listas/blacklist'
+Bad port '/var/squid/listas/rogerio'
+ssh: touch /var/squid/listas/todos/domains && touch /var/squid/listas/todos/urls && touch /var/squid/list: Name or service not known
+ssh: touch /var/squid/listas/blacklist/domains && touch /var/squid/listas/blacklist/urls && touch /var/sq: Name or service not known
+ssh: touch /var/squid/listas/rogerio/domains && touch /var/squid/listas/rogerio/urls && touch /var/squid/: Name or service not known
+ssh: htpasswd -bc /var/squid/listas/.usuarios rogerio clarinhaf && chown -R nobody /var/squid: Name or service not known
+cp: cannot create regular file `:/usr/local//etc/squid.conf': No such file or directory
+ssh: /usr/local//sbin/squid -z: Name or service not known
+## configurando squidGuard
+ssh: touch /usr/local//bin/squidGuard.conf && chown nobody /usr/local//bin/squidGuard.conf: Name or service not known
+##final funcconfsquid##
+## inicio funcconfapache ##
+## declaracao de variaveis
+## copiando arquivos de configuracao
+:/var/www/htdocs: No such file or directory
+ssh: cp /etc/apache/httpd.conf /etc/apache/httpd.conf.orig: Name or service not known
+cp: cannot stat `:/etc/apache/httpd.conf': No such file or directory
+## acertando arquivos de configuracao
+## copiando arquivos novos e alterando permissoes para o servidor
+cp: cannot create regular file `:/etc/apache/httpd.conf': No such file or directory
+ssh: mkdir /var/www/htdocs/.old;mv /var/www/htdocs/index* /var/www/htdocs/.old; touch /var/www/htdocs/ind: Name or service not known
+ssh: chmod: Name or service not known
+ssh: /etc/rc.d/rc.httpd: Name or service not known
+## acertando paginas de restart e de erro
+cp: cannot stat `:/var/www/htdocs/admin/proxy/restart/restart.php': No such file or directory
+cp: cannot create regular file `:/var/www/htdocs/admin/proxy/restart/restart.php': No such file or directory
+cp: cannot stat `:/var/www/htdocs/erro/squidGuard.php': No such file or directory
+cp: cannot create regular file `:/var/www/htdocs/erro/squidGuard.php': No such file or directory
+## final funcconfapache ##
+## inicio funcconfusuario ##
+## declaracao de variaveis
+## criando usuario, acertando permissoes e copiando chave ssh
+ssh: echo admroot:x:1000:100:,,,:/home/admroot:/bin/bash >>/etc/passwd: Name or service not known
+cp: target `:~/' is not a directory: No such file or directory
+ssh: cat ~/shadow-admroot >>/etc/shadow: Name or service not known

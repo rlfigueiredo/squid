@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>Alteracao de senha</title>
+</head>
+<body>
+<table heigth = "90%" widtch = "90%" border = "0" align = "center"> 
+	<form action="senhas.php" method="POST">
+	<th align = "center" colspan = "4">
+	</th>
+	<tr>
+		<td align = "right">Usuario:
+		</td>
+		<td> 
+			<input type="text" name="usuario">
+		</td>
+		<td align = "right">Senha Atual:
+		</td>
+                <td> 
+			<input type="password" name="senha_atual">
+		</td>
+	</tr>
+	<tr>
+		<td align = "right">Nova Senha: 
+		</td>
+                <td>
+			<input type="password" name="nova_senha">
+		</td>
+		<td align = "right">Confirma Nova Senha:
+		</td>
+                <td> 
+			<input type="password" name="confirma_nova_senha">
+		</td>
+	</tr>
+	<th colspan = "4">
+		<input type="submit" name="envia" value="Alterar">
+	</th>
+</table>
+</body>
+</html>

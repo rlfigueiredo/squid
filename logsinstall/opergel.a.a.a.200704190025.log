@@ -1,0 +1,884 @@
+Inicio da instalacao: Thu Apr 19 00:25:52 BRT 2007
+## inicio funcconfntop ##
+## declarando variavies ##
+## criando diretorio de instalacao e copiando arquivos fonte
+## instalando ntop
+ntop-3.2/acinclude.m4
+ntop-3.2/acinclude.m4.ntop
+ntop-3.2/aclocal.m4
+ntop-3.2/address.c
+ntop-3.2/admin.c
+ntop-3.2/argv.c
+ntop-3.2/AS-list.txt.gz
+ntop-3.2/AUTHORS
+ntop-3.2/autotoolversions
+ntop-3.2/ChangeLog
+ntop-3.2/config.guess
+ntop-3.2/config.h.in
+ntop-3.2/config.sub
+ntop-3.2/configure
+ntop-3.2/configureextra/
+ntop-3.2/configureextra/DARWIN
+ntop-3.2/configureextra/AIX
+ntop-3.2/configureextra/LINUXfedora
+ntop-3.2/configureextra/FREEBSD
+ntop-3.2/configureextra/HPUX
+ntop-3.2/configureextra/LINUXmandrake
+ntop-3.2/configureextra/LINUXredhat3
+ntop-3.2/configureextra/LINUXredhat8.0
+ntop-3.2/configureextra/LINUXredhat9
+ntop-3.2/configureextra/LINUXslackware
+ntop-3.2/configureextra/LINUXsuse
+ntop-3.2/configureextra/LINUXwhitebox3.0
+ntop-3.2/configureextra/SOLARIS8
+ntop-3.2/configureextra/SOLARIS9
+ntop-3.2/configureextra/functions
+ntop-3.2/configureextra/openbsd
+ntop-3.2/configureextra/readme
+ntop-3.2/configure.in
+ntop-3.2/CONTENTS
+ntop-3.2/COPYING
+ntop-3.2/dataFormat.c
+ntop-3.2/depcomp
+ntop-3.2/dirent.c
+ntop-3.2/docs/
+ntop-3.2/docs/RMON/
+ntop-3.2/docs/RMON/README.RMON
+ntop-3.2/docs/1STRUN.txt
+ntop-3.2/docs/BUG_REPORT
+ntop-3.2/docs/BUILD-MinGW.txt
+ntop-3.2/docs/BUILD-NTOP.txt
+ntop-3.2/docs/DAG
+ntop-3.2/docs/FAQ
+ntop-3.2/docs/FAQarchive
+ntop-3.2/docs/FILES
+ntop-3.2/docs/HACKING
+ntop-3.2/docs/INSTALL
+ntop-3.2/docs/KNOWN_BUGS
+ntop-3.2/docs/README
+ntop-3.2/docs/README.SSL
+ntop-3.2/docs/README.Suse
+ntop-3.2/docs/RedHat-rpmbuild-HOWTO.txt
+ntop-3.2/docs/TODO
+ntop-3.2/docs/ntop-autotools.pdf
+ntop-3.2/docs/ntop-autotools.vsd
+ntop-3.2/docs/database/
+ntop-3.2/docs/database/README.mySQL
+ntop-3.2/docs/database/README
+ntop-3.2/emitter.c
+ntop-3.2/etter.finger.os.gz
+ntop-3.2/fcReport.c
+ntop-3.2/fcUtils.c
+ntop-3.2/fcUtils.h
+ntop-3.2/getopt1.c
+ntop-3.2/getopt.c
+ntop-3.2/getopt.h
+ntop-3.2/globals-core.c
+ntop-3.2/globals-core.h
+ntop-3.2/globals-defines.h
+ntop-3.2/globals-report.c
+ntop-3.2/globals-report.h
+ntop-3.2/globals-structtypes.h
+ntop-3.2/graph.c
+ntop-3.2/hash.c
+ntop-3.2/html/
+ntop-3.2/html/statsicons/
+ntop-3.2/html/statsicons/flags/
+ntop-3.2/html/statsicons/flags/local.gif
+ntop-3.2/html/statsicons/flags/ad.gif
+ntop-3.2/html/statsicons/flags/ae.gif
+ntop-3.2/html/statsicons/flags/af.gif
+ntop-3.2/html/statsicons/flags/ag.gif
+ntop-3.2/html/statsicons/flags/ai.gif
+ntop-3.2/html/statsicons/flags/al.gif
+ntop-3.2/html/statsicons/flags/am.gif
+ntop-3.2/html/statsicons/flags/an.gif
+ntop-3.2/html/statsicons/flags/ao.gif
+ntop-3.2/html/statsicons/flags/aq.gif
+ntop-3.2/html/statsicons/flags/ar.gif
+ntop-3.2/html/statsicons/flags/as.gif
+ntop-3.2/html/statsicons/flags/at.gif
+ntop-3.2/html/statsicons/flags/au.gif
+ntop-3.2/html/statsicons/flags/aw.gif
+ntop-3.2/html/statsicons/flags/az.gif
+ntop-3.2/html/statsicons/flags/ba.gif
+ntop-3.2/html/statsicons/flags/bb.gif
+ntop-3.2/html/statsicons/flags/bd.gif
+ntop-3.2/html/statsicons/flags/be.gif
+ntop-3.2/html/statsicons/flags/bf.gif
+ntop-3.2/html/statsicons/flags/bg.gif
+ntop-3.2/html/statsicons/flags/bh.gif
+ntop-3.2/html/statsicons/flags/bi.gif
+ntop-3.2/html/statsicons/flags/bj.gif
+ntop-3.2/html/statsicons/flags/bm.gif
+ntop-3.2/html/statsicons/flags/bn.gif
+ntop-3.2/html/statsicons/flags/bo.gif
+ntop-3.2/html/statsicons/flags/br.gif
+ntop-3.2/html/statsicons/flags/bs.gif
+ntop-3.2/html/statsicons/flags/bt.gif
+ntop-3.2/html/statsicons/flags/bv.gif
+ntop-3.2/html/statsicons/flags/bw.gif
+ntop-3.2/html/statsicons/flags/by.gif
+ntop-3.2/html/statsicons/flags/bz.gif
+ntop-3.2/html/statsicons/flags/ca.gif
+ntop-3.2/html/statsicons/flags/cc.gif
+ntop-3.2/html/statsicons/flags/cd.gif
+ntop-3.2/html/statsicons/flags/cf.gif
+ntop-3.2/html/statsicons/flags/cg.gif
+ntop-3.2/html/statsicons/flags/ch.gif
+ntop-3.2/html/statsicons/flags/ci.gif
+ntop-3.2/html/statsicons/flags/ck.gif
+ntop-3.2/html/statsicons/flags/cl.gif
+ntop-3.2/html/statsicons/flags/cm.gif
+ntop-3.2/html/statsicons/flags/cn.gif
+ntop-3.2/html/statsicons/flags/co.gif
+ntop-3.2/html/statsicons/flags/com.gif
+ntop-3.2/html/statsicons/flags/cr.gif
+ntop-3.2/html/statsicons/flags/cu.gif
+ntop-3.2/html/statsicons/flags/cv.gif
+ntop-3.2/html/statsicons/flags/cx.gif
+ntop-3.2/html/statsicons/flags/cy.gif
+ntop-3.2/html/statsicons/flags/cz.gif
+ntop-3.2/html/statsicons/flags/de.gif
+ntop-3.2/html/statsicons/flags/dj.gif
+ntop-3.2/html/statsicons/flags/dk.gif
+ntop-3.2/html/statsicons/flags/dm.gif
+ntop-3.2/html/statsicons/flags/do.gif
+ntop-3.2/html/statsicons/flags/dz.gif
+ntop-3.2/html/statsicons/flags/ec.gif
+ntop-3.2/html/statsicons/flags/edu.gif
+ntop-3.2/html/statsicons/flags/ee.gif
+ntop-3.2/html/statsicons/flags/eg.gif
+ntop-3.2/html/statsicons/flags/eh.gif
+ntop-3.2/html/statsicons/flags/es.gif
+ntop-3.2/html/statsicons/flags/et.gif
+ntop-3.2/html/statsicons/flags/eu.gif
+ntop-3.2/html/statsicons/flags/fi.gif
+ntop-3.2/html/statsicons/flags/fj.gif
+ntop-3.2/html/statsicons/flags/fk.gif
+ntop-3.2/html/statsicons/flags/fm.gif
+ntop-3.2/html/statsicons/flags/fo.gif
+ntop-3.2/html/statsicons/flags/fr.gif
+ntop-3.2/html/statsicons/flags/fx.gif
+ntop-3.2/html/statsicons/flags/ga.gif
+ntop-3.2/html/statsicons/flags/gb.gif
+ntop-3.2/html/statsicons/flags/gd.gif
+ntop-3.2/html/statsicons/flags/ge.gif
+ntop-3.2/html/statsicons/flags/gf.gif
+ntop-3.2/html/statsicons/flags/gh.gif
+ntop-3.2/html/statsicons/flags/gi.gif
+ntop-3.2/html/statsicons/flags/gl.gif
+ntop-3.2/html/statsicons/flags/gm.gif
+ntop-3.2/html/statsicons/flags/gn.gif
+ntop-3.2/html/statsicons/flags/gov.gif
+ntop-3.2/html/statsicons/flags/gp.gif
+ntop-3.2/html/statsicons/flags/gq.gif
+ntop-3.2/html/statsicons/flags/gr.gif
+ntop-3.2/html/statsicons/flags/gt.gif
+ntop-3.2/html/statsicons/flags/gu.gif
+ntop-3.2/html/statsicons/flags/gw.gif
+ntop-3.2/html/statsicons/flags/gy.gif
+ntop-3.2/html/statsicons/flags/hk.gif
+ntop-3.2/html/statsicons/flags/hm.gif
+ntop-3.2/html/statsicons/flags/hn.gif
+ntop-3.2/html/statsicons/flags/hr.gif
+ntop-3.2/html/statsicons/flags/ht.gif
+ntop-3.2/html/statsicons/flags/hu.gif
+ntop-3.2/html/statsicons/flags/id.gif
+ntop-3.2/html/statsicons/flags/ie.gif
+ntop-3.2/html/statsicons/flags/il.gif
+ntop-3.2/html/statsicons/flags/in.gif
+ntop-3.2/html/statsicons/flags/int.gif
+ntop-3.2/html/statsicons/flags/io.gif
+ntop-3.2/html/statsicons/flags/iq.gif
+ntop-3.2/html/statsicons/flags/ir.gif
+ntop-3.2/html/statsicons/flags/is.gif
+ntop-3.2/html/statsicons/flags/it.gif
+ntop-3.2/html/statsicons/flags/jm.gif
+ntop-3.2/html/statsicons/flags/jo.gif
+ntop-3.2/html/statsicons/flags/jp.gif
+ntop-3.2/html/statsicons/flags/ke.gif
+ntop-3.2/html/statsicons/flags/kg.gif
+ntop-3.2/html/statsicons/flags/kh.gif
+ntop-3.2/html/statsicons/flags/ki.gif
+ntop-3.2/html/statsicons/flags/km.gif
+ntop-3.2/html/statsicons/flags/kn.gif
+ntop-3.2/html/statsicons/flags/kp.gif
+ntop-3.2/html/statsicons/flags/kr.gif
+ntop-3.2/html/statsicons/flags/kw.gif
+ntop-3.2/html/statsicons/flags/ky.gif
+ntop-3.2/html/statsicons/flags/kz.gif
+ntop-3.2/html/statsicons/flags/la.gif
+ntop-3.2/html/statsicons/flags/lb.gif
+ntop-3.2/html/statsicons/flags/lc.gif
+ntop-3.2/html/statsicons/flags/li.gif
+ntop-3.2/html/statsicons/flags/lk.gif
+ntop-3.2/html/statsicons/flags/localhost.gif
+ntop-3.2/html/statsicons/flags/lr.gif
+ntop-3.2/html/statsicons/flags/ls.gif
+ntop-3.2/html/statsicons/flags/lt.gif
+ntop-3.2/html/statsicons/flags/lu.gif
+ntop-3.2/html/statsicons/flags/lv.gif
+ntop-3.2/html/statsicons/flags/ly.gif
+ntop-3.2/html/statsicons/flags/ma.gif
+ntop-3.2/html/statsicons/flags/mc.gif
+ntop-3.2/html/statsicons/flags/md.gif
+ntop-3.2/html/statsicons/flags/mil.gif
+ntop-3.2/html/statsicons/flags/mk.gif
+ntop-3.2/html/statsicons/flags/ml.gif
+ntop-3.2/html/statsicons/flags/mn.gif
+ntop-3.2/html/statsicons/flags/mo.gif
+ntop-3.2/html/statsicons/flags/mq.gif
+ntop-3.2/html/statsicons/flags/mr.gif
+ntop-3.2/html/statsicons/flags/mt.gif
+ntop-3.2/html/statsicons/flags/mu.gif
+ntop-3.2/html/statsicons/flags/mx.gif
+ntop-3.2/html/statsicons/flags/my.gif
+ntop-3.2/html/statsicons/flags/mz.gif
+ntop-3.2/html/statsicons/flags/na.gif
+ntop-3.2/html/statsicons/flags/ne.gif
+ntop-3.2/html/statsicons/flags/net.gif
+ntop-3.2/html/statsicons/flags/ng.gif
+ntop-3.2/html/statsicons/flags/ni.gif
+ntop-3.2/html/statsicons/flags/nl.gif
+ntop-3.2/html/statsicons/flags/no.gif
+ntop-3.2/html/statsicons/flags/np.gif
+ntop-3.2/html/statsicons/flags/nu.gif
+ntop-3.2/html/statsicons/flags/nz.gif
+ntop-3.2/html/statsicons/flags/om.gif
+ntop-3.2/html/statsicons/flags/org.gif
+ntop-3.2/html/statsicons/flags/pa.gif
+ntop-3.2/html/statsicons/flags/pe.gif
+ntop-3.2/html/statsicons/flags/pf.gif
+ntop-3.2/html/statsicons/flags/pg.gif
+ntop-3.2/html/statsicons/flags/ph.gif
+ntop-3.2/html/statsicons/flags/pk.gif
+ntop-3.2/html/statsicons/flags/pl.gif
+ntop-3.2/html/statsicons/flags/pr.gif
+ntop-3.2/html/statsicons/flags/ps.gif
+ntop-3.2/html/statsicons/flags/pt.gif
+ntop-3.2/html/statsicons/flags/py.gif
+ntop-3.2/html/statsicons/flags/qa.gif
+ntop-3.2/html/statsicons/flags/ro.gif
+ntop-3.2/html/statsicons/flags/ru.gif
+ntop-3.2/html/statsicons/flags/rw.gif
+ntop-3.2/html/statsicons/flags/sa.gif
+ntop-3.2/html/statsicons/flags/sb.gif
+ntop-3.2/html/statsicons/flags/sd.gif
+ntop-3.2/html/statsicons/flags/se.gif
+ntop-3.2/html/statsicons/flags/sg.gif
+ntop-3.2/html/statsicons/flags/si.gif
+ntop-3.2/html/statsicons/flags/sk.gif
+ntop-3.2/html/statsicons/flags/sm.gif
+ntop-3.2/html/statsicons/flags/sn.gif
+ntop-3.2/html/statsicons/flags/su.gif
+ntop-3.2/html/statsicons/flags/sv.gif
+ntop-3.2/html/statsicons/flags/sy.gif
+ntop-3.2/html/statsicons/flags/sz.gif
+ntop-3.2/html/statsicons/flags/tc.gif
+ntop-3.2/html/statsicons/flags/td.gif
+ntop-3.2/html/statsicons/flags/tf.gif
+ntop-3.2/html/statsicons/flags/tg.gif
+ntop-3.2/html/statsicons/flags/th.gif
+ntop-3.2/html/statsicons/flags/tj.gif
+ntop-3.2/html/statsicons/flags/tk.gif
+ntop-3.2/html/statsicons/flags/tm.gif
+ntop-3.2/html/statsicons/flags/tn.gif
+ntop-3.2/html/statsicons/flags/to.gif
+ntop-3.2/html/statsicons/flags/tr.gif
+ntop-3.2/html/statsicons/flags/tt.gif
+ntop-3.2/html/statsicons/flags/tw.gif
+ntop-3.2/html/statsicons/flags/tz.gif
+ntop-3.2/html/statsicons/flags/ua.gif
+ntop-3.2/html/statsicons/flags/uk.gif
+ntop-3.2/html/statsicons/flags/us.gif
+ntop-3.2/html/statsicons/flags/uy.gif
+ntop-3.2/html/statsicons/flags/uz.gif
+ntop-3.2/html/statsicons/flags/va.gif
+ntop-3.2/html/statsicons/flags/vc.gif
+ntop-3.2/html/statsicons/flags/ve.gif
+ntop-3.2/html/statsicons/flags/vg.gif
+ntop-3.2/html/statsicons/flags/vi.gif
+ntop-3.2/html/statsicons/flags/vn.gif
+ntop-3.2/html/statsicons/flags/wf.gif
+ntop-3.2/html/statsicons/flags/ws.gif
+ntop-3.2/html/statsicons/flags/ye.gif
+ntop-3.2/html/statsicons/flags/yu.gif
+ntop-3.2/html/statsicons/flags/za.gif
+ntop-3.2/html/statsicons/flags/ze.gif
+ntop-3.2/html/statsicons/flags/zm.gif
+ntop-3.2/html/statsicons/flags/zw.gif
+ntop-3.2/html/statsicons/os/
+ntop-3.2/html/statsicons/os/amiga.gif
+ntop-3.2/html/statsicons/os/aix.gif
+ntop-3.2/html/statsicons/os/cisco.gif
+ntop-3.2/html/statsicons/os/be.gif
+ntop-3.2/html/statsicons/os/bsd.gif
+ntop-3.2/html/statsicons/os/irix.gif
+ntop-3.2/html/statsicons/os/hp.gif
+ntop-3.2/html/statsicons/os/linux.gif
+ntop-3.2/html/statsicons/os/mac.gif
+ntop-3.2/html/statsicons/os/novell.gif
+ntop-3.2/html/statsicons/os/os2.gif
+ntop-3.2/html/statsicons/os/sun.gif
+ntop-3.2/html/statsicons/os/windows.gif
+ntop-3.2/html/JSCookMenu.js
+ntop-3.2/html/Risk_high.gif
+ntop-3.2/html/Risk_low.gif
+ntop-3.2/html/Risk_medium.gif
+ntop-3.2/html/Risk_unknown.gif
+ntop-3.2/html/antenna.gif
+ntop-3.2/html/arrow.gif
+ntop-3.2/html/arrow_down.gif
+ntop-3.2/html/arrow_up.gif
+ntop-3.2/html/back.gif
+ntop-3.2/html/bar.gif
+ntop-3.2/html/bg_line.gif
+ntop-3.2/html/black.gif
+ntop-3.2/html/blank.gif
+ntop-3.2/html/bottom_corner.gif
+ntop-3.2/html/bridge.gif
+ntop-3.2/html/brocade.gif
+ntop-3.2/html/bug.png
+ntop-3.2/html/bulb.gif
+ntop-3.2/html/card.gif
+ntop-3.2/html/child.gif
+ntop-3.2/html/clear.gif
+ntop-3.2/html/clock.gif
+ntop-3.2/html/collapsed.gif
+ntop-3.2/html/copyright.png
+ntop-3.2/html/corner.gif
+ntop-3.2/html/deleteURL.gif
+ntop-3.2/html/deleteUser.gif
+ntop-3.2/html/disk.gif
+ntop-3.2/html/dns.gif
+ntop-3.2/html/download.gif
+ntop-3.2/html/dump.html
+ntop-3.2/html/emulex.gif
+ntop-3.2/html/error.gif
+ntop-3.2/html/expanded.gif
+ntop-3.2/html/favicon.ico
+ntop-3.2/html/fback.gif
+ntop-3.2/html/fforward.gif
+ntop-3.2/html/forward.gif
+ntop-3.2/html/functions.js
+ntop-3.2/html/gauge.jpg
+ntop-3.2/html/gaugeR.jpg
+ntop-3.2/html/gaugeS.jpg
+ntop-3.2/html/graph.gif
+ntop-3.2/html/gray_bg.gif
+ntop-3.2/html/help.html
+ntop-3.2/html/help.png
+ntop-3.2/html/hostSortNote.html
+ntop-3.2/html/info.gif
+ntop-3.2/html/initiator.gif
+ntop-3.2/html/lock.png
+ntop-3.2/html/mail.gif
+ntop-3.2/html/major.gif
+ntop-3.2/html/marchio_unipi_pant541_144.gif
+ntop-3.2/html/menubar.png
+ntop-3.2/html/menubar_j.png
+ntop-3.2/html/menuline.png
+ntop-3.2/html/minor.gif
+ntop-3.2/html/modifyUser.gif
+ntop-3.2/html/multihomed.gif
+ntop-3.2/html/multivlaned.gif
+ntop-3.2/html/nboxLogo.gif
+ntop-3.2/html/ntop.gif
+ntop-3.2/html/ntop.html
+ntop-3.2/html/ntop_logo.gif
+ntop-3.2/html/ntopdump.dtd
+ntop-3.2/html/ntophelp.html
+ntop-3.2/html/p2p.gif
+ntop-3.2/html/phone.gif
+ntop-3.2/html/pie-error.png
+ntop-3.2/html/printer.gif
+ntop-3.2/html/privacyNotice.html
+ntop-3.2/html/question.gif
+ntop-3.2/html/router.gif
+ntop-3.2/html/seagate.gif
+ntop-3.2/html/spacer.gif
+ntop-3.2/html/style.css
+ntop-3.2/html/switch.gif
+ntop-3.2/html/theme.css
+ntop-3.2/html/theme.js
+ntop-3.2/html/upload.gif
+ntop-3.2/html/url.gif
+ntop-3.2/html/user.gif
+ntop-3.2/html/users.gif
+ntop-3.2/html/vgauge.jpg
+ntop-3.2/html/warning.gif
+ntop-3.2/html/web.gif
+ntop-3.2/html/wheel.gif
+ntop-3.2/html/white_bg.gif
+ntop-3.2/http.c
+ntop-3.2/iface.c
+ntop-3.2/iface.h
+ntop-3.2/initialize.c
+ntop-3.2/INSTALL
+ntop-3.2/installer/
+ntop-3.2/installer/MacOSX/
+ntop-3.2/installer/MacOSX/License.txt
+ntop-3.2/installer/MacOSX/ReadMe.txt
+ntop-3.2/installer/MacOSX/ntop.package.pmsp
+ntop-3.2/install-sh
+ntop-3.2/leaks.c
+ntop-3.2/leaks.h
+ntop-3.2/libtool
+ntop-3.2/libtool.m4.in
+ntop-3.2/ltmain.sh
+ntop-3.2/main.c
+ntop-3.2/Makefile.am
+ntop-3.2/Makefile.in
+ntop-3.2/Makefile.mingw
+ntop-3.2/MANIFESTO
+ntop-3.2/missing
+ntop-3.2/mkinstalldirs
+ntop-3.2/myrrd/
+ntop-3.2/myrrd/Makefile.am
+ntop-3.2/myrrd/Makefile.in
+ntop-3.2/myrrd/config.h
+ntop-3.2/myrrd/config_aux.h
+ntop-3.2/myrrd/dummy.c
+ntop-3.2/myrrd/gdlucidab10.c
+ntop-3.2/myrrd/gdlucidab10.h
+ntop-3.2/myrrd/gdlucidab12.c
+ntop-3.2/myrrd/gdlucidab12.h
+ntop-3.2/myrrd/gdlucidab12l2.c
+ntop-3.2/myrrd/gdlucidab12l2.h
+ntop-3.2/myrrd/gdlucidab14.c
+ntop-3.2/myrrd/gdlucidab14.h
+ntop-3.2/myrrd/gdlucidan10.c
+ntop-3.2/myrrd/gdlucidan10.h
+ntop-3.2/myrrd/gdlucidan10l2.c
+ntop-3.2/myrrd/gdlucidan10l2.h
+ntop-3.2/myrrd/gdlucidan12.c
+ntop-3.2/myrrd/gdlucidan12.h
+ntop-3.2/myrrd/gdlucidan14.c
+ntop-3.2/myrrd/gdlucidan14.h
+ntop-3.2/myrrd/gdpng.c
+ntop-3.2/myrrd/gifsize.c
+ntop-3.2/myrrd/ntconfig.h
+ntop-3.2/myrrd/parsetime.c
+ntop-3.2/myrrd/parsetime.h
+ntop-3.2/myrrd/pngsize.c
+ntop-3.2/myrrd/rrd.h
+ntop-3.2/myrrd/rrd_create.c
+ntop-3.2/myrrd/rrd_diff.c
+ntop-3.2/myrrd/rrd_error.c
+ntop-3.2/myrrd/rrd_fetch.c
+ntop-3.2/myrrd/rrd_format.c
+ntop-3.2/myrrd/rrd_format.h
+ntop-3.2/myrrd/rrd_graph.c
+ntop-3.2/myrrd/rrd_graph.h
+ntop-3.2/myrrd/rrd_last.c
+ntop-3.2/myrrd/rrd_open.c
+ntop-3.2/myrrd/rrd_tool.h
+ntop-3.2/myrrd/rrd_update.c
+ntop-3.2/NetFlow/
+ntop-3.2/NetFlow/docs/
+ntop-3.2/NetFlow/docs/ntop-netflow-cisco.pdf
+ntop-3.2/NetFlow/docs/ntop-netflow-cisco.txt
+ntop-3.2/NetFlow/README
+ntop-3.2/NetFlow/netFlowClient.pl
+ntop-3.2/NetFlow/ntop_flows.sql
+ntop-3.2/NEWS
+ntop-3.2/ntop.8
+ntop-3.2/ntop.c
+ntop-3.2/ntop-cert.pem
+ntop-3.2/ntop-config.in
+ntop-3.2/ntop_darwin.c
+ntop-3.2/ntop_darwin.h
+ntop-3.2/ntop.h
+ntop-3.2/ntop.html
+ntop-3.2/ntop.txt
+ntop-3.2/ntop_win32.c
+ntop-3.2/ntop_win32.h
+ntop-3.2/oui.txt.gz
+ntop-3.2/p2c.opt.table.gz
+ntop-3.2/packages/
+ntop-3.2/packages/FreeBSD-ports/
+ntop-3.2/packages/FreeBSD-ports/net/
+ntop-3.2/packages/FreeBSD-ports/net/ntop/
+ntop-3.2/packages/FreeBSD-ports/net/ntop/files/
+ntop-3.2/packages/FreeBSD-ports/net/ntop/files/ntop.conf.sample
+ntop-3.2/packages/FreeBSD-ports/net/ntop/files/ntop.sh
+ntop-3.2/packages/FreeBSD-ports/net/ntop/files/patch-configure
+ntop-3.2/packages/FreeBSD-ports/net/ntop/files/patch-configure-in
+ntop-3.2/packages/FreeBSD-ports/net/ntop/files/patch-ntop-h
+ntop-3.2/packages/FreeBSD-ports/net/ntop/Makefile
+ntop-3.2/packages/FreeBSD-ports/net/ntop/distinfo
+ntop-3.2/packages/FreeBSD-ports/net/ntop/pkg-descr
+ntop-3.2/packages/FreeBSD-ports/net/ntop/pkg-message
+ntop-3.2/packages/FreeBSD-ports/net/ntop/pkg-plist
+ntop-3.2/packages/FreeBSD-ports/README
+ntop-3.2/packages/Gentoo/
+ntop-3.2/packages/Gentoo/digest-ntop-3.0_pre1
+ntop-3.2/packages/Gentoo/digest-ntop-3.0_pre2
+ntop-3.2/packages/Gentoo/ntop-3.0_pre1.ebuild
+ntop-3.2/packages/Gentoo/ntop-3.0_pre2.ebuild
+ntop-3.2/packages/MacOSX/
+ntop-3.2/packages/MacOSX/License.txt
+ntop-3.2/packages/MacOSX/ReadMe.txt
+ntop-3.2/packages/MacOSX/ltconfig
+ntop-3.2/packages/MacOSX/ltmain.sh
+ntop-3.2/packages/MacOSX/ntop.package.pmsp
+ntop-3.2/packages/Mandrake/
+ntop-3.2/packages/Mandrake/ntop.init
+ntop-3.2/packages/Mandrake/README
+ntop-3.2/packages/Mandrake/ntop.spec
+ntop-3.2/packages/Mandrake/regex.patch
+ntop-3.2/packages/Mandrake/version.patch
+ntop-3.2/packages/RedHat/
+ntop-3.2/packages/RedHat/ntop.init
+ntop-3.2/packages/RedHat/README
+ntop-3.2/packages/RedHat/cfgdbfile.patch
+ntop-3.2/packages/RedHat/makefile_am.patch
+ntop-3.2/packages/RedHat/ntop.conf.sample
+ntop-3.2/packages/RedHat/ntop.logrotate
+ntop-3.2/packages/RedHat/ntop.spec
+ntop-3.2/packages/RedHat/version.patch
+ntop-3.2/packages/Win32/
+ntop-3.2/packages/Win32/README
+ntop-3.2/packages/Win32/ntop-VC6-project.zip
+ntop-3.2/packages/debian.official/
+ntop-3.2/packages/debian.official/README.Debian
+ntop-3.2/packages/debian.official/changelog
+ntop-3.2/packages/debian.official/conffiles
+ntop-3.2/packages/debian.official/config
+ntop-3.2/packages/debian.official/control
+ntop-3.2/packages/debian.official/copyright
+ntop-3.2/packages/debian.official/dirs
+ntop-3.2/packages/debian.official/init
+ntop-3.2/packages/debian.official/logcheck
+ntop-3.2/packages/debian.official/logcheck.paranoid
+ntop-3.2/packages/debian.official/logrotate
+ntop-3.2/packages/debian.official/postinst
+ntop-3.2/packages/debian.official/postrm
+ntop-3.2/packages/debian.official/prerm
+ntop-3.2/packages/debian.official/protocol.list
+ntop-3.2/packages/debian.official/rules
+ntop-3.2/packages/debian.official/templates
+ntop-3.2/packages/suse/
+ntop-3.2/packages/suse/ntop.spec
+ntop-3.2/packages/suse/ntopd
+ntop-3.2/packages/suse/rc.config.ntopd
+ntop-3.2/pbuf.c
+ntop-3.2/plugin.c
+ntop-3.2/plugins/
+ntop-3.2/plugins/Makefile.am
+ntop-3.2/plugins/FILES
+ntop-3.2/plugins/Makefile.in
+ntop-3.2/plugins/NTOP-MIB.txt
+ntop-3.2/plugins/README.SNMP
+ntop-3.2/plugins/globals-structtypes.xml
+ntop-3.2/plugins/icmpPlugin.c
+ntop-3.2/plugins/lastSeenPlugin.c
+ntop-3.2/plugins/netflowPlugin.c
+ntop-3.2/plugins/pdaPlugin.c
+ntop-3.2/plugins/rrdPlugin.c
+ntop-3.2/plugins/rrdPlugin.h
+ntop-3.2/plugins/sflowPlugin.c
+ntop-3.2/plugins/snmpPlugin.c
+ntop-3.2/plugins/xmldumpPlugin.c
+ntop-3.2/pluginSkeleton.c
+ntop-3.2/PORTING
+ntop-3.2/prefs.c
+ntop-3.2/protocols.c
+ntop-3.2/README
+ntop-3.2/report.c
+ntop-3.2/reportUtils.c
+ntop-3.2/scsiUtils.h
+ntop-3.2/sessions.c
+ntop-3.2/specialMAC.txt.gz
+ntop-3.2/ssl.c
+ntop-3.2/stamp-h.in
+ntop-3.2/SUPPORT_NTOP.txt
+ntop-3.2/term.c
+ntop-3.2/THANKS
+ntop-3.2/traffic.c
+ntop-3.2/util.c
+ntop-3.2/utildl.c
+ntop-3.2/utils/
+ntop-3.2/utils/Juniper/
+ntop-3.2/utils/Juniper/setFilter.pl
+ntop-3.2/utils/Juniper/README
+ntop-3.2/utils/Juniper/juniper.conf.sample
+ntop-3.2/utils/AutoConfigureNtop
+ntop-3.2/utils/Makefile
+ntop-3.2/utils/README
+ntop-3.2/utils/addMacAddress.c
+ntop-3.2/utils/addMacAddressFile.pl
+ntop-3.2/utils/addVlanName.c
+ntop-3.2/utils/census.sh
+ntop-3.2/utils/checkrrdmodel.sh
+ntop-3.2/utils/config_h.sh
+ntop-3.2/utils/config_h1.awk
+ntop-3.2/utils/config_h2.awk
+ntop-3.2/utils/faqtohtml.awk
+ntop-3.2/utils/inetnum2countryalloc.c
+ntop-3.2/utils/init.d_ntop
+ntop-3.2/utils/insertssi.awk
+ntop-3.2/utils/linuxrelease
+ntop-3.2/utils/lookuptest.c
+ntop-3.2/utils/p2c
+ntop-3.2/utils/p2clib.c
+ntop-3.2/utils/p2clib.h
+ntop-3.2/utils/prefixtablegen.c
+ntop-3.2/utils/processstruct.awk
+ntop-3.2/utils/rm.bat
+ntop-3.2/utils/sampleMACfile.txt
+ntop-3.2/utils/verified.awk
+ntop-3.2/utils/xmldump.awk
+ntop-3.2/utils/rrd-alarm/
+ntop-3.2/utils/rrd-alarm/conf/
+ntop-3.2/utils/rrd-alarm/conf/alarm.conf.example
+ntop-3.2/utils/rrd-alarm/doc/
+ntop-3.2/utils/rrd-alarm/doc/rrd.pdf
+ntop-3.2/utils/rrd-alarm/Makefile
+ntop-3.2/utils/rrd-alarm/README
+ntop-3.2/utils/rrd-alarm/rrd_alarm.c
+ntop-3.2/vendor.c
+ntop-3.2/vt.sed
+ntop-3.2/webInterface.c
+ntop-3.2/www/
+ntop-3.2/www/PHP/
+ntop-3.2/www/PHP/doSearch.php
+ntop-3.2/www/PHP/ifStats.php
+ntop-3.2/www/PHP/index.html
+ntop-3.2/www/PHP/sessions.php
+ntop-3.2/www/FILES
+ntop-3.2/www/README
+ntop-3.2/www/Perl/
+ntop-3.2/www/Perl/dumpFlat.pl
+ntop-3.2/www/Perl/mapper.pl
+ntop-3.2/www/Perl/nClient
+ntop-3.2/www/Perl/remoteClient.pl
+ntop-3.2/www/Python/
+ntop-3.2/www/Python/ntopTest.py
+
+Welcome to ntop, Version 3.2  SourceForge .tgz
+  copyright (c) 1998-2005 Luca Deri <deri@ntop.org>
+
+Configuration script version v3.2-2005-10-20
+
+************************************************************************
+*                                                                      *
+* NOTICE:  I know you're used to ignoring output from ./configure      *
+*                                                                      *
+*          ntop has a lot of complexity and interdependences.          *
+*                                                                      *
+*          Please, please AT LEAST read the stuff in these boxes!      *
+*                                                                      *
+*>>> The ACTION taken by ./configure is shown prefixed with '>>>'      *
+*                                                                      *
+*    If that ACTION is unacceptable,                                   *
+*??? Steps to take to fix the problem are shown, prefixed with '???'   *
+*                                                                      *
+************************************************************************
+
+NOTE: To developers:
+
+       If you have the Gnu auto* tools (automake, autoconf and libtool)
+       installed, you may wish to enable the automatic regeneration of
+       the configure scripts.  Do this before running ./configure:
+
+$ export NTOPAUTOREBUILD=yes
+
+NOTE:
+
+       To enable additional, debugging messages during the ./configure
+       execution, do this before running ./configure:
+
+$ export NTOPCONFIGDEBUG=yes
+
+
+Configuring ntop according to your request(s):
+   ./configure --prefix=/usr/local/ntop-3.2 --with-gd-root=/usr/local/1 --with-gd-lib=/usr/local/1/lib --with-gd-include=/usr/local/1/include
+
+checking build system type... i686-pc-linux-gnu
+checking host system type... i686-pc-linux-gnu
+checking target system type... i686-pc-linux-gnu
+checking for a BSD-compatible install... /usr/bin/ginstall -c
+checking whether build environment is sane... yes
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking for gawk... (cached) gawk
+checking for style of include used by make... GNU
+checking for gcc... gcc
+checking for C compiler default output file name... a.out
+checking whether the C compiler works... yes
+checking whether we are cross compiling... no
+checking for suffix of executables... 
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ANSI C... none needed
+checking dependency style of gcc... gcc3
+checking how to run the C preprocessor... gcc -E
+checking for gcc... (cached) gcc
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether gcc accepts -g... (cached) yes
+checking for gcc option to accept ANSI C... (cached) none needed
+checking dependency style of gcc... (cached) gcc3
+checking for a BSD-compatible install... /usr/bin/ginstall -c
+checking whether ln -s works... yes
+checking whether make sets $(MAKE)... (cached) yes
+checking for ranlib... ranlib
+checking for libtool... 
+checking for a sed that does not truncate output... /usr/bin/sed
+checking for egrep... grep -E
+checking for ld used by gcc... /usr/i486-slackware-linux/bin/ld
+checking if the linker (/usr/i486-slackware-linux/bin/ld) is GNU ld... yes
+checking for /usr/i486-slackware-linux/bin/ld option to reload object files... -r
+checking for BSD-compatible nm... /usr/bin/nm -B
+checking how to recognise dependent libraries... pass_all
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking dlfcn.h usability... yes
+checking dlfcn.h presence... yes
+checking for dlfcn.h... yes
+checking for g++... g++
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking dependency style of g++... gcc3
+checking how to run the C++ preprocessor... g++ -E
+checking for g77... g77
+checking whether we are using the GNU Fortran 77 compiler... yes
+checking whether g77 accepts -g... yes
+checking the maximum length of command line arguments... 32768
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for objdir... .libs
+checking for ar... ar
+checking for ranlib... (cached) ranlib
+checking for strip... strip
+checking if gcc static flag  works... yes
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC
+checking if gcc PIC flag -fPIC works... yes
+checking if gcc supports -c -o file.o... yes
+checking whether the gcc linker (/usr/i486-slackware-linux/bin/ld) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+configure: creating libtool
+appending configuration tag "CXX" to libtool
+checking for ld used by g++... /usr/i486-slackware-linux/bin/ld
+checking if the linker (/usr/i486-slackware-linux/bin/ld) is GNU ld... yes
+checking whether the g++ linker (/usr/i486-slackware-linux/bin/ld) supports shared libraries... yes
+checking for g++ option to produce PIC... -fPIC
+checking if g++ PIC flag -fPIC works... yes
+checking if g++ supports -c -o file.o... yes
+checking whether the g++ linker (/usr/i486-slackware-linux/bin/ld) supports shared libraries... yes
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+appending configuration tag "F77" to libtool
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking for g77 option to produce PIC... -fPIC
+checking if g77 PIC flag -fPIC works... yes
+checking if g77 supports -c -o file.o... yes
+checking whether the g77 linker (/usr/i486-slackware-linux/bin/ld) supports shared libraries... yes
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking for libtool... $(SHELL) $(top_builddir)/libtool
+  Checking libtool version...1.5.22
+checking for autoheader... autoheader
+checking for aclocal... aclocal
+checking for automake... automake
+checking for autoconf... autoconf
+./configure: line 21630: ac_enable_jumbo-frames=no: command not found
+checking for aclocal.m4... yes
+checking for depcomp... yes
+
+Checking C compiler program and features...
+
+checking for gcc... (cached) gcc
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether gcc accepts -g... (cached) yes
+checking for gcc option to accept ANSI C... (cached) none needed
+checking dependency style of gcc... (cached) gcc3
+
+*******************************************************************
+*
+* Checking for unique options for i686-pc-linux-gnu, gcc...
+*
+* This appears to be LINUX slackware 11.0.0
+*
+*   Testing for extra configuration options for LINUX slackware 11.0.0
+*
+*    Executing configureextra/LINUXslackware
+        Setting Slackware specific flag values
+*
+*******************************************************************
+
+Test the compiler and setup CFLAGS...
+
+checking if compiler accepts -W (warning flags)... yes
+checking for an ANSI C-conforming const... yes
+checking for working volatile... yes
+checking for inline... inline
+checking whether char is unsigned... no
+checking for working long double with more range or precision than double... yes
+checking whether byte ordering is bigendian... no
+
+Critical library/include tests...
+
+checking for pcap... 
+checking pcap.h usability... yes
+checking pcap.h presence... yes
+checking for pcap.h... yes
+checking net/bpf.h usability... no
+checking net/bpf.h presence... no
+checking for net/bpf.h... no
+checking pcap-bpf.h usability... yes
+checking pcap-bpf.h presence... yes
+checking for pcap-bpf.h... yes
+checking for pcap_open_live in -lpcap... yes
+checking for pcap_findalldevs in -lpcap... yes
+checking for pcap_open_dead in -lpcap... yes
+checking for pcap_lib_version in -lpcap... yes
+checking for pcap_freecode in -lpcap... yes
+checking for pcap_freealldevs in -lpcap... yes
+checking for pcap_setnonblock in -lpcap... yes
+checking for gdbm... 
+checking gdbm.h usability... yes
+checking gdbm.h presence... yes
+checking for gdbm.h... yes
+checking for gdbm_open in -lgdbm... yes
+checking for gd... 
+
+*******************************************************************
+*
+* ERROR:    You specified or implied a non-existent directory for
+*           gd:
+*               --with-gd-lib=/usr/local/1/lib
+*               --with-gd-include=/usr/local/1/include
+*
+*>>> Continuing without gd is impossible.
+*
+*???     1. Correct the --with-gd-xxxxx option and rerun
+*???        ./configure
+*
+*******************************************************************
+
+groupadd: group ntop exists
+useradd: user ntop exists
+chown: cannot access `/usr/local/ntop-3.2/share/ntop': No such file or directory
+chown: cannot access `/usr/local/ntop-3.2/var': No such file or directory
+Final da instalacao: Thu Apr 19 00:26:02 BRT 2007

@@ -1,0 +1,32 @@
+<?php
+$data = date ("d/m/y - H:i:s");
+$clientaddr=$_GET['clientaddr'];
+$clientname=$_GET['clientname'];
+$clientident=$_GET['clientident'];
+$clientgroup=$_GET['clientgroup'];
+$destinationgroup=$_GET['destinationgroup'];
+$url=$_GET['url'];
+$emaildest = "squidclientesolutionlinux@gmail.com";
+system ("echo '$data - $clientaddr - $clientname - $clientident - $clientgroup - $destinationgroup - $url' >>/var/squid/log/urls.log");
+?>
+<html>
+<head>
+<title>Acesso Proibido</title>
+</head>
+<body>
+<hr size="6" width="100%" color="green" align="left">
+<table heigth = "90%" widtch = "90%" border = "0" align = "center"> 
+<?php
+        echo "  <tr align='center'><td>IP: $clientaddr</td></tr>
+                <tr align='center'><td>Usuario: $clientident</td></tr>
+                <tr align='center'><td>URL: $url</td></tr>
+                <tr align='center'><td>Filtro: $destinationgroup</td></tr>
+                <tr align='center'><td>Data: $data</td></tr>";
+        system ("echo -e 'IP: $clientaddr\nUsuario: $clientident\nURL: $url\nFiltro: $destinationgroup\nData: $data' | mail -sURL_Bloqueada-$clientident $emaildest");
+?>
+        <th align = "center" colspan = "5" >
+        <b>Este usuario nao tem permissao de acessar esta URL</b>
+        </th>
+</table>
+<hr size="6" width="100%" color="green" align="left">
+</body>

@@ -1,0 +1,21 @@
+# envia stat iptables e restart regras rc.firewall
+55 23 * * * /root/scripts/envia_stat_iptables_restart_rc.firewall.sh >/root/scripts/envia_stat_iptables_restart_rc.firewall.sh.log 2>&1
+##
+# script de backup diario
+45 23 * * * /root/scripts/backup.sh >/root/scripts/backup.sh.log 2>&1
+#
+# script de geracao do relatorio diario de utilizacao do squid
+0 5 * * * /root/scripts/proxy/gera_rel_diario_calamaris.sh >/root/scripts/proxy/gera_rel_diario_calamaris.sh.log 2>&1
+#
+# script de geracao do relatorio semanal de utilizacao do squid
+50 4 * * 0 /root/scripts/proxy/gera_rel_semanal_calamaris.sh >/root/scripts/proxy/gera_rel_semanal_calamaris.sh.log 2>&1
+#
+# script de verificao do espaco das particoes
+0 * * * * /root/scripts/checa_espaco.sh >/root/scripts/checa_espaco.sh.log 2>&1
+#
+# script de sincronizacao do horario 
+#*/5 * * * * /root/scripts/horacerta.sh >/root/scripts/horacerta.sh.log 2>&1
+#
+# mrtg
+*/5 * * * * /usr/local/mrtg-2.15.1/bin/mrtg /usr/local/mrtg-2.15.1/cfg/fwin-viterbo.cfg
+00 02 * * * /usr/local/mrtg-2.15.1/bin/cfgmaker-$(hostname).sh

@@ -1,0 +1,244 @@
+#!/bin/bash
+
+##variaveis
+redelocal=192.168.0.0/24
+broadcast=192.168.0.255
+broadcastfull=255.255.255.255
+fwinsolucont=192.168.0.250
+fwinsolucont_ext=200.171.45.249
+ifinternet=eth0
+iflocal=eth1
+iptables=/usr/sbin/iptables
+host_remoto=200.204.0.10
+ntop=3000:3002
+noip=8.4.112.97
+fit1=200.152.194.106
+fit2=200.152.194.107
+fit3=200.205.62.90
+fit4=200.205.62.91
+tca=200.204.116.70
+emilio=192.168.0.195
+marcelo=192.168.0.190
+estacao_cpd=192.168.0.199
+bloqueadas="192.168.0.54 192.168.0.186 192.168.0.192 192.168.0.104 192.168.0.61 192.168.0.38 192.168.0.185 192.168.0.35 192.168.0.183 192.168.0.198 192.168.0.52 192.168.0.180 192.168.0.195 192.168.0.42 192.168.0.194 192.168.0.23"
+portas_bloqueadas="21,22,23,80,443,8080"
+
+##ativando o forward/nat
+echo 1 > /proc/sys/net/ipv4/ip_forward
+
+##iptables -t nat -I PREROUTING -s 192.168.1.0/24 -j ACCEPT iptables -I INPUT -s 192.168.1.0/24 -j ACCEPT
+##limpando regras atuais
+$iptables -F INPUT
+$iptables -F FORWARD
+$iptables -F OUTPUT
+$iptables -t nat -F PREROUTING
+$iptables -t nat -F POSTROUTING
+$iptables -t nat -F OUTPUT
+
+##bloqueando tudo
+$iptables -P INPUT DROP
+$iptables -P FORWARD DROP
+$iptables -P OUTPUT DROP
+$iptables -t nat -P PREROUTING DROP
+$iptables -t nat -P POSTROUTING DROP
+$iptables -t nat -P OUTPUT DROP
+
+##loopback
+$iptables -A INPUT  -s 127.0.0.1 -d 127.0.0.1 -j ACCEPT 
+$iptables -A OUTPUT -s 127.0.0.1 -d 127.0.0.1 -j ACCEPT 
+$iptables -t nat -A POSTROUTING -s 127.0.0.1 -d 127.0.0.1 -j ACCEPT 
+$iptables -t nat -A OUTPUT  -s 127.0.0.1 -d 127.0.0.1 -j ACCEPT 
+
+##liberando no-ip
+$iptables -I INPUT -s $noip -p tcp --sport 8245 -j ACCEPT
+$iptables -I OUTPUT -d $noip -p tcp --dport 8245 -j ACCEPT
+$iptables -t nat -I OUTPUT -d $noip -p tcp --dport 8245 -j ACCEPT
+$iptables -t nat -I POSTROUTING -d $noip -p tcp --dport 8245 -j ACCEPT
+
+##liberando dhcpd
+$iptables -I INPUT -i $iflocal -p udp --sport 68 -j ACCEPT
+$iptables -t nat -I PREROUTING -p udp --sport 68 -j ACCEPT
+
+##liberando acesso ao servico de administracao web externo
+$iptables -I INPUT -d $fwinsolucont_ext -p tcp --dport 80 -j ACCEPT
+$iptables -t nat -I PREROUTING -d $fwinsolucont_ext -p tcp --dport 80 -j ACCEPT
+
+##liberando OUTPUT
+$iptables -A OUTPUT -o $ifinternet -j ACCEPT
+$iptables -A OUTPUT -o $iflocal -j ACCEPT
+$iptables -A OUTPUT -p udp --dport 53 -j ACCEPT
+$iptables -A OUTPUT -p tcp --dport 22 -j ACCEPT
+$iptables -A OUTPUT -d $host_remoto -p icmp -j ACCEPT
+
+##regras gerais liberando acessos INPUT
+$iptables -A INPUT -s $host_remoto -p icmp -j ACCEPT
+$iptables -A INPUT -s $redelocal -p icmp -j ACCEPT
+$iptables -A INPUT -p udp --sport 53 -j ACCEPT
+$iptables -A INPUT -p tcp --sport 22 -j ACCEPT
+##$iptables -A INPUT -i $ifinternet -p tcp --sport 80 -j ACCEPT
+$iptables -A INPUT -i $iflocal -p tcp --dport 80 -j ACCEPT
+$iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+$iptables -A INPUT -i $iflocal -s $redelocal -p tcp --dport 22 -j ACCEPT
+$iptables -A INPUT -i $iflocal -s $redelocal -p tcp --dport $ntop -j ACCEPT
+
+##regras gerais liberando acessos FORWARD
+$iptables -A FORWARD -d $redelocal -p udp --sport 53 -j ACCEPT
+$iptables -A FORWARD -d $redelocal -p tcp --sport 80 -j ACCEPT
+$iptables -A FORWARD -d $redelocal -p tcp --sport 443 -j ACCEPT
+$iptables -A FORWARD -d $redelocal -p tcp --sport 110 -j ACCEPT
+$iptables -A FORWARD -d $redelocal -p tcp --sport 995 -j ACCEPT
+$iptables -A FORWARD -d $redelocal -p tcp --sport 25 -j ACCEPT
+$iptables -A FORWARD -d $redelocal -p icmp -j ACCEPT
+$iptables -A FORWARD -s $redelocal -j ACCEPT
+$iptables -A FORWARD -d $redelocal -p tcp -m state --state ESTABLISHED,RELATED -j ACCEPT
+
+##regras gerais liberando acessos nat PREROUTING
+$iptables -t nat -A PREROUTING -s $redelocal -p udp --dport 53 -j ACCEPT
+$iptables -t nat -A PREROUTING -s $redelocal -p tcp --dport 22 -j ACCEPT
+$iptables -t nat -A PREROUTING -s $redelocal -p tcp --dport 110 -j ACCEPT
+$iptables -t nat -A PREROUTING -s $redelocal -p tcp --dport 995 -j ACCEPT
+$iptables -t nat -A PREROUTING -s $redelocal -p tcp --dport 25 -j ACCEPT
+$iptables -t nat -A PREROUTING -s $redelocal -p tcp --dport 80 -j ACCEPT
+$iptables -t nat -A PREROUTING -s $redelocal -p tcp --dport 443 -j ACCEPT
+$iptables -t nat -A PREROUTING -s $redelocal -p tcp --dport $ntop -j ACCEPT
+$iptables -t nat -A PREROUTING -s $redelocal -p icmp -j ACCEPT
+$iptables -t nat -I PREROUTING -s $redelocal -p tcp --dport 21 -j ACCEPT
+$iptables -t nat -I PREROUTING -s $redelocal -p tcp --dport 22 -j ACCEPT
+$iptables -t nat -I PREROUTING -s $redelocal -p tcp --dport 3389 -j ACCEPT
+$iptables -t nat -I PREROUTING -s $redelocal -p tcp -j ACCEPT
+
+##regras gerais liberando acessos nat POSTROUTING
+$iptables -t nat -A POSTROUTING -s $redelocal -j MASQUERADE
+$iptables -t nat -A POSTROUTING -p udp --dport 53 -j ACCEPT
+$iptables -t nat -A POSTROUTING -p tcp --dport 22 -j ACCEPT
+$iptables -t nat -A POSTROUTING -d $host_remoto -p icmp -j ACCEPT
+
+##regras gerais liberando acessos nat OUTPUT
+$iptables -t nat -A OUTPUT -s $redelocal -j ACCEPT
+$iptables -t nat -A OUTPUT -p udp --dport 53 -j ACCEPT
+$iptables -t nat -A OUTPUT -p tcp --dport 22 -j ACCEPT
+$iptables -t nat -A OUTPUT -d $host_remoto -p icmp -j ACCEPT
+
+##receitanet
+$iptables -I FORWARD -d $redelocal -p tcp --sport 3456 -j ACCEPT
+$iptables -t nat -I PREROUTING -s $redelocal -p tcp --dport 3456 -j ACCEPT
+
+##bancocentral
+$iptables -I FORWARD -d $redelocal -p tcp --sport 5024 -j ACCEPT
+$iptables -t nat -I PREROUTING -s $redelocal -p tcp --dport 5024 -j ACCEPT
+
+##caixa economica
+$iptables -I FORWARD -d $redelocal -p tcp --sport 2631 -j ACCEPT
+$iptables -t nat -I PREROUTING -s $redelocal -p tcp --dport 2631 -j ACCEPT
+
+##transmissao raiz
+$iptables -I FORWARD -d $redelocal -p tcp --sport 3007 -j ACCEPT
+$iptables -t nat -I PREROUTING -s $redelocal -p tcp --dport 3007 -j ACCEPT
+
+##transmissao sintegra
+$iptables -I FORWARD -d $redelocal -p tcp --sport 8017 -j ACCEPT
+$iptables -t nat -I PREROUTING -s $redelocal -p tcp --dport 8017 -j ACCEPT
+
+##transmissao porta 5017
+$iptables -I FORWARD -d $redelocal -p tcp --sport 5017 -j ACCEPT
+$iptables -t nat -I PREROUTING -s $redelocal -p tcp --dport 5017 -j ACCEPT
+
+##acesso remote desktop ts fit
+$iptables -t nat -I PREROUTING -s $fit1 -p tcp --dport 3389 -j DNAT --to-destination 192.168.0.20
+$iptables -t nat -I PREROUTING -s $fit2 -p tcp --dport 3389 -j DNAT --to-destination 192.168.0.20
+$iptables -t nat -I PREROUTING -s $fit3 -p tcp --dport 3389 -j DNAT --to-destination 192.168.0.20
+$iptables -t nat -I PREROUTING -s $fit4 -p tcp --dport 3389 -j DNAT --to-destination 192.168.0.20
+$iptables -I FORWARD -s $fit1 -d 192.168.0.20 -p tcp --dport 3389 -j ACCEPT
+$iptables -I FORWARD -s $fit2 -d 192.168.0.20 -p tcp --dport 3389 -j ACCEPT
+$iptables -I FORWARD -s $fit3 -d 192.168.0.20 -p tcp --dport 3389 -j ACCEPT
+$iptables -I FORWARD -s $fit4 -d 192.168.0.20 -p tcp --dport 3389 -j ACCEPT
+$iptables -t nat -I POSTROUTING -s $fit1 -p tcp --dport 3389 -j ACCEPT
+$iptables -t nat -I POSTROUTING -s $fit2 -p tcp --dport 3389 -j ACCEPT
+$iptables -t nat -I POSTROUTING -s $fit3 -p tcp --dport 3389 -j ACCEPT
+$iptables -t nat -I POSTROUTING -s $fit4 -p tcp --dport 3389 -j ACCEPT
+
+##acesso remote desktop tca
+$iptables -t nat -I PREROUTING -s $tca -p tcp --dport 3389 -j DNAT --to-destination 192.168.0.20
+$iptables -I FORWARD -s $tca -d 192.168.0.20 -p tcp --dport 3389 -j ACCEPT
+$iptables -t nat -I POSTROUTING -s $tca -p tcp --dport 3389 -j ACCEPT
+
+##acesso remote desktop estacao marcelo
+$iptables -t nat -I PREROUTING -p tcp --dport 6058 -j DNAT --to-destination $marcelo:3389
+$iptables -I FORWARD -d $marcelo -p tcp --dport 3389 -j ACCEPT
+
+##acesso remote desktop estacao cpd
+##$iptables -t nat -I PREROUTING -p tcp --dport 6057 -j DNAT --to-destination $estacao_cpd:3389
+##$iptables -I FORWARD -d $estacao_cpd -p tcp --dport 3389 -j ACCEPT
+
+##acesso remote desktop ts geral
+#$iptables -t nat -A PREROUTING -s 201.1.176.240 -p tcp --dport 3389 -j DNAT --to-destination 192.168.0.20
+#$iptables -A FORWARD -s 201.1.176.240 -d 192.168.0.20 -p tcp --dport 3389 -j ACCEPT
+#$iptables -t nat -A POSTROUTING -s 201.1.176.240 -p tcp --dport 3389 -j ACCEPT
+$iptables -t nat -A PREROUTING -p tcp --dport 6056 -j DNAT --to-destination 192.168.0.20:3389
+$iptables -A FORWARD -d 192.168.0.20 -p tcp --dport 3389 -j ACCEPT
+$iptables -t nat -A POSTROUTING -p tcp --dport 3389 -j ACCEPT
+
+##lixo
+$iptables -I INPUT -s 200.207.205.252 -j DROP
+
+##acesso ssh externo
+$iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+$iptables -A OUTPUT -p tcp --sport 22 -j ACCEPT
+$iptables -t nat -A PREROUTING -p tcp --dport 22 -j ACCEPT
+$iptables -t nat -A OUTPUT -p tcp --sport 22 -j ACCEPT
+
+##acesso smtp firewall enviar email
+$iptables -t nat -A OUTPUT -p tcp --dport 25 -j ACCEPT
+$iptables -A OUTPUT -p tcp --dport 25 -j ACCEPT
+$iptables -t nat -A POSTROUTING -p tcp --dport 25 -j ACCEPT
+$iptables -A INPUT -p tcp --sport 25 -j ACCEPT
+
+##rede windows dhcp...
+$iptables -t nat -I PREROUTING -i $iflocal -s $redelocal -p udp --sport 137:138 -d $broadcast -j ACCEPT
+$iptables -I INPUT -i $iflocal -s $redelocal -p udp --sport 137:138 -d $broadcast -j ACCEPT
+$iptables -t nat -I PREROUTING -s $fwinsolucont -p udp --sport 67 -d $broadcastfull -j ACCEPT
+$iptables -t nat -I PREROUTING -i $iflocal -s $fwinsolucont -p udp --sport 67 -d $broadcastfull -j ACCEPT
+$iptables -t nat -I PREROUTING -s $fwinsolucont -d $broadcastfull -j ACCEPT
+$iptables -I INPUT -i $iflocal -s $fwinsolucont -p udp --sport 67 -d $broadcastfull -j ACCEPT
+
+##squid
+$iptables -I INPUT -s $redelocal -d $fwinsolucont -p tcp --dport 3128 -j ACCEPT
+$iptables -I OUTPUT -s $fwinsolucont_ext -p tcp -m multiport --dport 21,80,443 -j ACCEPT
+$iptables -t nat -I OUTPUT -s $fwinsolucont_ext -p tcp -m multiport --dport 21,80,443 -j ACCEPT 
+$iptables -t nat -I POSTROUTING -s $fwinsolucont_ext -p tcp -m multiport --dport 21,80,443 -j ACCEPT
+$iptables -I INPUT -d $fwinsolucont_ext -p tcp -m multiport --sport 21,80,443 -j ACCEPT
+$iptables -I OUTPUT -o lo -s $fwinsolucont -d $fwinsolucont -j ACCEPT
+$iptables -I INPUT -i lo -s $fwinsolucont_ext -d $fwinsolucont -j ACCEPT
+$iptables -I INPUT -i lo -s $fwinsolucont -d $fwinsolucont -j ACCEPT
+
+##squid bloqueando estacoes
+for i in $bloqueadas;do
+	$iptables -I FORWARD -s $i -p tcp -m multiport --port $portas_bloqueadas -j DROP
+done
+
+## todos os logs
+$iptables -A OUTPUT -j LOG
+$iptables -A INPUT -j LOG
+$iptables -A FORWARD -j LOG
+$iptables -t nat -A PREROUTING -j LOG
+$iptables -t nat -A POSTROUTING -j LOG
+$iptables -t nat -A OUTPUT -j LOG
+
+##msn
+$iptables -t nat -I PREROUTING -s $emilio -p tcp --dport 1863 -j ACCEPT
+$iptables -I FORWARD -d $emilio -p tcp --sport 1863 -j ACCEPT
+
+##cvs
+##$iptables -I FORWARD -p tcp --sport 2401 -j ACCEPT
+##$iptables -t nat -I PREROUTING -p tcp --dport 2401 -j ACCEPT
+##temp
+##$iptables -t nat -I PREROUTING -s 200.204.116.70 -p tcp --dport 22 -j ACCEPT
+##$iptables -I FORWARD -s 200.204.116.70 -p tcp --sport 22 -j ACCEPT
+##$iptables -I FORWARD -s 200.204.116.70 -p tcp --sport 3389 -j ACCEPT
+##$iptables -I INPUT -s 200.204.116.70 -p tcp --dport 22 -j ACCEPT
+##$iptables -I OUTPUT -d 200.204.116.70 -p tcp --sport 22 -j ACCEPT
+
+##envia e-mail com com o arquivo de regras
+##mail -a /etc/rc.d/rc.firewall -satualizacao_regras_firewall rlfigueiredo@gmail.com
+/root/scripts/atualizacao_regras_firewall.sh >atualizacao_regras_firewall.log 2>&1 &
+

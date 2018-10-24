@@ -1,0 +1,30 @@
+/var/squid/log/access.log {
+    daily
+    rotate 365
+    copytruncate
+    ifempty
+    missingok
+    postrotate
+       if [ -r /var/squid/log/squid.pid ]; then
+            xargs kill -HUP < /var/squid/log/squid.pid
+       fi
+    endscript
+}
+
+/var/squid/log/cache.log {
+    weekly
+    rotate 48
+    copytruncate
+    compress
+    ifempty
+    missingok
+}
+
+/var/squid/log/store.log {
+    weekly
+    rotate 48
+    copytruncate
+    compress
+    ifempty
+    missingok
+}
